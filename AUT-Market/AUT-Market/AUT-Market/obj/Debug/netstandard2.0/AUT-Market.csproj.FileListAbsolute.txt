@@ -4,7 +4,6 @@ C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT-Market.pdb
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.dll
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT-Market.dll
 C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.pdb
+C:\Xamarin\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
