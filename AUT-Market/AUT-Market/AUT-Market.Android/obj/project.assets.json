@@ -1934,24 +1934,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\essat\\.nuget\\packages\\": {},
+    "C:\\Users\\Patel\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "projectName": "AUT-Market.Android",
-      "projectPath": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
-      "packagesPath": "C:\\Users\\essat\\.nuget\\packages\\",
-      "outputPath": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
+      "projectPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
+      "outputPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\essat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Patel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1965,8 +1965,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
-              "projectPath": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
+            "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+              "projectPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
             }
           }
         }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LQxWZDn3z5b4UI7MLrOPg4erV7INjsCbFwtctjG/IwtXOjrH535a/+YKSiLZyoUm3Sst7SdYv4gQPe1x+M22Ww==",
+  "dgSpecHash": "SqNo7lGw8lQO90Bpz6QjcJdfzEO+p6etwF8oPplO4w8FAOPU2+0SuLF8lrSFvr9m7z+cv+PZXtiB4SJPYbj6mA==",
   "success": true,
-  "projectFilePath": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+  "projectFilePath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\essat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\essat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\essat\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Patel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Patel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Patel\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
