@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AUT-Market.HomePage.xaml", "HomePage.xaml", typeof(global::AUT_Market.MainPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AUT-Market.HomePage.xaml", "HomePage.xaml", typeof(global::AUT_Market.HomePage))]
 
 namespace AUT_Market {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("HomePage.xaml")]
-    public partial class MainPage : global::Xamarin.Forms.ContentPage {
+    public partial class HomePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(HomePage));
         }
     }
 }
