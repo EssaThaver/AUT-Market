@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\WishList02.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AUT-Market\AUT-Market.csproj">
       <Project>{91B1D5FC-F26E-4F7B-9B33-19B456C7BF30}</Project>
@@ -100,9 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\sell.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Wishlist.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AUTLogo.png" />

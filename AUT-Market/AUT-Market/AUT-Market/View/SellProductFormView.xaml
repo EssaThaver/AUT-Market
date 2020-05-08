@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AUT_Market.View.SellProductFormView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HeightRequest="800">
+
+                <!-- Logo and brand name here -->
+
+                <Frame CornerRadius="20" BackgroundColor="Snow">
+                    <StackLayout>
+
+                        <!-- Title Here -->
+
+                        <Grid Margin="20,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Title " FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Entry Grid.Column="1"/>
+
+
+                            <Label Text="Author" Grid.Row="1" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Entry Grid.Row="1" Grid.Column="1"/>
+
+                            <Label Text="Edition" Grid.Row="2" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Entry Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+
+                            <Label Text="Pubilcation Date" Grid.Row="3" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <DatePicker Grid.Row="3" Grid.Column="1"/>
+
+                            <Label Text="Course Code" Grid.Row="4" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Picker Grid.Row="4" Grid.Column="1"/>
+
+                            <Label Text="Faculty" Grid.Row="5" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Picker Grid.Row="5" Grid.Column="1"/>
+
+
+                            <Label Text="Price" Grid.Row="6" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Entry Keyboard="Numeric" Grid.Row="6" Grid.Column="1"/>
+
+                            <Label Text="Condition" Grid.Row="7" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Picker Grid.Row="7" Grid.Column="1"/>
+
+                        </Grid>
+
+                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand"/>
+
+                        <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
+                        <Editor AutoSize="TextChanges"/>
+
+                        <Button Text="Add Image"/>
+                        <Button Text="Sell" Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

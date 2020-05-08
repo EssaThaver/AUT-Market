@@ -481,8 +481,6 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\com.companyname.aut_market.aab
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\com.companyname.aut_market-Signed.aab
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\com.companyname.aut_market-Signed.apk
-D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\AUT-Market.dll
-D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\AUT-Market.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\build.props
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\adb.props
@@ -544,8 +542,6 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\resolvedassemblies.hash
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT-Market.Android.dll
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT-Market.Android.pdb
-D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT-Market.dll
-D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT-Market.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Java.Interop.dll
@@ -952,3 +948,16 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\AUT_Market.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\bin\Debug\AUT_Market.pdb
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\logout.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\privacy.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\sell.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\wishlist.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\autlogo.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\bookstore.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\home.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.pdb
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\wishlist02.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\wishlist01.png

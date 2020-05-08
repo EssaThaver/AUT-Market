@@ -1,16 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell       xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view ="clr-namespace:AUT_Market.View"
+             Shell.ItemTemplate="{StaticResource MenuTemplate}"
+             Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
+             BackgroundColor="#F26522"
+             Shell.TabBarBackgroundColor="#DADADA"
+             Shell.TabBarForegroundColor="#F26522"
+             Shell.TabBarTitleColor="#F26522"
+             Shell.TabBarUnselectedColor="Black"
              mc:Ignorable="d"
              x:Class="AUT_Market.HomePage">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="MenuTemplate">
+                <StackLayout Orientation="Horizontal">
+                    <Image Margin="30,10,20,10" Source="{Binding Icon}" WidthRequest="22" HeightRequest="22"/>
+                    <Label Text="{Binding Title}" TextColor="Black" FontSize="16" VerticalOptions="Center"/>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <ContentView BackgroundColor="#F26522" HeightRequest="245">
+                <Image Source="AUTLogo.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </ContentView>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem Title="Home" Icon="Home.png">
+        <Tab Title="Products" Icon="BookStore.png">
+            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/>
+        </Tab>
+        <Tab Title="Wishlist" Icon="WishList02.png">
+            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <ShellContent Title="Sell" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
+    <MenuItem Text="Privacy" IconImageSource="privacy.png"/>
+    <MenuItem Text="Logout" IconImageSource="Logout.png"/>
+
+
+
+</Shell>
