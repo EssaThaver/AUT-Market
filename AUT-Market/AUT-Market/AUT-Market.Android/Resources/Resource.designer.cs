@@ -5813,13 +5813,7 @@ namespace AUT_Market.Droid
 			public const int tooltip_frame_light = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int Wishlist = 2131165308;
-			
-			// aapt resource value: 0x7F07007D
-			public const int WishList01 = 2131165309;
-			
-			// aapt resource value: 0x7F07007E
-			public const int WishList02 = 2131165310;
+			public const int WishList02 = 2131165308;
 			
 			static Drawable()
 			{

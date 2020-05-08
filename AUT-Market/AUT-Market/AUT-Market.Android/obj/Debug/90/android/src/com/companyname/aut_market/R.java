@@ -4581,9 +4581,7 @@ public final class R {
     public static final int sell=0x7f070079;
     public static final int tooltip_frame_dark=0x7f07007a;
     public static final int tooltip_frame_light=0x7f07007b;
-    public static final int wishlist=0x7f07007c;
-    public static final int wishlist01=0x7f07007d;
-    public static final int wishlist02=0x7f07007e;
+    public static final int wishlist02=0x7f07007c;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

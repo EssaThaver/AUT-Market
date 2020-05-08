@@ -13,7 +13,12 @@
              Shell.TabBarUnselectedColor="Black"
              mc:Ignorable="d"
              x:Class="AUT_Market.HomePage">
+    
+    <!-- This is home page after when user complete and verfication the login. -->
 
+    <!--===================================================================================================================================-->
+   
+    <!-- This is control the style and size for title and icon -->
     <Shell.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="MenuTemplate">
@@ -25,6 +30,10 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    <!--===================================================================================================================================-->
+
+    <!--This is header in menu(Flyout) page -->
+    <!-- TODO: Need change logo and title -->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <ContentView BackgroundColor="#F26522" HeightRequest="245">
@@ -33,19 +42,30 @@
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
+    <!--===================================================================================================================================-->
+
+    <!--This button(Tab) in the menu page to switch the page-->
     <FlyoutItem Title="Home" Icon="Home.png">
+
+        <!--===================================================================================================================================-->
+
+        <!-- This is tabbar in the bottom at home page-->
         <Tab Title="Products" Icon="BookStore.png">
-            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/>
+            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
-            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/>
+            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
+
+        <!--===================================================================================================================================-->
+
     </FlyoutItem>
 
     <ShellContent Title="Sell" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    <MenuItem Text="Privacy" IconImageSource="privacy.png"/>
-    <MenuItem Text="Logout" IconImageSource="Logout.png"/>
+    
+    <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
+    <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->
 
-
+    <!--===================================================================================================================================-->
 
 </Shell>
