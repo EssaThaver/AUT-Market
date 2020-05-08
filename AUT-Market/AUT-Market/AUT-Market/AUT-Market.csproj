@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <AssemblyName>AUT-Market</AssemblyName>
+    <RootNamespace>AUT-Market</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -16,8 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUT-Market.Android", "AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj", "{929A129B-9767-4292-AE4D-0602C17CA21B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUT-Market", "AUT-Market\AUT-Market\AUT-Market.csproj", "{91B1D5FC-F26E-4F7B-9B33-19B456C7BF30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUT-Market", "AUT-Market\AUT-Market\AUT-Market.csproj", "{91B1D5FC-F26E-4F7B-9B33-19B456C7BF30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
