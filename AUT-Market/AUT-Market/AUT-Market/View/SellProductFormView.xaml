@@ -19,7 +19,8 @@
                 <Frame CornerRadius="20" BackgroundColor="Snow">
                     <StackLayout>
 
-                        <!-- Title Here -->
+                        <!--This label will change name to better name later-->
+                        <Label Text="Product Detail" FontSize="40"/>
 
                         <!--===============================================================================================================================================-->
 
