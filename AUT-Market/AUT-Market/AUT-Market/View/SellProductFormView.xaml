@@ -20,7 +20,7 @@
                     <StackLayout>
 
                         <!--This label will change name to better name later-->
-                        <Label Text="Product Detail" FontSize="40"/>
+                        <Label Text="Product Detail" FontSize="40" HorizontalOptions="Center"/>
 
                         <!--===============================================================================================================================================-->
 
@@ -44,31 +44,30 @@
 
                             <!--===============================================================================================================================================-->
 
-                            <Label Text="Title " FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry Grid.Column="1"/>
+                            <Label Text="Title" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Entry x:Name="titleInput" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
 
                             <Label Text="Author" Grid.Row="1" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry Grid.Row="1" Grid.Column="1"/>
+                            <Entry x:Name="authorInput" Grid.Row="1" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
                             <Label Text="Edition" Grid.Row="2" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+                            <Entry x:Name="editionInput" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
                             <Label Text="Pubilcation Date" Grid.Row="3" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <DatePicker Grid.Row="3" Grid.Column="1"/>
+                            <DatePicker x:Name="publicationDateInput" Grid.Row="3" Grid.Column="1" DateSelected="DatePicker_DateSelected"/>
 
-                            <Label Text="Course Code" Grid.Row="4" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Picker Grid.Row="4" Grid.Column="1"/>
-
-                            <Label Text="Faculty" Grid.Row="5" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Picker Grid.Row="5" Grid.Column="1"/>
-
+                            <Label Text="Faculty" Grid.Row="4" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Picker x:Name="facultyInput" Grid.Row="4" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
+                            
+                            <Label Text="Course Code" Grid.Row="5" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
+                            <Picker x:Name="courseCodeInput" Grid.Row="5" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
 
                             <Label Text="Price" Grid.Row="6" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry Keyboard="Numeric" Grid.Row="6" Grid.Column="1" />
+                            <Entry x:Name="priceInput" Keyboard="Numeric" Grid.Row="6" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
                             <Label Text="Condition" Grid.Row="7" FontSize="20" VerticalOptions="End" Margin="0,0,0,10" />
-                            <Picker Grid.Row="7" Grid.Column="1" />
+                            <Picker x:Name="conditionInput" Grid.Row="7" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
 
                         </Grid>
 
@@ -77,12 +76,12 @@
                         <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand"/>
 
                         <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
-                        <Editor AutoSize="TextChanges"/>
+                        <Editor x:Name="descInput" AutoSize="TextChanges" TextChanged="entry_TextChanged"/>
 
                         <!--===============================================================================================================================================-->
 
                         <Button Text="Add Image"/> <!--This line will connect to another page becuase other team is current development the add Image-->
-                        <Button Text="Sell" Margin="0,10,0,0" IsEnabled="False"/>
+                        <Button Text="Sell" Margin="0,10,0,0" IsEnabled="False" x:Name="sellBtn"/>
 
                         <!--===============================================================================================================================================-->
                         
