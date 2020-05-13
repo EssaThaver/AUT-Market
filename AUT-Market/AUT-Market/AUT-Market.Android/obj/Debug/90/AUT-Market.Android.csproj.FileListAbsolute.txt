@@ -959,3 +959,4 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\wishlist02.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\logoo.png

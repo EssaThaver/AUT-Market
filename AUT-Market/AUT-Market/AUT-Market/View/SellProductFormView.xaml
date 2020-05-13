@@ -15,8 +15,8 @@
             <StackLayout HeightRequest="800">
 
                 <!-- Logo and brand name here -->
-
-                <Frame CornerRadius="20" BackgroundColor="Snow">
+                
+                <Frame CornerRadius="40" BackgroundColor="Snow">
                     <StackLayout>
 
                         <!--This label will change name to better name later-->
@@ -58,16 +58,16 @@
                             <DatePicker x:Name="publicationDateInput" Grid.Row="3" Grid.Column="1" DateSelected="DatePicker_DateSelected"/>
 
                             <Label Text="Faculty" Grid.Row="4" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Picker x:Name="facultyInput" Grid.Row="4" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
+                            <Picker x:Name="facultySelection" Grid.Row="4" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
                             
                             <Label Text="Course Code" Grid.Row="5" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Picker x:Name="courseCodeInput" Grid.Row="5" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
+                            <Entry x:Name="courseCodeInput" Grid.Row="5" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
                             <Label Text="Price" Grid.Row="6" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
                             <Entry x:Name="priceInput" Keyboard="Numeric" Grid.Row="6" Grid.Column="1" TextChanged="entry_TextChanged"/>
 
                             <Label Text="Condition" Grid.Row="7" FontSize="20" VerticalOptions="End" Margin="0,0,0,10" />
-                            <Picker x:Name="conditionInput" Grid.Row="7" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
+                            <Picker x:Name="conditionSelection" Grid.Row="7" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
 
                         </Grid>
 

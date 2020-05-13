@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AUT_Market.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -13,9 +14,14 @@ namespace AUT_Market.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SellProductFormView : ContentPage
     {
+        
+
         public SellProductFormView()
         {
             InitializeComponent();
+
+            facultySelection.ItemsSource = new Faculties().getListOfFaculty();
+            conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------//
