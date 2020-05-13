@@ -53,26 +53,7 @@ namespace AUT_Market.View
         //This validation check to make sure all the input are filled. if not fill in some input then sell buttion will disable.
         private void validationCheckInput()
         {
-            //-------------------------------------------------------------------------------------------------------------------------------------//
-
-            // This is validation check input make sure there no null and no whitespace.
-            if (!(String.IsNullOrWhiteSpace(titleInput.Text)) && !(String.IsNullOrWhiteSpace(authorInput.Text)) && !(String.IsNullOrWhiteSpace(descInput.Text))
-                && !(String.IsNullOrWhiteSpace(editionInput.Text)) && !(String.IsNullOrWhiteSpace(priceInput.Text)))
-            {
-                //-------------------------------------------------------------------------------------------------------------------------------------//
-
-                //This is validation to check the date to make sure select date is befoe today. 
-                if (publicationDateInput.Date < DateTime.Now.Date)
-                {
-                    sellBtn.IsEnabled = true;
-                }
-
-                //-------------------------------------------------------------------------------------------------------------------------------------//
-            }
-            else
-            {
-                sellBtn.IsEnabled = false;
-            }
+            authorInput.Text = facultySelection.SelectedItem.ToString();
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------//

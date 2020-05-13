@@ -20,8 +20,17 @@ namespace AUT_Market.Model
 
         public Boolean CheckSelectDateIsBeforeToday(DateTime date)
         {
-            return false;
+            if(date < DateTime.Now.Date)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }            
         }
+
+
         
     }
 }

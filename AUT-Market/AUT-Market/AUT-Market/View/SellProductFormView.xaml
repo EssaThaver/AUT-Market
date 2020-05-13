@@ -16,7 +16,7 @@
 
                 <!-- Logo and brand name here -->
                 
-                <Frame CornerRadius="40" BackgroundColor="Snow">
+                <Frame CornerRadius="40" BackgroundColor="Snow" Margin="20,20,20,20">
                     <StackLayout>
 
                         <!--This label will change name to better name later-->
@@ -24,56 +24,41 @@
 
                         <!--===============================================================================================================================================-->
 
-                        <!-- This Grid is set up the table -->
-                        <Grid Margin="20,0,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/> <!--This column is for label(title)-->
-                                <ColumnDefinition Width="*"/> <!--This column is for input(entry) and user able type the input box-->
-                            </Grid.ColumnDefinitions>
+                        <Entry x:Name="titleInput" Placeholder="Title" TextChanged="entry_TextChanged" FontSize="20"/>
 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/> <!--Title-->
-                                <RowDefinition Height="*"/> <!--Author-->
-                                <RowDefinition Height="*"/> <!--Edition-->
-                                <RowDefinition Height="*"/> <!--Pubilcation Date-->
-                                <RowDefinition Height="*"/> <!--Course Code-->
-                                <RowDefinition Height="*"/> <!--Faculty-->
-                                <RowDefinition Height="*"/> <!--Price-->
-                                <RowDefinition Height="*"/> <!--Condition-->
-                            </Grid.RowDefinitions>
+                        <Entry x:Name="authorInput" Placeholder="Author" TextChanged="entry_TextChanged"/>
 
-                            <!--===============================================================================================================================================-->
-
-                            <Label Text="Title" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry x:Name="titleInput" Grid.Column="1" TextChanged="entry_TextChanged"/>
-
-
-                            <Label Text="Author" Grid.Row="1" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry x:Name="authorInput" Grid.Row="1" Grid.Column="1" TextChanged="entry_TextChanged"/>
-
-                            <Label Text="Edition" Grid.Row="2" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry x:Name="editionInput" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" TextChanged="entry_TextChanged"/>
-
-                            <Label Text="Pubilcation Date" Grid.Row="3" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <DatePicker x:Name="publicationDateInput" Grid.Row="3" Grid.Column="1" DateSelected="DatePicker_DateSelected"/>
-
-                            <Label Text="Faculty" Grid.Row="4" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Picker x:Name="facultySelection" Grid.Row="4" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
-                            
-                            <Label Text="Course Code" Grid.Row="5" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry x:Name="courseCodeInput" Grid.Row="5" Grid.Column="1" TextChanged="entry_TextChanged"/>
-
-                            <Label Text="Price" Grid.Row="6" FontSize="20" VerticalOptions="End" Margin="0,0,0,10"/>
-                            <Entry x:Name="priceInput" Keyboard="Numeric" Grid.Row="6" Grid.Column="1" TextChanged="entry_TextChanged"/>
-
-                            <Label Text="Condition" Grid.Row="7" FontSize="20" VerticalOptions="End" Margin="0,0,0,10" />
-                            <Picker x:Name="conditionSelection" Grid.Row="7" Grid.Column="1" SelectedIndexChanged="form_Completed"/>
-
-                        </Grid>
+                        <Entry x:Name="editionInput" Placeholder="Edition" Keyboard="Numeric" TextChanged="entry_TextChanged"/>
 
                         <!--===============================================================================================================================================-->
 
-                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="120"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Publication Date" FontSize="18" Margin="5,10,0,0"/>
+                            <DatePicker x:Name="publicationDateInput" DateSelected="DatePicker_DateSelected" Grid.Column="1"/>
+
+                        </Grid>
+                        
+                        <!--===============================================================================================================================================-->
+
+                        <Picker x:Name="facultySelection" Title="Faculty"  SelectedIndexChanged="form_Completed"/>
+
+                        <Entry x:Name="courseCodeInput" Placeholder="Course Code" FontSize="18" TextChanged="entry_TextChanged"/>
+
+                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" TextChanged="entry_TextChanged"/>
+
+                        <Picker x:Name="conditionSelection" Title="Condition" SelectedIndexChanged="form_Completed"/>
+
+                        <!--===============================================================================================================================================-->
+
+                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"/>
 
                         <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
                         <Editor x:Name="descInput" AutoSize="TextChanges" TextChanged="entry_TextChanged"/>
