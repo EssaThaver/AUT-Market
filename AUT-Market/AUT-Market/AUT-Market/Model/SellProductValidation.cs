@@ -7,6 +7,9 @@ namespace AUT_Market.Model
 {
     public class SellProductValidation
     {
+        //-------------------------------------------------------------------------------------------------------------------------------------//\
+        
+        //This method to check make sure all input are not null or whitespace.
         public int CheckValidInput(string title, string author, string edition, string courseCode, string price, string desc)
         {
             string[] userInput = { title, author, edition, courseCode, price, desc };
@@ -20,7 +23,10 @@ namespace AUT_Market.Model
                 
             }
 
-            if(this.CheckStringToDouble(price))
+            //-------------------------------------------------------------------------------------------------------------------------------------//
+
+            // Those fucntion to call method to valid user input are number.
+            if (this.CheckStringToDouble(price))
             {
                 if(this.CheckStringToDouble(edition))
                 {
@@ -37,7 +43,10 @@ namespace AUT_Market.Model
             }
                
         }
-               
+
+        //-------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This method to check if the input date is before today. 
         public Boolean CheckSelectDateIsBeforeToday(DateTime date)
         {
             if(date < DateTime.Now.Date)
@@ -50,6 +59,9 @@ namespace AUT_Market.Model
             }            
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This mehtod to check description word count is below min word count.
         public Boolean CheckMinWordCount(String desc)
         {
             desc.Trim();
@@ -66,6 +78,9 @@ namespace AUT_Market.Model
             }
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This is check if user input is number.
         public Boolean CheckStringToDouble(string num)
         {
             Double doublePrice;
@@ -82,7 +97,7 @@ namespace AUT_Market.Model
             return true;
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------//
 
-        
     }
 }
