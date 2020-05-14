@@ -27,47 +27,59 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
+        // This when user complete the form the this method to proccess to check aall input to validation to make sure there are no dumb/ invalid input.
         private void doneBtn_Clicked(object sender, EventArgs e)
         {
+            // This fuction to check all input are not null and white. Also, some input have number input then this fuction will check number is double.. 
             int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text,courseCodeInput.Text, priceInput.Text, descInput.Text);
+
+            //-------------------------------------------------------------------------------------------------------------------------------------//
+
             
-            if(IsValidInput == -1)
+            if (IsValidInput == -1)
             {
+                //This method is check to make the input date is before today.
                 if (valid.CheckSelectDateIsBeforeToday(publicationDateInput.Date))
                 {
+                    //This valid to check make sure user have select it.
                     if (facultySelection.SelectedItem != null)
                     {
-                        if(conditionSelection.SelectedItem != null)
+                        //This valid to check make sure user have select it.
+                        if (conditionSelection.SelectedItem != null)
                         {
                             this.completeForm();
                         }
                         else
                         {
+                            // if not select then will pop up display of msg.
                             DisplayAlert("Condition is Missing", "Please select the condition", "OK");
                         }
 
                     }
                     else
                     {
+                        // if not select then will pop up display of msg.
                         DisplayAlert("Faculty is missing", "Please select the Faculty", "OK");
                     }
                 }
                 else
                 {
+                    // if user input future date then this will pop up display of msg.
                     DisplayAlert("Publication Date Invalid", "Publication Date cannot been in the future. Please selection Date", "OK");
                 }
             }
             else
             {
+                //This method will pop up display of invalid input.
                 invalidMsgDisplayAlert(IsValidInput);
             }
+
 
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
-
-
+        //This is when valid check is invalid then function pass the num of type which is invliad will pop up display invalid input. 
         private void invalidMsgDisplayAlert(int InvalidType)
         {
             switch (InvalidType)
@@ -101,6 +113,10 @@ namespace AUT_Market.View
             }
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This method will save the detail and store in database
+        // This method is waiting when the database is complete set then will start store in it.
         private void completeForm()
         {
             DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
