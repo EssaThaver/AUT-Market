@@ -12,9 +12,8 @@ namespace AUT_Market.Service
 
             listCondition.Add("Brand New");
             listCondition.Add("Nearly New");
-            listCondition.Add("Noraml");
-            listCondition.Add("Old");
-            listCondition.Add("Slightly Damage");
+            listCondition.Add("Average");
+            listCondition.Add("Slightly Damaged");
 
             return listCondition;
         }

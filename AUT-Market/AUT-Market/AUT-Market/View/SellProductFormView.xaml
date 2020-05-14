@@ -24,11 +24,11 @@
 
                         <!--===============================================================================================================================================-->
 
-                        <Entry x:Name="titleInput" Placeholder="Title" TextChanged="entry_TextChanged" FontSize="20"/>
+                        <Entry x:Name="titleInput" Placeholder="Title" FontSize="20"/>
 
-                        <Entry x:Name="authorInput" Placeholder="Author" TextChanged="entry_TextChanged"/>
+                        <Entry x:Name="authorInput" Placeholder="Author"/>
 
-                        <Entry x:Name="editionInput" Placeholder="Edition" Keyboard="Numeric" TextChanged="entry_TextChanged"/>
+                        <Entry x:Name="editionInput" Placeholder="Edition" Keyboard="Numeric"/>
 
                         <!--===============================================================================================================================================-->
 
@@ -42,34 +42,50 @@
                             </Grid.RowDefinitions>
 
                             <Label Text="Publication Date" FontSize="18" Margin="5,10,0,0"/>
-                            <DatePicker x:Name="publicationDateInput" DateSelected="DatePicker_DateSelected" Grid.Column="1"/>
+                            <DatePicker x:Name="publicationDateInput" Grid.Column="1"/>
 
                         </Grid>
                         
                         <!--===============================================================================================================================================-->
 
-                        <Picker x:Name="facultySelection" Title="Faculty"  SelectedIndexChanged="form_Completed"/>
+                        <Picker x:Name="facultySelection" Title="Faculty"/>
 
-                        <Entry x:Name="courseCodeInput" Placeholder="Course Code" FontSize="18" TextChanged="entry_TextChanged"/>
+                        <Entry x:Name="courseCodeInput" Placeholder="Course Code" FontSize="18"/>
 
-                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" TextChanged="entry_TextChanged"/>
+                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric"/>
 
-                        <Picker x:Name="conditionSelection" Title="Condition" SelectedIndexChanged="form_Completed"/>
+                        <Picker x:Name="conditionSelection" Title="Condition"/>
 
                         <!--===============================================================================================================================================-->
 
                         <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"/>
 
                         <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
-                        <Editor x:Name="descInput" AutoSize="TextChanges" TextChanged="entry_TextChanged"/>
+                        <Editor x:Name="descInput" AutoSize="TextChanges"/>
 
                         <!--===============================================================================================================================================-->
 
-                        <Button Text="Add Image"/> <!--This line will connect to another page becuase other team is current development the add Image-->
-                        <Button Text="Sell" Margin="0,10,0,0" IsEnabled="False" x:Name="sellBtn"/>
-
-                        <!--===============================================================================================================================================-->
+                        <Button Text="Add Image" CornerRadius="20"/> <!--This line will connect to another page becuase other team is current development the add Image-->
                         
+                        <!--===============================================================================================================================================-->
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Button Text="Cancel" BackgroundColor="#DADADA" CornerRadius="20"/>
+                            <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#F26522" TextColor="White" CornerRadius="20" />
+
+                        </Grid>
+
+                        <!--===============================================================================================================================================-->
+
+
                     </StackLayout>
                 </Frame>
             </StackLayout>

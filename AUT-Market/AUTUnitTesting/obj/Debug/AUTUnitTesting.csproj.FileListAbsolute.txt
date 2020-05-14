@@ -1,0 +1,16 @@
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\AUTUnitTesting.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\AUTUnitTesting.pdb
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\obj\Debug\AUTUnitTesting.csprojAssemblyReference.cache
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\obj\Debug\AUTUnitTesting.csproj.CoreCompileInputs.cache
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\obj\Debug\AUTUnitTesting.csproj.CopyComplete
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\obj\Debug\AUTUnitTesting.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\obj\Debug\AUTUnitTesting.pdb
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\AUT_Market.dll
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUTUnitTesting\bin\Debug\AUT_Market.pdb
