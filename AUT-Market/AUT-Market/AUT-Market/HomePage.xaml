@@ -37,7 +37,7 @@
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <ContentView BackgroundColor="#F26522" HeightRequest="245">
-                <Image Source="AUTLogo.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image Source="AUTiconOng.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
             </ContentView>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>

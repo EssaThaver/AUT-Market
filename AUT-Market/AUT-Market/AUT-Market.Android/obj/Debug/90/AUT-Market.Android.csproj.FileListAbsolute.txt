@@ -953,10 +953,11 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\logout.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\privacy.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\sell.png
-D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\autlogo.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\bookstore.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\home.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\AUT_Market.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\wishlist02.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\logoo.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\auticonong.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\autlonglogo.png
