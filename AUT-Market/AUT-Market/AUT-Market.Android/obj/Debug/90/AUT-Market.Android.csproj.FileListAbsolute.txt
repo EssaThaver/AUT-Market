@@ -961,3 +961,5 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\logoo.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\auticonong.png
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\autlonglogo.png
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc646df7c1235ac730fb\SplashScreen.java
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\splashlogo.png
