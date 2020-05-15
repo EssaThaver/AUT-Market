@@ -45,12 +45,12 @@
     <!--===================================================================================================================================-->
 
     <!--This button(Tab) in the menu page to switch the page-->
-    <FlyoutItem Title="Home" Icon="Home.png">
+    <FlyoutItem Title="Home" Icon="Home.png" Route="main">
 
         <!--===================================================================================================================================-->
 
         <!-- This is tabbar in the bottom at home page-->
-        <Tab Title="Products" Icon="BookStore.png">
+        <Tab Title="Books" Icon="BookStore.png">
             <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
@@ -62,7 +62,8 @@
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    
+    <ShellContent Title="Remove Book"  ContentTemplate="{DataTemplate view:RemoveBook}" Icon="RemoveBook.png"/>
+
     <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
     <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->
 

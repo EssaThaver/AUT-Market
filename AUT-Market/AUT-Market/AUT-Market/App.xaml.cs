@@ -1,4 +1,5 @@
 ﻿using AUT_Market;
+using AUT_Market.View;
 using System;
 using System.Threading;
 using Xamarin.Forms;
@@ -12,7 +13,8 @@ namespace AUT_Market
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            MainPage = new TestLogin();
+           
         }
 
         protected override void OnStart()

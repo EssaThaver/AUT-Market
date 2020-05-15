@@ -29,3 +29,5 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
+D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
