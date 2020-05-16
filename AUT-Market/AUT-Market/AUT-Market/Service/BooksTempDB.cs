@@ -1,16 +1,17 @@
 ﻿using AUT_Market.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace AUT_Market.Service
 {
     class BooksTempDB
     {
-        public List<TestBooks> GetBooks()
+        public ObservableCollection<TestBooks> GetBooks()
         {
 
-            return new List<TestBooks>
+            return new ObservableCollection<TestBooks>
             {
                  new TestBooks
                 {
