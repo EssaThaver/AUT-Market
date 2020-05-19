@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AUT_Market;
+using AUT_Market.Service;
+using AUT_Market.View;
+using System;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +14,13 @@ namespace AUT_Market
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            BaseDatabase.Current.CreateTableAsync();
+            Device.SetFlags(new[] {
+                "IndicatorView_Experimental"
+            });
+
+            MainPage = new TestLogin();
+           
         }
 
         protected override void OnStart()
