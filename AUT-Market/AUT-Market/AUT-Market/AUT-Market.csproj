@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
+    <Compile Update="ListingPage.xaml.cs">
+      <DependentUpon>ListingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

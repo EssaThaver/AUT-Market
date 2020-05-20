@@ -10,7 +10,7 @@ namespace AUT_Market
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            MainPage = new ListingPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AUT_Market"
+             mc:Ignorable="d"
+             x:Class="AUT_Market.ListingPage">
+
+    <ListView ItemsSource="{Binding Books}"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2"
+                           Source="{Binding Product_Image}"
+                           Aspect="AspectFill"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+                        <Label Grid.Column="1"
+                           Text="{Binding Title}"
+                           FontAttributes="Bold" />
+                        <Label Grid.Row="1"
+                            Grid.Column="1"
+                           Text="{Binding Author}"
+                           FontAttributes="Italic" />
+                        <Label Grid.Row="2"
+                           Grid.Column="1"
+                           Text="{Binding Course_Code}"
+                           VerticalOptions="End" />
+                        <Label Grid.Row="3"
+                           Grid.Column="1"
+                           Text="{Binding Price}"
+                           VerticalOptions="End" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+
+</ContentPage>
+    
+<!--
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Books}" 
+                SelectionMode="Single"
+                SelectionChanged="OnCollectionViewSelectionChanged">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Frame HasShadow="True" Margin="10" CornerRadius="20" Padding="0" HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Vertical" Padding="10,10,10,10 " >
+                                <Image Source="{Binding Product_Image}"
+                                 HeightRequest="100"
+                                 WidthRequest="100"/>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalOptions="Center" Margin="10" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="1" Text="{Binding Author}" FontAttributes="Italic"/>
+                                <Label Grid.Column="2" Text="{Binding Course_Code}"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    -->
+
