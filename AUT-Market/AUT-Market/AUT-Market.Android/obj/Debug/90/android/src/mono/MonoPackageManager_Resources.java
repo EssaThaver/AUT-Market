@@ -4,7 +4,23 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "AUT-Market.Android.dll" comes first in this list. */
 		"AUT-Market.Android.dll",
 		"AUT_Market.dll",
+<<<<<<< HEAD
+=======
+		"FFImageLoading.dll",
+		"FFImageLoading.Forms.dll",
+		"FFImageLoading.Forms.Platform.dll",
+		"FFImageLoading.Platform.dll",
+>>>>>>> Oliver
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Media.dll",
+		"Plugin.Permissions.dll",
+		"SQLite-net.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.android.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

@@ -23,6 +23,10 @@ AndroidDexTool=d8
 AndroidLinkTool=
 AndroidEnableProfiledAot=
 AndroidInstallAfterBuild=True
+<<<<<<< HEAD
 AndroidSessionId=dc386b36-dc0b-479a-a2d4-a0fabdc28eed
+=======
+AndroidSessionId=95ecb89e-39cf-45fa-803c-1aea8b6e9e8d
+>>>>>>> Oliver
 BuildConfiguration=Debug
 TemplateName={c9e5eea5-ca05-42a1-839b-61506e0a37df}

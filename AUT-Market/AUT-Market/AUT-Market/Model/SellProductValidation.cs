@@ -22,10 +22,13 @@ namespace AUT_Market.Model
                 }
                 
             }
+<<<<<<< HEAD
 
             //-------------------------------------------------------------------------------------------------------------------------------------//
 
             // Those fucntion to call method to valid user input are number.
+=======
+>>>>>>> Oliver
             if (this.CheckStringToDouble(price))
             {
                 if(this.CheckStringToDouble(edition))
@@ -43,10 +46,13 @@ namespace AUT_Market.Model
             }
                
         }
+<<<<<<< HEAD
 
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
         //This method to check if the input date is before today. 
+=======
+>>>>>>> Oliver
         public Boolean CheckSelectDateIsBeforeToday(DateTime date)
         {
             if(date < DateTime.Now.Date)

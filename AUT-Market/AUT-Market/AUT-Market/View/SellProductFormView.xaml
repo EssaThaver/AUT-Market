@@ -24,11 +24,19 @@
 
                         <!--===============================================================================================================================================-->
 
+<<<<<<< HEAD
                         <Entry x:Name="titleInput" Placeholder="Title" FontSize="20"/>
 
                         <Entry x:Name="authorInput" Placeholder="Author"/>
 
                         <Entry x:Name="editionInput" Placeholder="Edition" Keyboard="Numeric"/>
+=======
+                        <Entry x:Name="titleInput" Placeholder="Title" Text="Title" FontSize="20"/>
+
+                        <Entry x:Name="authorInput" Placeholder="Author" Text="Author"/>
+
+                        <Entry x:Name="editionInput" Placeholder="Edition" Text="100" Keyboard="Numeric"/>
+>>>>>>> Oliver
 
                         <!--===============================================================================================================================================-->
 
@@ -50,9 +58,15 @@
 
                         <Picker x:Name="facultySelection" Title="Faculty"/>
 
+<<<<<<< HEAD
                         <Entry x:Name="courseCodeInput" Placeholder="Course Code" FontSize="18"/>
 
                         <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric"/>
+=======
+                        <Entry x:Name="courseCodeInput" Placeholder="Course Code" Text="Course Code" FontSize="18"/>
+
+                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" Text="200"/>
+>>>>>>> Oliver
 
                         <Picker x:Name="conditionSelection" Title="Condition"/>
 
@@ -61,6 +75,7 @@
                         <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,20,0,10"/>
 
                         <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
+<<<<<<< HEAD
                         <Editor x:Name="descInput" AutoSize="TextChanges" MaxLength="500"/>
 
                         <!--===============================================================================================================================================-->
@@ -69,6 +84,14 @@
                         
                         <!--===============================================================================================================================================-->
 
+=======
+                        <Editor x:Name="descInput" AutoSize="TextChanges" MaxLength="500" Text="descInput"/>
+                        <Button Text="Add Image" CornerRadius="20" Margin="0,20,0,0" Clicked="BtnAddImageAsync"/>
+                        <FlexLayout x:Name="flexlay" Direction="Row" Wrap="Wrap">
+                            
+                        </FlexLayout>
+                        <!--<Image x:Name="testimg" WidthRequest="100" MinimumHeightRequest="100"/>-->
+>>>>>>> Oliver
                         <Grid Margin="0,40,0,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -80,11 +103,15 @@
 
                             <Button Text="Cancel" BackgroundColor="#DADADA" CornerRadius="20"/>
                             <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#F26522" TextColor="White" CornerRadius="20" />
+<<<<<<< HEAD
 
                         </Grid>
 
                         <!--===============================================================================================================================================-->
 
+=======
+                        </Grid>
+>>>>>>> Oliver
                     </StackLayout>
                 </Frame>
             </StackLayout>

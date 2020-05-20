@@ -31,3 +31,46 @@ D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
 D:\Software Developemnt Practices COMP602\Offical AUT Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
+<<<<<<< HEAD
+=======
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.deps.json
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.dll
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.pdb
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\ProductsTestingView.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistDetail.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistTesting.xaml.g.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\xiangmu\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.deps.json
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\ref\AUT_Market.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\ProductsTestingView.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistDetail.xaml.g.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistTesting.xaml.g.cs
+>>>>>>> Oliver

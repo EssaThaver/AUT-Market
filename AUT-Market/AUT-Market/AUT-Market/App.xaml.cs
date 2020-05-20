@@ -1,4 +1,8 @@
 ﻿using AUT_Market;
+<<<<<<< HEAD
+=======
+using AUT_Market.Service;
+>>>>>>> Oliver
 using AUT_Market.View;
 using System;
 using System.Threading;
@@ -13,6 +17,14 @@ namespace AUT_Market
         {
             InitializeComponent();
 
+<<<<<<< HEAD
+=======
+            BaseDatabase.Current.CreateTableAsync();
+            Device.SetFlags(new[] {
+                "IndicatorView_Experimental"
+            });
+
+>>>>>>> Oliver
             MainPage = new TestLogin();
            
         }

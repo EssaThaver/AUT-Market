@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Book Details"
+             x:Class="AUT_Market.View.WishlistDetail">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <CarouselView x:Name="carouselview" ItemsSource="{Binding BookImages}" HeightRequest="200" IndicatorView="indicatorView">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <ffimg:CachedImage Source="{Binding}" Aspect="AspectFit"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView x:Name="indicatorView" IndicatorColor="White" SelectedIndicatorColor="#1976D2" BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,-20,0,0" IndicatorSize="8"/>
+                </StackLayout>
+                <BoxView HeightRequest="5"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="{Binding BookTitle}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="{Binding IslikeImg}"/>
+                        <Label Text="Add to WishList" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Author:" WidthRequest="60" FontAttributes="Bold"/>
+                    <Label Text="{Binding author}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Faculty:" WidthRequest="60" FontAttributes="Bold"/>
+                    <Label Text="{Binding faculty}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
+                    <Label Text="{Binding price}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Publication Date:" FontAttributes="Bold"/>
+                    <Label Text="{Binding publicationDateStr}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+               
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Course Code:" FontAttributes="Bold"/>
+                    <Label Text="{Binding courseCode}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Book Condition:" FontAttributes="Bold"/>
+                    <Label Text="{Binding bookCondition}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Book description:" FontAttributes="Bold"/>
+                    <Label Text="{Binding BookDesc}"/>
+                </StackLayout>
+                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
