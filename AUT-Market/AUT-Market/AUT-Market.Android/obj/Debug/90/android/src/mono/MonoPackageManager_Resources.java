@@ -3,7 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "AUT-Market.Android.dll" comes first in this list. */
 		"AUT-Market.Android.dll",
-		"AUT-Market.dll",
+		"AUT_Market.dll",
 		"FormsViewGroup.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

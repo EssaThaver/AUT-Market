@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AUT_Market.View.RemoveBook">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Image Source="AUTLongLogo.png"/>
+
+                    <Frame CornerRadius="40" Margin="20,-150,20,20">
+                        <StackLayout>
+
+                            <Label Text="Remove Book" HorizontalOptions="Center" FontSize="40"/>
+
+                            <CollectionView ItemsSource="{Binding getBooks}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="10,20,10,0">
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="150"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Grid.RowSpan="3" Source="{Binding imageUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="50"/>
+                                            <Label Grid.Column="1" Text="{Binding title}" FontAttributes="Bold"/>
+                                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding faculty}"/>
+                                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding courseCode}"/>
+
+                                            <ImageButton x:Name="Remove" Source="Delete.png" Clicked="Remove_Clicked" Grid.Column="2" Grid.Row="1"  HeightRequest="20" WidthRequest="20" HorizontalOptions="End" Margin="0,0,10,0 "/>
+
+                                            <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="3" Grid.ColumnSpan ="3"/>
+
+
+                                        </Grid>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,16 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell       xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view ="clr-namespace:AUT_Market.View"
+             Shell.ItemTemplate="{StaticResource MenuTemplate}"
+             Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
+             BackgroundColor="#F26522"
+             Shell.TabBarBackgroundColor="#DADADA"
+             Shell.TabBarForegroundColor="#F26522"
+             Shell.TabBarTitleColor="#F26522"
+             Shell.TabBarUnselectedColor="Black"
              mc:Ignorable="d"
              x:Class="AUT_Market.HomePage">
+    
+    <!-- This is home page after when user complete and verfication the login. -->
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to AUT Market!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <!--===================================================================================================================================-->
+   
+    <!-- This is control the style and size for title and icon -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="MenuTemplate">
+                <StackLayout Orientation="Horizontal">
+                    <Image Margin="30,10,20,10" Source="{Binding Icon}" WidthRequest="22" HeightRequest="22"/>
+                    <Label Text="{Binding Title}" TextColor="Black" FontSize="16" VerticalOptions="Center"/>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Shell.Resources>
 
-</ContentPage>
+    <!--===================================================================================================================================-->
+
+    <!--This is header in menu(Flyout) page -->
+    <!-- TODO: Need change logo and title -->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <ContentView BackgroundColor="#F26522" HeightRequest="245">
+                <Image Source="AUTiconOng.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </ContentView>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <!--===================================================================================================================================-->
+
+    <!--This button(Tab) in the menu page to switch the page-->
+    <FlyoutItem Title="Home" Icon="Home.png" Route="main">
+
+        <!--===================================================================================================================================-->
+
+        <!-- This is tabbar in the bottom at home page-->
+        <Tab Title="Books" Icon="BookStore.png">
+            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+        </Tab>
+        <Tab Title="Wishlist" Icon="WishList02.png">
+            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+        </Tab>
+
+        <!--===================================================================================================================================-->
+
+    </FlyoutItem>
+
+    <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
+    <ShellContent Title="Remove Book"  ContentTemplate="{DataTemplate view:RemoveBook}" Icon="RemoveBook.png"/>
+
+    <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
+    <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->
+
+    <!--===================================================================================================================================-->
+
+</Shell>
