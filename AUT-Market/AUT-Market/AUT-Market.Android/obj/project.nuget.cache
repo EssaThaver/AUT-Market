@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Dzfjq2MUNPsR5BoI2vFzxHaQgotqJwz0M7+BqHL4y8TQLEwdL1tRbzngcu3J9zt2vHU3l9KQZlAVpnN+4Ptyg==",
+  "dgSpecHash": "iEojFutxa8HV1l31m3FZMkMUMUkr+HHL2GOmD4Ucx/8yOV9R8FutkiyXGYC6GFrPkf21rgjxjY1T4KbAH7+C4w==",
   "success": true,
-  "projectFilePath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+  "projectFilePath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patel\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",

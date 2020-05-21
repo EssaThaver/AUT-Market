@@ -1940,11 +1940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "projectName": "AUT-Market.Android",
-      "projectPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectPath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-      "outputPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
+      "outputPath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1965,8 +1965,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
-              "projectPath": "D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
+            "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+              "projectPath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
             }
           }
         }
@@ -1986,13 +1986,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Software Developemnt Practices COMP602\\Offical AUT Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
