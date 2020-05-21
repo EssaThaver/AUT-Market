@@ -575,11 +575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUT2020\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "projectName": "AUT_Market",
-      "projectPath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2020\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-      "outputPath": "D:\\Software Developemnt Practices COMP602\\AUTMarket2\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
+      "outputPath": "D:\\Software Developemnt Practices COMP602\\AUT2020\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

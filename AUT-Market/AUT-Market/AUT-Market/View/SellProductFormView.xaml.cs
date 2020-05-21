@@ -122,6 +122,12 @@ namespace AUT_Market.View
             DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
         }
 
+        protected async void cancelBtn_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new HomePage();
+            await Shell.Current.GoToAsync("//main");
+        }
+
         //-------------------------------------------------------------------------------------------------------------------------------------//
     }
 }

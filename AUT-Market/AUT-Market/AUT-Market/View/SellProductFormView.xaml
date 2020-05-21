@@ -78,7 +78,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <Button Text="Cancel" BackgroundColor="#DADADA" CornerRadius="20"/>
+                            <Button Text="Cancel" x:Name="cancelBtn" Clicked="cancelBtn_Clicked" BackgroundColor="#DADADA" CornerRadius="20"/>
                             <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#F26522" TextColor="White" CornerRadius="20" />
 
                         </Grid>
