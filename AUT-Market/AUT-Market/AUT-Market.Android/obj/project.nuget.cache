@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7PxTpIr/5vKgZydNtZMysICqypeHI+TT+pd9lgX3UZ4fy44HB0WRsx0aNZX8O2apRN4BDecLQn0+q/VJO82LSg==",
+  "dgSpecHash": "XcilU4CttYaf+pOZdhQ8Xc5H6dtG2s2RicStG7zW2j//jhDtpHxrEw273k7FJHJnNaSKKi0v4GHm+Ue3dXDxKg==",
   "success": true,
-  "projectFilePath": "C:\\Xamarin\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\essat\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",
@@ -45,5 +46,26 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.5.3.2 to 1.3.1. Reference the package directly from the project to select a different version. \r\n AUT-Market.Android -> AUT-Market -> Xamarin.Essentials (>= 1.5.3.2) \r\n AUT-Market.Android -> Xamarin.Essentials (>= 1.3.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.6.0.800 to 4.4.0.991265. Reference the package directly from the project to select a different version. \r\n AUT-Market.Android -> AUT-Market -> Xamarin.Forms (>= 4.6.0.800) \r\n AUT-Market.Android -> Xamarin.Forms (>= 4.4.0.991265)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    }
+  ]
 }
