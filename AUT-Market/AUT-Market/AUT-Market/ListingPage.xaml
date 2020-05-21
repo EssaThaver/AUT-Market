@@ -6,80 +6,85 @@
              xmlns:vm="clr-namespace:AUT_Market"
              mc:Ignorable="d"
              x:Class="AUT_Market.ListingPage">
+    <StackLayout>
 
-    <ListView ItemsSource="{Binding Books}"
+        <Picker x:Name="faculty_picker"
+        Title="Select a faculty">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>All faculties</x:String>
+                    <x:String>Faculty of Business, Economics and Law</x:String>
+                    <x:String>Faculty of Culture and Society</x:String>
+                    <x:String>Faculty of Design and Creative Technologies</x:String>
+                    <x:String>Faculty of Health and Environmental Sciences</x:String>
+                    <x:String>Te Ara Poutama</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Picker x:Name="price_picker"
+        Title="Select a Price">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>All prices</x:String>
+                    <x:String>Under 25</x:String>
+                    <x:String>Under 50</x:String>
+                    <x:String>Under 75</x:String>
+                    <x:String>Under 100</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <ListView ItemsSource="{Binding Books}"
           HasUnevenRows="true"
           ItemSelected="OnListViewItemSelected"
           ItemTapped="OnListViewItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Grid.RowSpan="2"
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="AUT Market"
+               FontSize="Medium" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2"
                            Source="{Binding Product_Image}"
                            Aspect="AspectFill"
                            HeightRequest="60"
                            WidthRequest="60" />
-                        <Label Grid.Column="1"
+                            <Label Grid.Column="1"
                            Text="{Binding Title}"
                            FontAttributes="Bold" />
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                             Grid.Column="1"
                            Text="{Binding Author}"
                            FontAttributes="Italic" />
-                        <Label Grid.Row="2"
+                            <Label Grid.Row="2"
                            Grid.Column="1"
                            Text="{Binding Course_Code}"
                            VerticalOptions="End" />
-                        <Label Grid.Row="3"
+                            <Label Grid.Row="3"
                            Grid.Column="1"
                            Text="{Binding Price}"
                            VerticalOptions="End" />
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-
-
-
-</ContentPage>
-    
-<!--
-    <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding Books}" 
-                SelectionMode="Single"
-                SelectionChanged="OnCollectionViewSelectionChanged">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="2"/>
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <Frame HasShadow="True" Margin="10" CornerRadius="20" Padding="0" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Vertical" Padding="10,10,10,10 " >
-                                <Image Source="{Binding Product_Image}"
-                                 HeightRequest="100"
-                                 WidthRequest="100"/>
-                                <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalOptions="Center" Margin="10" HorizontalTextAlignment="Center"/>
-                                <Label Grid.Column="1" Text="{Binding Author}" FontAttributes="Italic"/>
-                                <Label Grid.Column="2" Text="{Binding Course_Code}"/>
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </ContentPage.Content>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="You have reached the end of the database!"
+                     FontSize="Medium" />
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </StackLayout>
 </ContentPage>
-    
-    -->
-
