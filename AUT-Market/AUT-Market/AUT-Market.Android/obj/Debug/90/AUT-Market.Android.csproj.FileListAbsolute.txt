@@ -952,3 +952,4 @@ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-M
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll
