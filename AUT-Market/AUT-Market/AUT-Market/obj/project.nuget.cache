@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FlkijRjwbXpk675Djm033vCpykFroJTbvyk1PANcND+0U4Dha/D3vYrP+8wkRSQo6Bb/otCCSIx0DOtkfWbT8w==",
+  "dgSpecHash": "OJIwl6V2mDCTaEwiPsridZQht5luZQEc3x9optyToQ/kZ9C5KXAx2HKCRoM6TNoTZme63cj2OTfzqmtsJdTRVQ==",
   "success": true,
-  "projectFilePath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+  "projectFilePath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\essat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\essat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

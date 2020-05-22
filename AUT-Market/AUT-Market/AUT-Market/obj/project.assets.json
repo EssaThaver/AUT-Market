@@ -1216,11 +1216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectUniqueName": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "projectName": "AUT_Market",
-      "projectPath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectPath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "packagesPath": "C:\\Users\\essat\\.nuget\\packages\\",
-      "outputPath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
+      "outputPath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

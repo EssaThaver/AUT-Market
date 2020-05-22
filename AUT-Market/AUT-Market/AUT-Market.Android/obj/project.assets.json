@@ -2501,11 +2501,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectUniqueName": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "projectName": "AUT-Market.Android",
-      "projectPath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectPath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "packagesPath": "C:\\Users\\essat\\.nuget\\packages\\",
-      "outputPath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
+      "outputPath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2526,8 +2526,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
-              "projectPath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
+            "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+              "projectPath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
             }
           }
         }

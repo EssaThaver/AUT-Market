@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OZ/k6xh4hmSPTzxKFvkK4i91b2gRtKN1HsLWS77FbeE59EP18XlkX1oQo7RFY01J67RyrfOaHx1do/rjSN49yA==",
+  "dgSpecHash": "0Dvh4sTYqApPkUG/wDAXO/PXrtK5PPhZ/pSdKZVI7Sm7Wk0/TvRKhKw8XSxqE2wOq+MX0Gc/tT/hius68lRSHw==",
   "success": true,
-  "projectFilePath": "C:\\AUT market merge\\AUT-Market- karan\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+  "projectFilePath": "C:\\Uni\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\essat\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\essat\\.nuget\\packages\\plugin.currentactivity\\2.1.0.4\\plugin.currentactivity.2.1.0.4.nupkg.sha512",

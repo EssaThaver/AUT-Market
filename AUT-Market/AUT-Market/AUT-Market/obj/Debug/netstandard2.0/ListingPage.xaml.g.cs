@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AUT-Market.ListingPage.xaml", "ListingPage.xaml", typeof(global::AUT_Market.ListingPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AUT_Market.ListingPage.xaml", "ListingPage.xaml", typeof(global::AUT_Market.ListingPage))]
 
 namespace AUT_Market {
     
