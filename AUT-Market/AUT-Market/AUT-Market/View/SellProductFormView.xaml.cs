@@ -119,6 +119,32 @@ namespace AUT_Market.View
         // This method is waiting when the database is complete set then will start store in it.
         private void completeForm()
         {
+
+            User newUser = new User();
+
+            newUser.ID = 999999;
+            newUser.Name = "AUTmarket";
+            newUser.Email = "Please delete it";
+
+            UsersDb.AddUser(newUser);
+
+           
+
+            Book book = new Book();
+
+            book.Title = titleInput.Text;
+            book.Author = authorInput.Text;
+            book.Edition = editionInput.Text;
+            book.CourseCode = courseCodeInput.Text;
+            book.Faculty = facultySelection.SelectedItem.ToString();
+            book.Condition = conditionSelection.SelectedItem.ToString();
+            book.Description = descInput.Text;
+            book.Price = float.Parse(priceInput.Text);
+            book.Campus = "City";
+
+            BooksDb.AddBook(book, newUser);
+
+
             DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
         }
 

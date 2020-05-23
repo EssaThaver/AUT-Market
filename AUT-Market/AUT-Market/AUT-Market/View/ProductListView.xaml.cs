@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AUT_Market.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProductsTestingView : ContentPage
+    public partial class ProductListView : ContentPage
     {
-        public ProductsTestingView()
+        public ProductListView()
         {
             InitializeComponent();
         }

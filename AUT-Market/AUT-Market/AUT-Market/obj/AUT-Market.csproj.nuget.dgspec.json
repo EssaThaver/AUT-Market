@@ -48,6 +48,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"

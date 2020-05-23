@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Yp5+3HTu8ISHxOYTzFE5W7nClyA+RmWklxbCPVlHlRz+R/28B6AWhTpBqRz/9CmcRrJOIGJvBttWsmSo6lJ0aA==",
+  "dgSpecHash": "P7UFECr1+dq9jkRSWMB+A3pLAy8Pj9/NKLHl+ddrC9GxrxLPxfydXU9a7El4BEA3YrHs8yDLI9bfvc3CpK+Xlg==",
   "success": true,
   "projectFilePath": "D:\\Software Developemnt Practices COMP602\\AUT2020\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Patel\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
     "C:\\Users\\Patel\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

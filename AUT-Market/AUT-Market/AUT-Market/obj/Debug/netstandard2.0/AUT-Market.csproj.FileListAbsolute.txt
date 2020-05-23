@@ -57,7 +57,11 @@ D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+<<<<<<< Updated upstream
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\ProductsTestingView.xaml.g.cs
+=======
+D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ListingPage.xaml.g.cs
+>>>>>>> Stashed changes
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
@@ -69,3 +73,4 @@ D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\ProductListView.xaml.g.cs

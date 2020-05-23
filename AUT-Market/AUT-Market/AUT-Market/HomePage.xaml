@@ -36,8 +36,8 @@
     <!-- TODO: Need change logo and title -->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <ContentView BackgroundColor="#F26522" HeightRequest="245">
-                <Image Source="AUTiconOng.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ContentView BackgroundColor="#A44DC0" HeightRequest="245">
+                <Image Source="MenuLogo.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
             </ContentView>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -51,7 +51,7 @@
 
         <!-- This is tabbar in the bottom at home page-->
         <Tab Title="Books" Icon="BookStore.png">
-            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+            <ShellContent ContentTemplate="{DataTemplate view:ProductListView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
             <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->

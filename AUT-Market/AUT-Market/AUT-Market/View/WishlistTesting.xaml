@@ -7,7 +7,7 @@
              x:Class="AUT_Market.View.WishlistTesting">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to WishList Testing" FontSize="20"
+            <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

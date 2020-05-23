@@ -16,7 +16,7 @@
                 
                 <Image Source="AUTLongLogo.png"/>
                 
-                <Frame CornerRadius="40" BackgroundColor="Snow" Margin="20,-150,20,20" HasShadow="True">
+                <Frame CornerRadius="40" BackgroundColor="Snow" Margin="20,-120,20,20" HasShadow="True">
                     <StackLayout>
 
                         <!--This label will change name to better name later-->
@@ -77,6 +77,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
+
 
                             <Button Text="Cancel" x:Name="cancelBtn" Clicked="cancelBtn_Clicked" BackgroundColor="#DADADA" CornerRadius="20"/>
                             <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#F26522" TextColor="White" CornerRadius="20" />
