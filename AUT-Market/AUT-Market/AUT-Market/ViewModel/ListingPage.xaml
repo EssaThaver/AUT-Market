@@ -8,8 +8,10 @@
              x:Class="AUT_Market.ListingPage">
 
     <StackLayout>
+        <!-- Header for the top of the screen showing the name of the app -->
         <Label Text="AUT Market" TextDecorations="Underline" FontSize ="Large" TextColor="DarkBlue"
                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <!-- Picker which allows the user to choose a faculty for books listed on the screen -->
         <Picker x:Name="faculty_picker"
         Title="Select a faculty">
             <Picker.ItemsSource>
@@ -23,6 +25,7 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
+        <!-- Picker which allows the user to choose a price range for books listed on the screen -->
         <Picker x:Name="price_picker"
         Title="Select a Price">
             <Picker.ItemsSource>
@@ -35,6 +38,7 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
+        <!-- ListView of every book on the database. Connected to a "Books" list-->
         <ListView ItemsSource="{Binding Books}"
           HasUnevenRows="true"
           ItemSelected="OnListViewItemSelected"
@@ -58,6 +62,7 @@
                            Aspect="AspectFill"
                            HeightRequest="60"
                            WidthRequest="60" />
+                            <!-- Labels for the title, author, course code and price of each book -->
                             <Label Grid.Column="1"
                            Text="{Binding Title}"
                            FontAttributes="Bold" />
@@ -76,6 +81,7 @@
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
+                <!-- Footer to show the user that they have reached the end of the database -->
             </ListView.ItemTemplate>
             <ListView.Footer>
                 <StackLayout Orientation="Horizontal">

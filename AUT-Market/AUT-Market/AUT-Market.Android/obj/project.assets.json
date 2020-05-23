@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v9.0": {
+    "MonoAndroid,Version=v10.0": {
       "System.Data.SqlClient/4.8.1": {
         "type": "package",
         "compile": {
@@ -2082,7 +2082,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v9.0": [
+    "MonoAndroid,Version=v10.0": [
       "AUT-Market >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.4.0.991265"
@@ -2111,14 +2111,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid90"
+        "monoandroid10.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid90": {
+        "monoandroid10.0": {
           "projectReferences": {
             "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
               "projectPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
@@ -2128,7 +2128,7 @@
       }
     },
     "frameworks": {
-      "monoandroid90": {
+      "monoandroid10.0": {
         "dependencies": {
           "Xamarin.Essentials": {
             "target": "Package",

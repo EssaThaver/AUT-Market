@@ -13,9 +13,10 @@ namespace AUT_Market
         {
             InitializeComponent();
 
-            Books = new List<Book>();
-            Books = BooksDb.GetBooks();
-            BindingContext = this;
+            
+            Books = new List<Book>(); //Creates a new List of book objects
+            Books = BooksDb.GetBooks(); //Fills the Books list with the Book objects in the database
+            BindingContext = this;  //Binds the List
 
             /* {
                  new Book

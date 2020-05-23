@@ -1,5 +1,0 @@
-C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
-C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\ViewModel\ListingPage.xaml.g.cs
-C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
-C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs

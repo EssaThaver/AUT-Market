@@ -12,7 +12,7 @@ namespace AUT_Market
     static class UsersDb
     {
         /*
-         * User cant have any null variables
+         * User can't have any null variables
          */
         public static void AddUser(User newUser)
         {
