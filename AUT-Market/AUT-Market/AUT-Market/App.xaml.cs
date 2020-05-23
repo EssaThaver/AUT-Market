@@ -10,6 +10,8 @@ namespace AUT_Market
 {
     public partial class App : Application
     {
+        public static User CurrentUser;
+
         public App()
         {
             InitializeComponent();

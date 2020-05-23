@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using AUT_Market.Service;
 using AUT_Market.View;
-
+using System.Data.SqlClient;
 
 namespace AUT_Market.View
 {
@@ -92,7 +92,15 @@ namespace AUT_Market.View
                 await store.SaveAsync(account = e.Account, Constants.AppName);
                 await DisplayAlert("Name", user.Name, "OK");
                 await DisplayAlert("Email Address", user.Email, "OK");
-                
+
+
+                try
+                {
+                    UsersDb.AddUser(user);
+                }
+                catch (SqlException ex)
+                { }
+                App.CurrentUser = user;
             }
 
             Application.Current.MainPage = new HomePage();

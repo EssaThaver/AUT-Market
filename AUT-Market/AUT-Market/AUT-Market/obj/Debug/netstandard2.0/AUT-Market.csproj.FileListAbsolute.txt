@@ -133,3 +133,17 @@ D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.deps.json
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.dll
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ListingPage.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\ProductsTestingView.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\RemoveBook.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\TestLogin.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistDetail.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistTesting.xaml.g.cs
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
+C:\Users\Michael\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
