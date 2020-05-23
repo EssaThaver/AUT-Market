@@ -7,9 +7,11 @@
              mc:Ignorable="d"
              x:Class="AUT_Market.ListingPage">
     <StackLayout>
-
+        <Label Text="AUT Market" TextDecorations="Underline" FontSize ="Large" TextColor="DarkBlue"
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <!-- Header for the top of the screen showing the name of the app -->
         <Picker x:Name="faculty_picker"
-        Title="Select a faculty">
+            Title="Select a faculty">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>All faculties</x:String>
@@ -19,10 +21,11 @@
                     <x:String>Faculty of Health and Environmental Sciences</x:String>
                     <x:String>Te Ara Poutama</x:String>
                 </x:Array>
+                <!-- Picker which allows the user to choose a maximum price for books listed on the screen -->
             </Picker.ItemsSource>
         </Picker>
-        <Picker x:Name="price_picker"
-        Title="Select a Price">
+        <Picker x:Name="price_picker" 
+            Title="Select a Price">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>All prices</x:String>
@@ -31,18 +34,13 @@
                     <x:String>Under 75</x:String>
                     <x:String>Under 100</x:String>
                 </x:Array>
+                <!-- ListView of every book on the database. Connected to a "Books" list-->
             </Picker.ItemsSource>
         </Picker>
-        <ListView ItemsSource="{Binding Books}"
-          HasUnevenRows="true"
+        <ListView ItemsSource="{Binding Books}" 
+            HasUnevenRows="true"
           ItemSelected="OnListViewItemSelected"
           ItemTapped="OnListViewItemTapped">
-            <ListView.Header>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="AUT Market"
-               FontSize="Medium" />
-                </StackLayout>
-            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -55,36 +53,41 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
+                            <!-- Shows where the photo will go once the link with the database is fully operational -->
+                            <Label>Photo</Label>
                             <Image Grid.RowSpan="2"
-                           Source="{Binding Product_Image}"
+                           Source="{Binding Photo}"
                            Aspect="AspectFill"
                            HeightRequest="60"
                            WidthRequest="60" />
-                            <Label Grid.Column="1"
-                           Text="{Binding Title}"
+                            <!-- Label for the title, author, course code and price of each book -->
+                            <Label Grid.Column="1" 
+                                Text="{Binding Title}"
                            FontAttributes="Bold" />
                             <Label Grid.Row="1"
                             Grid.Column="1"
                            Text="{Binding Author}"
-                           FontAttributes="Italic" />
+                                    FontAttributes="Italic" />
                             <Label Grid.Row="2"
                            Grid.Column="1"
-                           Text="{Binding Course_Code}"
-                           VerticalOptions="End" />
+                           Text="{Binding CourseCode}" 
+                                        VerticalOptions="End" />
                             <Label Grid.Row="3"
                            Grid.Column="1"
-                           Text="{Binding Price}"
-                           VerticalOptions="End" />
+                           Text="{Binding Price}" 
+                                            VerticalOptions="End" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.Footer>
+                <!-- Footer to show the user that they have reached the end of the database -->
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="You have reached the end of the database!"
+                    <Label Text="You have reached the end of the list!"
                      FontSize="Medium" />
                 </StackLayout>
             </ListView.Footer>
         </ListView>
     </StackLayout>
+
 </ContentPage>
