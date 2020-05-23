@@ -54,16 +54,16 @@ namespace AUT_Market.ViewModel
             author = model.author;
             IslikeImg = model.IslikeImg;
         }
-        public Command UpdateZan{
-            get {
-                return new Command(async()=> {
-                    model.Islike = !model.Islike;
-                    int result = await BaseDatabase.Current.UpdateBook(model);
-                    if (result > 0)
-                        IslikeImg = model.IslikeImg;
-                });
-            }
-        }
+        //public Command UpdateZan{
+        //    get {
+        //        return new Command(async()=> {
+        //            model.Islike = !model.Islike;
+        //            int result = await BaseDatabase.Current.UpdateBook(model);
+        //            if (result > 0)
+        //                IslikeImg = model.IslikeImg;
+        //        });
+        //    }
+        //}
 
 
 

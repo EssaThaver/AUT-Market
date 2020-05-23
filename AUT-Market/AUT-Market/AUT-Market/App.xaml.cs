@@ -14,7 +14,7 @@ namespace AUT_Market
         {
             InitializeComponent();
 
-            BaseDatabase.Current.CreateTableAsync();
+            //BaseDatabase.Current.CreateTableAsync();
             Device.SetFlags(new[] {
                 "IndicatorView_Experimental"
             });

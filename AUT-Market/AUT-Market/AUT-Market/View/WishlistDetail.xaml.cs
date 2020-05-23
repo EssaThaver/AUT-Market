@@ -24,7 +24,7 @@ namespace AUT_Market.View
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e){
-            vm?.UpdateZan.Execute(null);
+            //vm?.UpdateZan.Execute(null);
         }
     }
 }

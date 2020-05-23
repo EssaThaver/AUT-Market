@@ -106,8 +106,8 @@ namespace AUT_Market.View
             };
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
-            var result= await BaseDatabase.Current.UpdateBook(model);
-            await DisplayAlert("Complate", "Your Book will post on the list soon"+ result, "OK");
+            //var result= await BaseDatabase.Current.UpdateBook(model);
+           // await DisplayAlert("Complate", "Your Book will post on the list soon"+ result, "OK");
         }
         List<string> imagePaths = new List<string>();
         private async void BtnAddImageAsync(object sender,EventArgs e){
