@@ -31,7 +31,7 @@ namespace AUT_Market
             {
                 con.Open();
                 SqlCommand insertCommand = new SqlCommand("DECLARE @MyTableVar table (ListingNumber uniqueidentifier)" +
-                    "INSERT INTO Books (Title, Author, Edition, CourseCode, Faculty, Price, Condition, Description, ID, Campus, Posted) " +
+                    "INSERT INTO Books (Title, Author, Edition, CourseCode, Faculty, Price, Condition, Description, EmailAddress, Campus, Posted) " +
                     "OUTPUT INSERTED.ListingNumber into @MyTableVar " +
                     "VALUES (@Title, @Author, @Edition, @CourseCode, @Faculty, @Price, @Condition, @Description, @Email, @Campus, @Posted);" +
                     "SELECT ListingNumber FROM @MyTableVar", con);
