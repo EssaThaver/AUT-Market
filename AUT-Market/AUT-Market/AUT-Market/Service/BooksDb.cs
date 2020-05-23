@@ -7,6 +7,7 @@ using System.Text;
 using System.Drawing;
 using System.IO;
 using AUT_Market.Service;
+using System.Collections.ObjectModel;
 
 namespace AUT_Market
 {
@@ -101,6 +102,43 @@ namespace AUT_Market
             }
             return allBooks;
         }
+
+        public static ObservableCollection<Book> GetBookss()
+        {
+            ObservableCollection<Book> allBooks = new ObservableCollection<Book>();
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM Books", con);
+                using (SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Book book = new Book();
+
+                        book.Title = reader["Title"].ToString();
+                        book.Author = reader["Author"].ToString();
+                        book.Edition = reader["Edition"].ToString();
+                        book.CourseCode = reader["CourseCode"].ToString();
+                        book.Faculty = reader["Faculty"].ToString();
+                        book.Condition = reader["Condition"].ToString();
+                        book.Description = reader["Description"].ToString();
+                        book.Price = (int)reader["Price"];
+                        book.Campus = reader["Campus"].ToString();
+                        book.Posted = (DateTime)reader["Posted"];
+                        book.ListingNumber = (Guid)reader["ListingNumber"];
+
+                        //MemoryStream ms = new MemoryStream(reader.GetSqlBytes(11).Buffer);
+                        //book.Photo = Image.FromStream(ms);
+
+                        allBooks.Add(book);
+                    }
+                }
+                con.Close();
+            }
+            return allBooks;
+        }
+
 
         public static List<Book> GetBookByUser(User user)
         {

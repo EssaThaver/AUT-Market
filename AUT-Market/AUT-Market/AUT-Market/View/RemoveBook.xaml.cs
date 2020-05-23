@@ -29,7 +29,9 @@ namespace AUT_Market.View
         {
             var removeBtn = sender as ImageButton;
 
-            var book = removeBtn?.BindingContext as TestBooks;
+            var book = removeBtn?.BindingContext as Book;
+
+            BooksDb.RemoveBook(book);
 
             vm?.RemoveBook.Execute(book);
 

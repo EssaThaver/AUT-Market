@@ -25,6 +25,12 @@ namespace AUT_Market.View
             conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
         }
 
+        protected async void cancelBtn_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new HomePage();
+            await Shell.Current.GoToAsync("//main");
+        }
+
         private void doneBtn_Clicked(object sender, EventArgs e)
         {
             int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text,courseCodeInput.Text, priceInput.Text, descInput.Text);
@@ -106,9 +112,58 @@ namespace AUT_Market.View
             };
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
-            //var result= await BaseDatabase.Current.UpdateBook(model);
-           // await DisplayAlert("Complate", "Your Book will post on the list soon"+ result, "OK");
+
+            //---------------------------------------------------------------------------//
+
+            //TODO: need fix this get proper user
+            User newUser = new User();
+
+            newUser.Id = "999999";
+            newUser.Name = "AUTmarket";
+            newUser.Email = "Please delete it";
+
+            UsersDb.AddUser(newUser);
+
+            //---------------------------------------------------------------------------//
+
+            Book book = new Book();
+
+            book.Title = titleInput.Text.Trim();
+            titleInput.Text = null;
+
+            book.Author = authorInput.Text.Trim();
+            authorInput.Text = null;
+
+            book.Edition = editionInput.Text.Trim();
+            editionInput.Text = null;
+
+            book.CourseCode = courseCodeInput.Text.Trim();
+            courseCodeInput.Text = null;
+
+            book.Faculty = facultySelection.SelectedItem.ToString();
+            facultySelection.SelectedIndex = 0;
+
+            book.Condition = conditionSelection.SelectedItem.ToString();
+            conditionSelection.SelectedIndex = 0;
+
+            book.Description = descInput.Text.Trim();
+            descInput.Text = null;
+
+            book.Price = float.Parse(priceInput.Text.Trim());
+            priceInput.Text = null;
+
+            book.Campus = "City";
+
+            BooksDb.AddBook(book, newUser);
+            
+            await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
+
+            Application.Current.MainPage = new HomePage();
+            await Shell.Current.GoToAsync("//main");
+
         }
+
+      
         List<string> imagePaths = new List<string>();
         private async void BtnAddImageAsync(object sender,EventArgs e){
             var path = await getphoto();
@@ -134,7 +189,11 @@ namespace AUT_Market.View
             };
             absoluteLayout.Children.Add(image2);
             flexlay.Children.Add(absoluteLayout);
+
         }
+
+       
+
         async Task<string> getphoto() {
 
             await CrossMedia.Current.Initialize();

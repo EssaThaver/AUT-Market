@@ -4,12 +4,13 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:view ="clr-namespace:AUT_Market.View"
+            xmlns:home ="clr-namespace:AUT_Market"
             Shell.ItemTemplate="{StaticResource MenuTemplate}"
             Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
-            BackgroundColor="#F26522"
+            BackgroundColor="#A44DC0"
             Shell.TabBarBackgroundColor="#DADADA"
-            Shell.TabBarForegroundColor="#F26522"
-            Shell.TabBarTitleColor="#F26522"
+            Shell.TabBarForegroundColor="#A44DC0"
+            Shell.TabBarTitleColor="#A44DC0"
             Shell.TabBarUnselectedColor="Black"
             mc:Ignorable="d"
             x:Class="AUT_Market.HomePage">
@@ -26,8 +27,8 @@
     </Shell.Resources>
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <ContentView BackgroundColor="#F26522" HeightRequest="245">
-                <Image Source="AUTiconOng.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ContentView BackgroundColor="#A44DC0" HeightRequest="245">
+                <Image Source="MenuLogo.png" WidthRequest="800" HeightRequest="800" HorizontalOptions="Center" VerticalOptions="Center"/>
             </ContentView>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -41,7 +42,7 @@
 
         <!-- This is tabbar in the bottom at home page-->
         <Tab Title="Books" Icon="BookStore.png">
-            <ShellContent ContentTemplate="{DataTemplate view:ProductsTestingView}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+            <ShellContent ContentTemplate="{DataTemplate home:ListingPage}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
             <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->

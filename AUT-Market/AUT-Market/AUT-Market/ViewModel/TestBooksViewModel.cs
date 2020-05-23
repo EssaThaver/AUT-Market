@@ -10,22 +10,22 @@ namespace AUT_Market.ViewModel
 {
     class TestBooksViewModel
     {
-        public ObservableCollection<TestBooks> getBooks { get; set; }
+        public ObservableCollection<Book> getBooks { get; set; }
 
-        public Command<TestBooks> RemoveBook
+        public Command<Book> RemoveBook
         {
             get
             {
-                return new Command<TestBooks>((book) =>
+                return new Command<Book>((book) =>
                 {
-                    getBooks.Remove(book);    
+                    getBooks.Remove(book);
                 });
             }
         }
 
         public TestBooksViewModel()
         {
-            getBooks = new BooksTempDB().GetBooks();
+            getBooks = BooksDb.GetBookss(); ;
         }
     }
 }
