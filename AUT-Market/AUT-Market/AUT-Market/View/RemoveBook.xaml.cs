@@ -21,6 +21,7 @@ namespace AUT_Market.View
 
             vm = new TestBooksViewModel();
 
+            vm.getUserBook();
 
             BindingContext = vm;
 
