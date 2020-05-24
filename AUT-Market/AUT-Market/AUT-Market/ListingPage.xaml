@@ -7,9 +7,10 @@
              mc:Ignorable="d"
              x:Class="AUT_Market.ListingPage">
     <StackLayout>
-        <Label Text="AUT Market" TextDecorations="Underline" FontSize ="Large" TextColor="DarkBlue"
+        
+        <!--<Label Text="AUT Market" TextDecorations="Underline" FontSize ="Large" TextColor="DarkBlue"
                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        <!-- Header for the top of the screen showing the name of the app -->
+        --><!-- Header for the top of the screen showing the name of the app --><!--
         <Picker x:Name="faculty_picker"
             Title="Select a faculty">
             <Picker.ItemsSource>
@@ -21,7 +22,7 @@
                     <x:String>Faculty of Health and Environmental Sciences</x:String>
                     <x:String>Te Ara Poutama</x:String>
                 </x:Array>
-                <!-- Picker which allows the user to choose a maximum price for books listed on the screen -->
+                --><!-- Picker which allows the user to choose a maximum price for books listed on the screen --><!--
             </Picker.ItemsSource>
         </Picker>
         <Picker x:Name="price_picker" 
@@ -34,10 +35,37 @@
                     <x:String>Under 75</x:String>
                     <x:String>Under 100</x:String>
                 </x:Array>
-                <!-- ListView of every book on the database. Connected to a "Books" list-->
+                --><!-- ListView of every book on the database. Connected to a "Books" list--><!--
             </Picker.ItemsSource>
-        </Picker>
-        <ListView ItemsSource="{Binding Books}" 
+        </Picker>-->
+
+        <CollectionView ItemsSource="{Binding getBooks}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10,20,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="3" Source="{Binding Photo}" Aspect="AspectFill" HeightRequest="60" WidthRequest="50"/>
+                        <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty}"/>
+                        <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode}"/>
+                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="3" Grid.ColumnSpan ="3"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+        <!--<ListView ItemsSource="{Binding Books}" 
             HasUnevenRows="true"
           ItemSelected="OnListViewItemSelected"
           ItemTapped="OnListViewItemTapped">
@@ -53,14 +81,14 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <!-- Shows where the photo will go once the link with the database is fully operational -->
+                            --><!-- Shows where the photo will go once the link with the database is fully operational --><!--
                             <Label>Photo</Label>
                             <Image Grid.RowSpan="2"
                            Source="{Binding Photo}"
                            Aspect="AspectFill"
                            HeightRequest="60"
                            WidthRequest="60" />
-                            <!-- Label for the title, author, course code and price of each book -->
+                            --><!-- Label for the title, author, course code and price of each book --><!--
                             <Label Grid.Column="1" 
                                 Text="{Binding Title}"
                            FontAttributes="Bold" />
@@ -81,13 +109,13 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.Footer>
-                <!-- Footer to show the user that they have reached the end of the database -->
+                --><!-- Footer to show the user that they have reached the end of the database --><!--
                 <StackLayout Orientation="Horizontal">
                     <Label Text="You have reached the end of the list!"
                      FontSize="Medium" />
                 </StackLayout>
             </ListView.Footer>
-        </ListView>
+        </ListView>-->
     </StackLayout>
 
 </ContentPage>

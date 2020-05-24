@@ -9,15 +9,21 @@ namespace AUT_Market
 
     public partial class ListingPage : ContentPage
     {
-         IList<Book> Books { get; set; }
-
+        // List<Book> Books { get; set; }
+        TestBooksViewModel vm;
+        
         public ListingPage()
         {
             InitializeComponent();
 
-            Books = new List<Book>(); //Creates a new List of book objects called Books 
-            Books = BooksDb.GetBooks(); //Populates the Books List with data from the database
-            BindingContext = this; //Binds the Books List
+            InitializeComponent();
+
+            vm = new TestBooksViewModel();
+            BindingContext = vm;
+
+            ////Books = new List<Book>(); //Creates a new List of book objects called Books 
+            ////Books = BooksDb.GetBooks(); //Populates the Books List with data from the database
+            ////BindingContext = Books; //Binds the Books List
 
             /* { Test data used to show if the listing page would operate correctly. No longer needed.
                  new Book
