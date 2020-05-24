@@ -90,8 +90,8 @@ namespace AUT_Market.View
                 }
 
                 await store.SaveAsync(account = e.Account, Constants.AppName);
-                await DisplayAlert("Name", user.Name, "OK");
-                await DisplayAlert("Email Address", user.Email, "OK");
+                await DisplayAlert("Name", User.Name, "OK");
+                await DisplayAlert("Email Address", User.Email, "OK");
 
 
                 try

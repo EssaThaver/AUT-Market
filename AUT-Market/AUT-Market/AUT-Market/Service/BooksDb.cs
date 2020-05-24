@@ -25,7 +25,7 @@ namespace AUT_Market
          * example
          * newbook.ListingNumber = BooksDb.AddBook(newBook);
          */
-        public static Guid AddBook(Book newBook, User user)
+        public static Guid AddBook(Book newBook /*, User user*/)
         {
             Guid ListingNumber;
             using(SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -44,7 +44,7 @@ namespace AUT_Market
                 insertCommand.Parameters.Add("@Price", SqlDbType.Int).Value = newBook.Price;
                 insertCommand.Parameters.Add("@Condition", SqlDbType.NVarChar).Value = newBook.Condition;
                 insertCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = newBook.Description;
-                insertCommand.Parameters.Add("@Email",SqlDbType.NVarChar).Value = user.Email;
+                insertCommand.Parameters.Add("@Email",SqlDbType.NVarChar).Value = User.Email;
                 insertCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = newBook.Campus;
                 insertCommand.Parameters.Add("@Posted",SqlDbType.DateTime).Value = DateTime.Now;
 
@@ -140,17 +140,43 @@ namespace AUT_Market
         }
 
 
-        public static List<Book> GetBookByUser(User user)
+        public static ObservableCollection<Book> GetBookByUser(User user)
         {
-            List<Book> usersBooks = new List<Book>();
+            ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("Select * FROM Books WHERE ID = ", con);
-            }
+                SqlCommand getCommand = new SqlCommand("Select * FROM Books WHERE EmailAddress = @EmailAddress", con);
+                getCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = User.Email;
+                using (SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Book book = new Book();
 
-            return usersBooks;
+                        book.Title = reader["Title"].ToString();
+                        book.Author = reader["Author"].ToString();
+                        book.Edition = reader["Edition"].ToString();
+                        book.CourseCode = reader["CourseCode"].ToString();
+                        book.Faculty = reader["Faculty"].ToString();
+                        book.Condition = reader["Condition"].ToString();
+                        book.Description = reader["Description"].ToString();
+                        book.Price = (int)reader["Price"];
+                        book.Campus = reader["Campus"].ToString();
+                        book.Posted = (DateTime)reader["Posted"];
+                        book.ListingNumber = (Guid)reader["ListingNumber"];
+
+                        //MemoryStream ms = new MemoryStream(reader.GetSqlBytes(11).Buffer);
+                        //book.Photo = Image.FromStream(ms);
+
+                        usersBooks.Add(book);
+                    }
+                }
+
+                return usersBooks;
+            }
         }
+
         /*
          * Book must have already been added to the database and have a ListingNumber
          */

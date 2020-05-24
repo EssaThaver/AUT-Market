@@ -115,17 +115,7 @@ namespace AUT_Market.View
 
             //---------------------------------------------------------------------------//
 
-            //TODO: need fix this get proper user
-            User newUser = new User();
-
-            newUser.Id = "999999";
-            newUser.Name = "AUTmarket";
-            newUser.Email = "Please delete it";
-
-            UsersDb.AddUser(newUser);
-
-            //---------------------------------------------------------------------------//
-
+           
             Book book = new Book();
 
             book.Title = titleInput.Text.Trim();
@@ -154,7 +144,9 @@ namespace AUT_Market.View
 
             book.Campus = "City";
 
-            BooksDb.AddBook(book, newUser);
+            UsersDb.AddUser(new User());
+
+            BooksDb.AddBook(book);
             
             await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 

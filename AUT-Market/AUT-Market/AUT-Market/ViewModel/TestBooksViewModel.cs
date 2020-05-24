@@ -46,8 +46,12 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        
-
+        public void getUserBook ()
+        {
+            getBooks = BooksDb.GetBookByUser(new User());
+        }
 
     }
+
+
 }

@@ -24,8 +24,8 @@ namespace AUT_Market
                     con.Open();
                     SqlCommand insertCommand = new SqlCommand("INSERT INTO Users (Name, EmailAddress) " +
                         "VALUES (@Name, @EmailAddress)", con);
-                    insertCommand.Parameters.Add("@Name", SqlDbType.NVarChar).Value = newUser.Name;
-                    insertCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = newUser.Email;
+                    insertCommand.Parameters.Add("@Name", SqlDbType.NVarChar).Value = User.Name;
+                    insertCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = User.Email;
                     insertCommand.ExecuteNonQuery();
                     con.Close();
                 }
@@ -47,8 +47,8 @@ namespace AUT_Market
                 using (SqlDataReader reader = getCommand.ExecuteReader())
                 {
                     reader.Read();
-                    user.Name = reader[1].ToString();
-                    user.Email = reader[2].ToString();
+                    User.Name = reader[1].ToString();
+                    User.Email = reader[2].ToString();
                 }
                 con.Close();
             }

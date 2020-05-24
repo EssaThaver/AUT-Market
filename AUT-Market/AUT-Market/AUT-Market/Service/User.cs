@@ -9,34 +9,34 @@ namespace AUT_Market.Service
     public class User
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public static string Id { get; set; }
 
         [JsonProperty("email")]
-        public string Email { get; set; }
+        public static string Email { get; set; }
 
         [JsonProperty("verified_email")]
-        public string VerifiedEmail { get; set; }
+        public static string VerifiedEmail { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public static string Name { get; set; }
 
         [JsonProperty("first_name")]
-        public string GivenName { get; set; }
+        public static string GivenName { get; set; }
 
         [JsonProperty("last_name")]
-        public string FamilyName { get; set; }
+        public static string FamilyName { get; set; }
 
         [JsonProperty("link")]
-        public string Link { get; set; }
+        public static string Link { get; set; }
 
         [JsonProperty("picture")]
-        public string Picture { get; set; }
+        public static string Picture { get; set; }
 
         [JsonProperty("gender")]
-        public string Gender { get; set; }
+        public static string Gender { get; set; }
 
         [JsonProperty("profile")]
-        public string Profile { get; set; }
+        public static string Profile { get; set; }
 
     }
 }

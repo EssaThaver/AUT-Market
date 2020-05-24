@@ -20,6 +20,8 @@ namespace AUT_Market.View
             InitializeComponent();
 
             vm = new TestBooksViewModel();
+
+
             BindingContext = vm;
 
 
