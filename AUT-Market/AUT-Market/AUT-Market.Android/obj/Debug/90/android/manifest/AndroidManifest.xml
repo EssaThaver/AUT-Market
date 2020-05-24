@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.aut_market">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.aut_market" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="AUT_Market.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="AUT_Market" android:theme="@style/MainTheme" android:name="crc646df7c1235ac730fb.MainActivity">
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="AUT Market" android:icon="@drawable/auticonong" android:largeHeap="true" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.aut_market.fileprovider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+    </provider>
+    <activity android:label="CustomUrlSchemeInterceptorActivity" android:launchMode="singleTop" android:noHistory="true" android:name="crc646df7c1235ac730fb.CustomUrlSchemeInterceptorActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="com.googleusercontent.apps.1089706656019-q0dgfmlvl5trfdto620ttai38thjljr4" />
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/auticonong" android:label="AUT_Market" android:theme="@style/MainTheme" android:name="crc646df7c1235ac730fb.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="crc646df7c1235ac730fb.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:configChanges="orientation|screenSize" android:name="crc646957603ea1820544.MediaPickerActivity" />
     <service android:name="crc64a98abb514ffad9f1.KeepAliveService" />
+    <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.WebAuthenticatorActivity" />
+    <activity android:label="@string/title_activity_webview" android:theme="@android:style/Theme.DeviceDefault" android:name="crc64f98dd38067c0c88b.WebViewActivity" />
+    <activity android:label="Web Authenticator Native Browser" android:launchMode="singleTop" android:name="crc64f98dd38067c0c88b.WebAuthenticatorNativeBrowserActivity" />
+    <receiver android:name="crc64f98dd38067c0c88b.CustomTabsActionsBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.ConnectivityBroadcastReceiver" />

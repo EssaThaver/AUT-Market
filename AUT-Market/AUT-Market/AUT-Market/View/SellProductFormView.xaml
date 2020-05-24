@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AUT_Market.View.SellProductFormView">
+    <ContentPage.Content>
+
+        <!--This is sell product form and user able to sell their textbook.-->
+
+        <!--===============================================================================================================================================-->
+
+        <ScrollView>            
+            <StackLayout>
+                
+                <Image Source="AUTLongLogo.png"/>
+                
+                <Frame CornerRadius="40" BackgroundColor="Snow" Margin="20,-150,20,20" HasShadow="True">
+                    <StackLayout>
+
+                        <!--This label will change name to better name later-->
+                        <Label Text="Product Detail" FontSize="40" HorizontalOptions="Center"/>
+
+                        <!--===============================================================================================================================================-->
+
+                        <Entry x:Name="titleInput" Placeholder="Title" Text="Title" FontSize="20"/>
+
+                        <Entry x:Name="authorInput" Placeholder="Author" Text="Author"/>
+
+                        <Entry x:Name="editionInput" Placeholder="Edition" Text="100" Keyboard="Numeric"/>
+
+                        <!--===============================================================================================================================================-->
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="120"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Publication Date" FontSize="18" Margin="5,10,0,0"/>
+                            <DatePicker x:Name="publicationDateInput" Grid.Column="1"/>
+
+                        </Grid>
+                        
+                        <!--===============================================================================================================================================-->
+
+                        <Picker x:Name="facultySelection" Title="Faculty"/>
+
+                        <Entry x:Name="courseCodeInput" Placeholder="Course Code" Text="Course Code" FontSize="18"/>
+
+                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" Text="200"/>
+
+                        <Picker x:Name="conditionSelection" Title="Condition"/>
+
+                        <!--===============================================================================================================================================-->
+
+                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,20,0,10"/>
+
+                        <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
+                        <Editor x:Name="descInput" AutoSize="TextChanges" MaxLength="500" Text="descInput"/>
+                        <Button Text="Add Image" CornerRadius="20" Margin="0,20,0,0" Clicked="BtnAddImageAsync"/>
+                        <FlexLayout x:Name="flexlay" Direction="Row" Wrap="Wrap">
+                            
+                        </FlexLayout>
+                        <!--<Image x:Name="testimg" WidthRequest="100" MinimumHeightRequest="100"/>-->
+                        <Grid Margin="0,40,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Button Text="Cancel" BackgroundColor="#DADADA" CornerRadius="20"/>
+                            <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#A44DC0" TextColor="White" CornerRadius="20" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

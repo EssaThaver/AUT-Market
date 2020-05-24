@@ -1,0 +1,32 @@
+[13:15:06.579 Info] - BuildManager - Build performance issue: compiler called to produce 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\AUT-Market.dll' again after build already succeeded.
+[13:15:07.336 Verbose] - BuildManager - C:\Users\Georgia Thomson\.nuget\packages\xamarin.forms\4.4.0.991265\build\Xamarin.Forms.targets(110,3): error MSB4018: The "XamlCTask" task failed unexpectedly.
+System.IO.FileNotFoundException: No symbol found for file: C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\i\AUT-Market\Debug\netstandard2.0\AUT-Market.dll
+   at Mono.Cecil.Cil.DefaultSymbolReaderProvider.GetSymbolReader(ModuleDefinition module, String fileName)
+   at Mono.Cecil.ModuleReader.ReadSymbols(ModuleDefinition module, ReaderParameters parameters)
+   at Mono.Cecil.ModuleReader.CreateModule(Image image, ReaderParameters parameters)
+   at Mono.Cecil.ModuleDefinition.ReadModule(String fileName, ReaderParameters parameters)
+   at Mono.Cecil.AssemblyDefinition.ReadAssembly(String fileName, ReaderParameters parameters)
+   at Xamarin.Forms.Build.Tasks.XamlCTask.Execute(IList`1& thrownExceptions)
+   at Xamarin.Forms.Build.Tasks.XamlTask.Execute()
+   at Microsoft.Build.Framework.ITask.Execute()
+   at Microsoft.Build.BackEnd.TaskExecutionHost.Microsoft.Build.BackEnd.ITaskExecutionHost.Execute()
+   at Microsoft.Build.BackEnd.TaskBuilder.<ExecuteInstantiatedTask>d__26.MoveNext()
+[13:15:07.515 Verbose] - BuildManager - Some of the file paths defined in the csproj under the Live Unit Testing build path are missing. Verify whether these files should be present under the Live Unit Testing build path and if necessary update the csproj definition to look these files up in a different place.
+[13:15:07.530 Verbose] - BuildManager - Item _OutputPathItem 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\' evaluated via:
+_OutputPathItem: '$(OutDir)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:272
+  OutDir: 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:0
+[13:15:07.532 Verbose] - BuildManager - Item AppConfigFileDestination 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\AUT-Market.Android.dll.config' evaluated via:
+AppConfigFileDestination: '$(OutDir)$(TargetFileName).config' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:303
+  OutDir: 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:0
+  TargetFileName: '$(TargetName)$(TargetExt)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:212
+    TargetName: '$(AssemblyName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:204
+      AssemblyName: 'AUT-Market.Android' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:11
+    TargetExt: '.dll' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:183
+[13:15:07.533 Verbose] - BuildManager - Item _DebugSymbolsOutputPath 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\AUT-Market.Android.pdb' evaluated via:
+_DebugSymbolsOutputPath: '@(_DebugSymbolsIntermediatePath->'$(OutDir)%(Filename)%(Extension)')' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:372
+  OutDir: 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:0
+[13:15:07.534 Verbose] - BuildManager - Item _ApplicationManifestFinal 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\Native.AUT-Market.Android.manifest' evaluated via:
+_ApplicationManifestFinal: '$(OutDir)$(_DeploymentTargetApplicationManifestFileName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:410
+  OutDir: 'C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\.vs\AUT-Market\v16\lut\0\b\AUT-Market.Android\bin\Debug\' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:0
+  _DeploymentTargetApplicationManifestFileName: 'Native.$(AssemblyName).manifest' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:228
+    AssemblyName: 'AUT-Market.Android' @ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\AUT-Market.Android.csproj:11
