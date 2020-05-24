@@ -35,7 +35,6 @@ namespace AUT_Market.View
 
             vm?.RemoveBook.Execute(book);
 
-            /// Will delete databse soon (this varablie pass the data (book)
         }
     }
 }

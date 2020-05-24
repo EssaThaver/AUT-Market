@@ -32,7 +32,7 @@
                                             <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold"/>
                                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty}"/>
                                             <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode}"/>
-                                            <ImageButton x:Name="Remove" Source="Delete.png" Clicked="Remove_Clicked" Grid.Column="2" Grid.Row="1"  HeightRequest="20" WidthRequest="20" HorizontalOptions="End" Margin="0,0,10,0 "/>
+                                            <ImageButton x:Name="Remove" Source="Delete.png" Clicked="Remove_Clicked" Grid.Column="2" Grid.Row="1"  HeightRequest="20" WidthRequest="20" HorizontalOptions="End" Margin="0,0,10,0 " BackgroundColor="Transparent"/>
                                             <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="3" Grid.ColumnSpan ="3"/>
                                         </Grid>
                                     </DataTemplate>

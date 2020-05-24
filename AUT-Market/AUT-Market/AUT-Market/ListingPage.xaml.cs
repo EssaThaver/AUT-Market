@@ -1,7 +1,10 @@
-﻿using AUT_Market.ViewModel;
+﻿using AUT_Market.Service;
+using AUT_Market.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AUT_Market
@@ -11,13 +14,12 @@ namespace AUT_Market
     {
         // List<Book> Books { get; set; }
         TestBooksViewModel vm;
-        
+
         public ListingPage()
         {
             InitializeComponent();
 
-            InitializeComponent();
-
+            conditionSelection.ItemsSource = new Conditions().getOptionCondition();
             vm = new TestBooksViewModel();
             BindingContext = vm;
 
@@ -111,7 +113,33 @@ namespace AUT_Market
             Book tappedItem = e.Item as Book;
         }
 
+        private void bookRefresh_Refreshing(object sender, System.EventArgs e)
+        {
+            vm = new TestBooksViewModel();
+            BindingContext = vm;
+            bookRefresh.IsRefreshing = false;
+        }
 
+        private void conditionSelection_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if(conditionSelection.SelectedIndex != 0)
+            {
+                vm = new TestBooksViewModel(); 
+                
+                string userSelect = conditionSelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfCondition(userSelect);
+
+                BindingContext = vm;
+
+            }
+            else
+            {
+                vm = new TestBooksViewModel();
+                BindingContext = vm;
+            }
+            
+        }
     }
 }
 
