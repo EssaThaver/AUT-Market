@@ -27,9 +27,17 @@ namespace AUT_Market.Droid
         {
             base.OnCreate(savedInstanceState);
 
+            global::Android.Net.Uri uri_android = Intent.Data;
+
             var uri = new Uri(Intent.Data.ToString());
 
+            Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+
             AuthenticationState.Authenticator.OnPageLoaded(uri);
+
+            var intent = new Intent(this, typeof(MainActivity));
+            intent.SetFlags(ActivityFlags.ClearTop | ActivityFlags.SingleTop);
+            StartActivity(intent);
 
             Finish();
         }
