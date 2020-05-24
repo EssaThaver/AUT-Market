@@ -10,3 +10,6 @@ https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Monke
 
 Microsoft Docs (2019) ListView appearance [Tutorial].
 https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance#headers-and-footers
+
+“Xamarin Picker (SfPicker) Overview.” Syncfusion, Syncfusion, 
+help.syncfusion.com/xamarin/picker/overview.
