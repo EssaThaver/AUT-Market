@@ -11,6 +11,8 @@
         <!-- Header for the top of the screen showing the name of the app -->
         <Label Text="AUT Market" TextDecorations="Underline" FontSize ="Large" TextColor="DarkBlue"
                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <!-- Search bar for user to enter the information of books they want to buy -->
+        <SearchBar Placeholder="Search for a book..." />
         <!-- Picker which allows the user to choose a faculty for books listed on the screen -->
         <Picker x:Name="faculty_picker"
         Title="Select a faculty">
@@ -56,7 +58,7 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                          <!--  <Label>Photo</Label> -->
+                            <Label>Photo</Label>
                             <Image Grid.RowSpan="2"
                            Source="{Binding Photo}"
                            Aspect="AspectFill"

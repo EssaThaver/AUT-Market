@@ -46,14 +46,14 @@ namespace AUT_Market
                 insertCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = newBook.Campus;
                 insertCommand.Parameters.Add("@Posted", SqlDbType.DateTime).Value = DateTime.Now;
 
-                //byte[] image;
-                //using (var ms = new MemoryStream())
-                //{
-                //    newBook.Photo.Save(ms, newBook.Photo.RawFormat);
-                //    image = ms.ToArray();
-                //}
+                byte[] image;
+                using (var ms = new MemoryStream())
+                {
+                    newBook.Photo.Save(ms, newBook.Photo.RawFormat);
+                    image = ms.ToArray();
+                }
 
-                //insertCommand.Parameters.Add("@Photo", SqlDbType.Image).Value = image;
+                insertCommand.Parameters.Add("@Photo", SqlDbType.Image).Value = image;
 
                 using (SqlDataReader reader = insertCommand.ExecuteReader())
                 {

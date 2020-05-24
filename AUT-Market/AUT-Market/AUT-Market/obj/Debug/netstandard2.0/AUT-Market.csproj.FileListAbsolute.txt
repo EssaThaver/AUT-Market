@@ -25,3 +25,4 @@ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-M
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ViewModel\ListingPage.xaml.g.cs
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
