@@ -20,19 +20,19 @@ namespace AUT_Market.View
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //vm.getChildData();
+            vm.getChildData();
         }
 
         private void BtnZanClicked(object sender, EventArgs e)
         {
             var removeBtn = sender as ImageButton;
-            var book = removeBtn?.BindingContext as TestBooks;
-            //vm?.UpdateBooksZan.Execute(book);
+            var book = removeBtn?.BindingContext as Book;
+            vm?.UpdateBooksZan.Execute(book);
         }
         private async void BtnDeleteClicked(object sender, EventArgs e)
         {
             var removeBtn = sender as ImageButton;
-            var book = removeBtn?.BindingContext as TestBooks;
+            var book = removeBtn?.BindingContext as Book;
             //vm?.RemoveBook.Execute(book);
             await Navigation.PushAsync(new WishlistDetail(book));
         }

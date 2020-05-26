@@ -33,8 +33,8 @@ namespace AUT_Market.ViewModel
 
         #endregion
         public ObservableCollection<string> BookImages { get; set; }
-        TestBooks model;
-        public WishlistDetailViewModel(TestBooks model) {
+        Book model;
+        public WishlistDetailViewModel(Book model) {
             this.model = model;
             BookImages = new ObservableCollection<string>();
            
@@ -44,28 +44,30 @@ namespace AUT_Market.ViewModel
             foreach (var item in list){
                 BookImages.Add(item);
             }
-            BookTitle = model.title;
-            BookDesc = model.BookDesc;
-            bookCondition = model.bookCondition;
-            price = model.price.ToString();
-            courseCode = model.courseCode;
-            faculty = model.faculty;
-            publicationDateStr = model.publicationDateStr;
-            author = model.author;
+            BookTitle = model.Title;
+            BookDesc = model.Description;
+            bookCondition = model.Condition;
+            price = model.Price.ToString();
+            courseCode = model.CourseCode;
+            faculty = model.Faculty;
+            publicationDateStr = model.Posted.ToString("yyyy-MM-dd HH:mm:ss");
+            author = model.Author;
             IslikeImg = model.IslikeImg;
         }
-        //public Command UpdateZan{
-        //    get {
-        //        return new Command(async()=> {
-        //            model.Islike = !model.Islike;
-        //            int result = await BaseDatabase.Current.UpdateBook(model);
-        //            if (result > 0)
-        //                IslikeImg = model.IslikeImg;
-        //        });
-        //    }
-        //}
+        public Command UpdateZan
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    model.Islike = model.Islike==0 ? 1 : 0;
+                    int result = BooksDb.UpdateBook(model);
+                    IslikeImg = model.IslikeImg;
+                });
+            }
+        }
 
-
+            
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChaned([CallerMemberName] string  name="") {

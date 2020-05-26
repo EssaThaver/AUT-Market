@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace AUT_Market
 {
-    class Book
+    public class Book: INotifyPropertyChanged
     {
         public string Title { get; set; }
         public string Author { get; set; }
@@ -16,8 +17,23 @@ namespace AUT_Market
         public float Price { get; set; }
         public string Campus { get; set; }
         public DateTime Posted { get; set; }
-        public System.Drawing.Image Photo { get; set; }
+        public string Photo { get; set; }
         public Guid ListingNumber { get; set; }
+        private int _Islike;
+        public int Islike {
+            get => _Islike;
+            set {
+                _Islike = value;
+                OnPropertyChaned("IslikeImg");
+            }
+        }
+        [JsonIgnore]
+        public string IslikeImg
+        {
+            get => Islike==1 ? "zan_on" : "zan_off";
+        }
+        public string BooksImgs { get; set; } = "[]";
+
         public Book()
         {
             Posted = DateTime.Now;
@@ -35,6 +51,12 @@ namespace AUT_Market
             this.Price = Price;
             this.Campus = Campus;
             this.Posted = Posted;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChaned([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

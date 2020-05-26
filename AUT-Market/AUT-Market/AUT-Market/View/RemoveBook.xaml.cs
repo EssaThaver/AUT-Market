@@ -19,7 +19,7 @@ namespace AUT_Market.View
         {
             InitializeComponent();
 
-            vm = new TestBooksViewModel();
+            vm = new TestBooksViewModel(Navigation);
 
             vm.getUserBook();
 
