@@ -15,7 +15,7 @@ namespace AUT_Market.View
     public partial class WishlistDetail : ContentPage
     {
         WishlistDetailViewModel vm;
-        public WishlistDetail(TestBooks model)
+        public WishlistDetail(Book model)
         {
             InitializeComponent();
             vm = new WishlistDetailViewModel(model);
@@ -24,7 +24,7 @@ namespace AUT_Market.View
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e){
-            //vm?.UpdateZan.Execute(null);
+            vm?.UpdateZan.Execute(null);
         }
     }
 }

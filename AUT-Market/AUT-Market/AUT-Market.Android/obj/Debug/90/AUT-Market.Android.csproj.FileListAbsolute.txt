@@ -1178,14 +1178,6 @@ C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.dll
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.x86.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.x86_64.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.x86.s
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.x86_64.s
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\AndroidManifest.xml
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\__environment__.txt
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\mono\MonoRuntimeProvider.java
@@ -1487,14 +1479,6 @@ C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\bin\packaged_resources
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\com\companyname\aut_market\R.java
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.x86.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.x86.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.jm.x86_64.o
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemap.mj.x86_64.o
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\environment.arm64-v8a.o
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\environment.armeabi-v7a.o
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\environment.x86.o
@@ -1504,7 +1488,6 @@ C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\bin\classes.dex
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ConvertLibraryResourcesCases.stamp
@@ -3216,3 +3199,35 @@ D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll
 D:\Software Developemnt Practices COMP602\AUT2020\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\menulogo.png
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\8BBEDC138FD97942.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\8BBEDC138FD97942.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\menulogo.png
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\System.Json.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\System.Json.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Xamarin.Auth.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Xamarin.Auth.dll.mdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.arm64-v8a.s
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.armeabi-v7a.s
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.x86.s
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.x86_64.s
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.armeabi-v7a-shared.inc
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.shared.inc
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc646df7c1235ac730fb\CustomUrlSchemeInterceptorActivity.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64b5ccde371e18b5d0\CustomTabActivityHelper.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64b5ccde371e18b5d0\ServiceConnection.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\AndroidAccountStore_SecretAccount.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\CustomTabsActionsBroadcastReceiver.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\FormAuthenticatorActivity.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\FormAuthenticatorActivity_State.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebAuthenticatorActivity.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebAuthenticatorActivity_Client.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebAuthenticatorActivity_State.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebAuthenticatorNativeBrowserActivity.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebAuthenticatorNativeBrowserActivity_State.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\src\crc64f98dd38067c0c88b\WebViewActivity.java
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.arm64-v8a.o
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.armeabi-v7a.o
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.x86.o
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\typemaps.x86_64.o
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_CleanIntermediateIfNeeded.stamp

@@ -99,54 +99,54 @@ namespace AUT_Market.View
 
         private async void completeForm()
         {
-            var model = new TestBooks {
-                imageUrl = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1188/9781118881170.jpg",
-                title = titleInput.Text,
-                author = authorInput.Text,
-                publicationDateStr= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-                faculty = facultySelection.SelectedItem.ToString(),
-                courseCode = courseCodeInput.Text,
-                price = Convert.ToDouble(priceInput.Text),
-                bookCondition = conditionSelection.SelectedItem.ToString(),
-                BookDesc = descInput.Text.Trim()
+            var model = new Book {
+                Photo = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1188/9781118881170.jpg",
+                Edition=editionInput.Text,
+                Title = titleInput.Text,
+                Author = authorInput.Text,
+                Posted = DateTime.Now,
+                Faculty = facultySelection.SelectedItem.ToString(),
+                CourseCode = courseCodeInput.Text,
+                Price = float.Parse(priceInput.Text),
+                Condition = conditionSelection.SelectedItem.ToString(),
+                Description = descInput.Text.Trim(),
+                Campus = "City"
             };
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
-            System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
-
             //---------------------------------------------------------------------------//
 
-           
-            Book book = new Book();
+            #region
+            //Book book = new Book();
 
-            book.Title = titleInput.Text.Trim();
-            titleInput.Text = null;
+            //book.Title = titleInput.Text.Trim();
+            //titleInput.Text = null;
 
-            book.Author = authorInput.Text.Trim();
-            authorInput.Text = null;
+            //book.Author = authorInput.Text.Trim();
+            //authorInput.Text = null;
 
-            book.Edition = editionInput.Text.Trim();
-            editionInput.Text = null;
+            //book.Edition = editionInput.Text.Trim();
+            //editionInput.Text = null;
 
-            book.CourseCode = courseCodeInput.Text.Trim();
-            courseCodeInput.Text = null;
+            //book.CourseCode = courseCodeInput.Text.Trim();
+            //courseCodeInput.Text = null;
 
-            book.Faculty = facultySelection.SelectedItem.ToString();
-            facultySelection.SelectedIndex = 0;
+            //book.Faculty = facultySelection.SelectedItem.ToString();
+            //facultySelection.SelectedIndex = 0;
 
-            book.Condition = conditionSelection.SelectedItem.ToString();
-            conditionSelection.SelectedIndex = 0;
+            //book.Condition = conditionSelection.SelectedItem.ToString();
+            //conditionSelection.SelectedIndex = 0;
 
-            book.Description = descInput.Text.Trim();
-            descInput.Text = null;
+            //book.Description = descInput.Text.Trim();
+            //descInput.Text = null;
 
-            book.Price = float.Parse(priceInput.Text.Trim());
-            priceInput.Text = null;
+            //book.Price = float.Parse(priceInput.Text.Trim());
+            //priceInput.Text = null;
 
-            book.Campus = "City";
-
+            //book.Campus = "City";
+            #endregion
             UsersDb.AddUser(new User());
 
-            BooksDb.AddBook(book);
+            BooksDb.AddBook(model);
             
             await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 
@@ -154,8 +154,6 @@ namespace AUT_Market.View
             await Shell.Current.GoToAsync("//main");
 
         }
-
-      
         List<string> imagePaths = new List<string>();
         private async void BtnAddImageAsync(object sender,EventArgs e){
             var path = await getphoto();
@@ -183,9 +181,6 @@ namespace AUT_Market.View
             flexlay.Children.Add(absoluteLayout);
 
         }
-
-       
-
         async Task<string> getphoto() {
 
             await CrossMedia.Current.Initialize();

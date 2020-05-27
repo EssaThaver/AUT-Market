@@ -1,10 +1,12 @@
 ﻿using AUT_Market.Model;
 using AUT_Market.Service;
+using AUT_Market.View;
 using FFImageLoading.Forms.Args;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace AUT_Market.ViewModel
@@ -25,8 +27,10 @@ namespace AUT_Market.ViewModel
             }
         }
 
-        public TestBooksViewModel()
+        INavigation Navigation;
+        public TestBooksViewModel(INavigation Navigation)
         {
+            this.Navigation = Navigation;
             getBooks = BooksDb.GetBookss();
         }
 
@@ -50,6 +54,10 @@ namespace AUT_Market.ViewModel
         {
             getBooks = BooksDb.GetBookByUser(new User());
         }
+
+        public ICommand ListViewCommand => new Command<Book>(async(value)=> {
+            await Navigation.PushAsync(new WishlistDetail(value));
+        });
 
     }
 
