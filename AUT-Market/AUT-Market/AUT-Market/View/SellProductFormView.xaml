@@ -29,28 +29,12 @@
                         <Entry x:Name="authorInput" Placeholder="Author" Text="Author"/>
 
                         <Entry x:Name="editionInput" Placeholder="Edition" Text="100" Keyboard="Numeric"/>
-
-                        <!--===============================================================================================================================================-->
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="120"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <Label Text="Publication Date" FontSize="18" Margin="5,10,0,0"/>
-                            <DatePicker x:Name="publicationDateInput" Grid.Column="1"/>
-
-                        </Grid>
-                        
-                        <!--===============================================================================================================================================-->
-
+                      
                         <Picker x:Name="facultySelection" Title="Faculty"/>
 
                         <Entry x:Name="courseCodeInput" Placeholder="Course Code" Text="Course Code" FontSize="18"/>
+
+                        <Picker x:Name="campusSelection" Title="Campus"/>
 
                         <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" Text="200"/>
 
@@ -62,6 +46,9 @@
 
                         <Label Text="Description" FontSize="20" Margin="10,10,0,0"/>
                         <Editor x:Name="descInput" AutoSize="TextChanges" MaxLength="500" Text="descInput"/>
+
+                        <!--===============================================================================================================================================-->
+                        
                         <Button Text="Add Image" CornerRadius="20" Margin="0,20,0,0" Clicked="BtnAddImageAsync"/>
                         <FlexLayout x:Name="flexlay" Direction="Row" Wrap="Wrap">
                             
