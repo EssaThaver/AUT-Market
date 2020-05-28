@@ -11,10 +11,22 @@
         <!--========================================================================================================================================================================================-->
         
         <StackLayout x:Name="listingBook">
+            <Grid BackgroundColor="#A44DC0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Filter" x:Name="filterBtn" Clicked="filterBtn_Clicked" TextColor="White" BackgroundColor="#A44DC0"/>
+                <Button Text="Sort" x:Name="sortBtn" Clicked="sortBtn_Clicked" Grid.Column="1" TextColor="White" BackgroundColor="#A44DC0"/>
+                <Button Text="Clear" x:Name="clearBtn" Clicked="clearBtn_Clicked" Grid.Column="2" TextColor="White" BackgroundColor="#A44DC0"/>
+            </Grid>
             <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
                 <ScrollView>
                     <StackLayout>
-                        <Button Text="Filter" x:Name="filterBtn" Clicked="filterBtn_Clicked"/>
                         <CollectionView x:Name="listview" ItemsSource="{Binding getBooks}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
@@ -48,7 +60,7 @@
 
         <!--========================================================================================================================================================================================-->
 
-        
+        <!--This is filter section-->
         <StackLayout x:Name="filter" BackgroundColor="#A44DC0">
             <Grid>
                 <Grid.RowDefinitions>
@@ -59,13 +71,14 @@
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
                 
-                <Label Text="Filter" TextColor="White" HorizontalOptions="Center" FontSize="40"/>
+                <Label Text="Filter" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,10"/>
                 <ImageButton x:Name="closeFilter" Clicked="closeFilter_Clicked" Source="Delete.png" BackgroundColor="Transparent" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Margin="0,10,10,5" Grid.Column="1"/>
                 
             </Grid>
 
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
-                <Picker x:Name="conditionSelection" Title="Condition"/>
+                <!-- Add more filter here-->
+                <Picker x:Name="conditionSelection" Title="Condition" FontSize="20"/>
             </Frame>
             <StackLayout WidthRequest="100" HorizontalOptions="Center">
                 <Button x:Name="applyBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applyBtn_Clicked"/>
@@ -75,7 +88,31 @@
 
         <!--========================================================================================================================================================================================-->
 
+        <!-- This is sorting section -->
+        <StackLayout x:Name="sort" BackgroundColor="#A44DC0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
 
+                <Label Text="Sorting" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,10"/>
+                <ImageButton x:Name="closeStoring" Clicked="closeStoring_Clicked" Source="Delete.png" BackgroundColor="Transparent" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Margin="0,10,10,5" Grid.Column="1"/>
+
+            </Grid>
+
+            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+                <!-- add the sort fuction here -->
+            </Frame>
+            <StackLayout WidthRequest="100" HorizontalOptions="Center">
+                <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--========================================================================================================================================================================================-->
 
 
         <!--<ListView ItemsSource="{Binding Books}" 

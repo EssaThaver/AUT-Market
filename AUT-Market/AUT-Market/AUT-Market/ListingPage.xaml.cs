@@ -20,6 +20,7 @@ namespace AUT_Market
         {
             InitializeComponent();
             filter.IsVisible = false;
+            sort.IsVisible = false;
         }
         protected override void OnAppearing()
         {
@@ -48,13 +49,14 @@ namespace AUT_Market
        
         private void filterBtn_Clicked(object sender, EventArgs e)
         {
-           
             filter.IsVisible = true;
+            sort.IsVisible = false;
         }
 
         private void applyBtn_Clicked(object sender, EventArgs e)
         {
-            if (conditionSelection.SelectedIndex != 0)
+
+            if (conditionSelection.SelectedIndex > 0)
             {
                 vm = new TestBooksViewModel(Navigation);
 
@@ -77,6 +79,24 @@ namespace AUT_Market
         private void closeFilter_Clicked(object sender, EventArgs e)
         {
             filter.IsVisible = false;
+        }
+
+        private void closeStoring_Clicked(object sender, EventArgs e)
+        {
+            sort.IsVisible = false;
+        }
+
+        private void sortBtn_Clicked(object sender, EventArgs e)
+        {
+            sort.IsVisible = true;
+            filter.IsVisible = false;
+        }
+
+        private void clearBtn_Clicked(object sender, EventArgs e)
+        {
+            vm = new TestBooksViewModel(Navigation);
+            BindingContext = vm;
+
         }
     }
 }
