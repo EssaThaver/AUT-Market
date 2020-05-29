@@ -219,5 +219,40 @@ namespace AUT_Market
                 return result;
             }
         }
+
+        public static void UpdateBookDetail(Book UpBook)
+        {
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand UpdateCommand = new SqlCommand("UPDATE Books SET Title = @Title, Author = @Author, Edition = @Edition, CourseCode = @CourseCode, Faculty = @Faculty, Price = @Price, Condition = @Condition, Description = @Description, Campus = @Campus, BooksImgs = @BooksImgs where ListingNumber=@ListingNumber", con);
+                UpdateCommand.Parameters.AddWithValue("@ListingNumber", SqlDbType.UniqueIdentifier).Value = UpBook.ListingNumber;
+                UpdateCommand.Parameters.Add("@Title", SqlDbType.NVarChar).Value = UpBook.Title;
+                UpdateCommand.Parameters.Add("@Author", SqlDbType.NVarChar).Value = UpBook.Author;
+                UpdateCommand.Parameters.Add("@Edition", SqlDbType.NVarChar).Value = UpBook.Edition;
+                UpdateCommand.Parameters.Add("@CourseCode", SqlDbType.NVarChar).Value = UpBook.CourseCode;
+                UpdateCommand.Parameters.Add("@Faculty", SqlDbType.NVarChar).Value = UpBook.Faculty;
+                UpdateCommand.Parameters.Add("@Price", SqlDbType.Int).Value = UpBook.Price;
+                UpdateCommand.Parameters.Add("@Condition", SqlDbType.NVarChar).Value = UpBook.Condition;
+                UpdateCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = UpBook.Description;
+                UpdateCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = UpBook.Campus;
+                UpdateCommand.Parameters.Add("@BooksImgs", SqlDbType.VarChar).Value = UpBook.BooksImgs;
+                UpdateCommand.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+        public static void PriceChange( Book UpBook)
+        {
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand delCommand = new SqlCommand("UPDATE Books SET Price=@price where ListingNumber=@ListingNumber", con);
+                delCommand.Parameters.AddWithValue("@ListingNumber", SqlDbType.UniqueIdentifier).Value = UpBook.ListingNumber;
+                delCommand.Parameters.AddWithValue("@price", SqlDbType.Int).Value = UpBook.Price;
+                delCommand.ExecuteNonQuery();
+                con.Close();
+            }
+        }
     }
 }

@@ -15,6 +15,8 @@ namespace AUT_Market.View
     public partial class RemoveBook : ContentPage
     {
         TestBooksViewModel vm;
+        SellProductValidation valid;
+        
         public RemoveBook()
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace AUT_Market.View
 
             if (check)
             {
-                var removeBtn = sender as ImageButton;
+                var removeBtn = sender as Button;
 
                 var book = removeBtn?.BindingContext as Book;
 
@@ -42,6 +44,43 @@ namespace AUT_Market.View
 
                 vm?.RemoveBook.Execute(book);
             }
+        }
+
+        private void Edit_Clicked(object sender, EventArgs e)
+        {
+            var editBtn = sender as Button;
+
+            var book = editBtn?.BindingContext as Book;
+
+            Navigation.PushModalAsync(new SellProductFormView(book));
+        }
+
+        private async void priceChange_Clicked(object sender, EventArgs e)
+        {
+            var priceBtn = sender as Button;
+
+            var book = priceBtn?.BindingContext as Book;
+
+            string newPrice = await DisplayPromptAsync("Price Change", "New Price", keyboard: Keyboard.Numeric);
+
+            this.changePrice(newPrice, book);
+        }
+
+        private void changePrice (string newPrice, Book book)
+        {
+            valid = new SellProductValidation();
+
+            if (valid.CheckStringToDouble(newPrice) && !(String.IsNullOrWhiteSpace(newPrice)))
+            {
+                book.Price = float.Parse(newPrice);
+
+                BooksDb.PriceChange(book);
+            }
+
+            vm = new TestBooksViewModel(Navigation);
+            vm.getUserBook();
+            BindingContext = vm;
+
         }
     }
 }

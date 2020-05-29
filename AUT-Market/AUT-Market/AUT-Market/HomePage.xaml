@@ -52,7 +52,7 @@
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    <ShellContent Title="Remove Book"  ContentTemplate="{DataTemplate view:RemoveBook}" Icon="RemoveBook.png"/>
+    <ShellContent Title="My Book"  ContentTemplate="{DataTemplate view:RemoveBook}"/>
 
     <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
     <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->

@@ -65,6 +65,8 @@
 
                             <Button Text="Cancel" BackgroundColor="#DADADA" CornerRadius="20"/>
                             <Button Text="Done" x:Name="doneBtn" Clicked="doneBtn_Clicked" Grid.Column="1" BackgroundColor="#A44DC0" TextColor="White" CornerRadius="20" />
+                            <Button Text="Update" x:Name="UpdateBtn" Clicked="UpdateBtn_Clicked" Grid.Column="1" BackgroundColor="#A44DC0" TextColor="White" CornerRadius="20" />
+
                         </Grid>
                     </StackLayout>
                 </Frame>
