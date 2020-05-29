@@ -23,6 +23,7 @@ namespace AUT_Market.View
 
             facultySelection.ItemsSource = new Faculties().getListOfFaculty();
             conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
+            campusSelection.ItemsSource = new Campus().getlistOfCampus();
         }
 
         protected async void cancelBtn_Clicked(object sender, EventArgs e)
@@ -36,14 +37,16 @@ namespace AUT_Market.View
             int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text,courseCodeInput.Text, priceInput.Text, descInput.Text);
             if (IsValidInput == -1)
             {
-                if (valid.CheckSelectDateIsBeforeToday(publicationDateInput.Date))
+                if (facultySelection.SelectedItem != null)
                 {
-                    if (facultySelection.SelectedItem != null)
+                    if (campusSelection.SelectedItem != null)
                     {
-                        if (conditionSelection.SelectedItem != null){
+                        if (conditionSelection.SelectedItem != null)
+                        {
                             this.completeForm();
                         }
-                        else{
+                        else
+                        {
                             // if not select then will pop up display of msg.
                             DisplayAlert("Condition is Missing", "Please select the condition", "OK");
                         }
@@ -51,12 +54,13 @@ namespace AUT_Market.View
                     else
                     {
                         // if not select then will pop up display of msg.
-                        DisplayAlert("Faculty is missing", "Please select the Faculty", "OK");
+                        DisplayAlert("Campus is Missing", "Please select the Campus", "OK");
                     }
                 }
                 else
                 {
-                    DisplayAlert("Publication Date Invalid", "Publication Date cannot been in the future. Please selection Date", "OK");
+                    // if not select then will pop up display of msg.
+                    DisplayAlert("Faculty is missing", "Please select the Faculty", "OK");
                 }
             }
             else
@@ -101,7 +105,7 @@ namespace AUT_Market.View
         {
             var model = new Book {
                 Photo = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1188/9781118881170.jpg",
-                Edition=editionInput.Text,
+                Edition = editionInput.Text,
                 Title = titleInput.Text,
                 Author = authorInput.Text,
                 Posted = DateTime.Now,
@@ -110,7 +114,7 @@ namespace AUT_Market.View
                 Price = float.Parse(priceInput.Text),
                 Condition = conditionSelection.SelectedItem.ToString(),
                 Description = descInput.Text.Trim(),
-                Campus = "City"
+                Campus = campusSelection.SelectedItem.ToString()
             };
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             //---------------------------------------------------------------------------//

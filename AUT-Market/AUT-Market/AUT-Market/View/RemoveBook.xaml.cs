@@ -28,16 +28,20 @@ namespace AUT_Market.View
 
         }
 
-        private void Remove_Clicked(object sender, EventArgs e)
+        private async void Remove_Clicked(object sender, EventArgs e)
         {
-            var removeBtn = sender as ImageButton;
+            var check = await DisplayAlert("Warning", "Are you Sure? ", "Yes", "No");
 
-            var book = removeBtn?.BindingContext as Book;
+            if (check)
+            {
+                var removeBtn = sender as ImageButton;
 
-            BooksDb.RemoveBook(book);
+                var book = removeBtn?.BindingContext as Book;
 
-            vm?.RemoveBook.Execute(book);
+                BooksDb.RemoveBook(book);
 
+                vm?.RemoveBook.Execute(book);
+            }
         }
     }
 }
