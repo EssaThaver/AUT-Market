@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj": {}
+    "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj": {}
   },
   "projects": {
-    "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj": {
+    "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
         "projectName": "AUT-Market.Android",
-        "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
-        "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-        "outputPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
+        "projectPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+        "packagesPath": "C:\\Users\\Georgia Thomson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Patel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgia Thomson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
-                "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
+              "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+                "projectPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
               }
             }
           }
@@ -66,20 +66,21 @@
         }
       }
     },
-    "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+    "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+        "projectUniqueName": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
         "projectName": "AUT_Market",
-        "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
-        "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-        "outputPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
+        "projectPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+        "packagesPath": "C:\\Users\\Georgia Thomson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Georgia Thomson\\Documents\\GitHub\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Patel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgia Thomson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
