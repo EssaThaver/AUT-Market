@@ -11,19 +11,22 @@
         <!--========================================================================================================================================================================================-->
         
         <StackLayout x:Name="listingBook">
-            <Grid BackgroundColor="#A44DC0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Text="Filter" x:Name="filterBtn" Clicked="filterBtn_Clicked" TextColor="White" BackgroundColor="#A44DC0"/>
-                <Button Text="Sort" x:Name="sortBtn" Clicked="sortBtn_Clicked" Grid.Column="1" TextColor="White" BackgroundColor="#A44DC0"/>
-                <Button Text="Clear" x:Name="clearBtn" Clicked="clearBtn_Clicked" Grid.Column="2" TextColor="White" BackgroundColor="#A44DC0"/>
-            </Grid>
+            <StackLayout BackgroundColor="#A44DC0">
+                <SearchBar HorizontalOptions="Center" x:Name="searchBook" Placeholder="Search" SearchButtonPressed="searchBook_SearchButtonPressed"  Margin="10,10,10,0" BackgroundColor="#DADADA"/>
+                <Grid BackgroundColor="#A44DC0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Filter" x:Name="filterBtn" Clicked="filterBtn_Clicked" TextColor="White" BackgroundColor="#A44DC0"/>
+                    <Button Text="Sort" x:Name="sortBtn" Clicked="sortBtn_Clicked" Grid.Column="1" TextColor="White" BackgroundColor="#A44DC0"/>
+                    <Button Text="Clear" x:Name="clearBtn" Clicked="clearBtn_Clicked" Grid.Column="2" TextColor="White" BackgroundColor="#A44DC0"/>
+                </Grid>
+            </StackLayout>
             <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
                 <ScrollView>
                     <StackLayout>

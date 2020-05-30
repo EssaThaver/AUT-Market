@@ -3800,3 +3800,4 @@ D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\mybook2.png

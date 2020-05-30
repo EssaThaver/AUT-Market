@@ -45,14 +45,14 @@
             <ShellContent ContentTemplate="{DataTemplate home:ListingPage}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
-            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+            <ShellContent ContentTemplate="{DataTemplate view:Wishlist}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
         </Tab>
 
         <!--===================================================================================================================================-->
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    <ShellContent Title="My Book"  ContentTemplate="{DataTemplate view:RemoveBook}"/>
+    <ShellContent Title="My Books"  ContentTemplate="{DataTemplate view:MyBook}" Icon="MyBook2.png"/>
 
     <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
     <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->

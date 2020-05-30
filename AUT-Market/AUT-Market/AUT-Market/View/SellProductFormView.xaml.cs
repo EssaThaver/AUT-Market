@@ -317,7 +317,7 @@ namespace AUT_Market.View
 
             BooksDb.UpdateBookDetail(updateBook);
 
-            await DisplayAlert("Complate Update", "Your Book will update and post on the list soon", "OK");
+            await DisplayAlert("Complate Update", "Your Book will be update and post on the list soon", "OK");
 
             Application.Current.MainPage = new HomePage();
             await Shell.Current.GoToAsync("//main");
