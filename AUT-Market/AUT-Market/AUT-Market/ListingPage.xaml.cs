@@ -26,6 +26,7 @@ namespace AUT_Market
         {
             base.OnAppearing();
             conditionSelection.ItemsSource = new Conditions().getOptionCondition();
+            campusSelection.ItemsSource = new Campus().getOptionCampus();
             vm = new TestBooksViewModel(Navigation);
             BindingContext = vm;
         }
@@ -65,14 +66,23 @@ namespace AUT_Market
                 vm.getShortLiistOfCondition(userSelect);
 
                 BindingContext = vm;
+            }
+            else if (campusSelection.SelectedIndex > 0)
+            {
+                vm = new TestBooksViewModel(Navigation);
 
+                string userSelect = campusSelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfCampus(userSelect);
+
+                BindingContext = vm;
             }
             else
             {
                 vm = new TestBooksViewModel(Navigation);
                 BindingContext = vm;
             }
-
+            
             filter.IsVisible = false;
         }
 

@@ -14,7 +14,6 @@ namespace AUT_Market.ViewModel
     class TestBooksViewModel
     {
         public ObservableCollection<Book> getBooks { get; set; }
-        
 
         public Command<Book> RemoveBook
         {
@@ -42,6 +41,22 @@ namespace AUT_Market.ViewModel
             foreach(Book book in books)
             {
                 if(book.Condition.Equals(condition))
+                {
+                    resultBook.Add(book);
+                }
+            }
+
+            getBooks = resultBook;
+        }
+
+        public void getShortLiistOfCampus(string campus)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBookss();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+            foreach (Book book in books)
+            {
+                if (book.Campus.Equals(campus))
                 {
                     resultBook.Add(book);
                 }
