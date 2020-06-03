@@ -21,11 +21,10 @@ namespace AUT_Market.View
         public TestLogin()
         {
             InitializeComponent();
-
             store = AccountStore.Create();
-        } 
+        }
 
-        private void signinGoogle_Clicked(System.Object sender, System.EventArgs e)
+        private async void signinGoogle_Clicked(System.Object sender, System.EventArgs e)
         {
             string clientId = null;
             string redirectUrl = null;
@@ -37,6 +36,12 @@ namespace AUT_Market.View
                     redirectUrl = Constants.AndroidRedirectUrl;
                     break;
             }
+            //User user = null;
+            //user = JsonConvert.DeserializeObject<User>("{\"Name\":\"GTesting XTesting\",\"Email\":\"gxtesting12@gmail.com\"}");
+            //App.CurrentUser = user;
+            //Application.Current.MainPage = new HomePage();
+            //await Shell.Current.GoToAsync("//main");
+            //return;
 
             account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
 
@@ -70,15 +75,10 @@ namespace AUT_Market.View
             }
 
             User user = null;
-
             if (e.IsAuthenticated)
             {
-                //UserInfo = https://www.googleapis,com/oaurh2/v2/userinfo
                 var request = new OAuth2Request("GET", new Uri(Constants.UserInfoUrl), null, e.Account);
                 var response = await request.GetResponseAsync();
-
-
-
                 if (response != null)
                 {
                     string userJson = await response.GetResponseTextAsync();
@@ -88,12 +88,9 @@ namespace AUT_Market.View
                 {
                     store.Delete(account, Constants.AppName);
                 }
-
                 await store.SaveAsync(account = e.Account, Constants.AppName);
                 await DisplayAlert("Name", User.Name, "OK");
                 await DisplayAlert("Email Address", User.Email, "OK");
-
-
                 try
                 {
                     UsersDb.AddUser(user);

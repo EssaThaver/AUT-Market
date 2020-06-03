@@ -5,6 +5,7 @@ using Plugin.Media;
 using Plugin.Permissions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -104,11 +105,9 @@ namespace AUT_Market.View
         private async void completeForm()
         {
             var model = new Book {
-                Photo = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1188/9781118881170.jpg",
                 Edition = editionInput.Text,
                 Title = titleInput.Text,
                 Author = authorInput.Text,
-                Posted = DateTime.Now,
                 Faculty = facultySelection.SelectedItem.ToString(),
                 CourseCode = courseCodeInput.Text,
                 Price = float.Parse(priceInput.Text),
@@ -117,53 +116,30 @@ namespace AUT_Market.View
                 Campus = campusSelection.SelectedItem.ToString()
             };
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
-            //---------------------------------------------------------------------------//
-
-            #region
-            //Book book = new Book();
-
-            //book.Title = titleInput.Text.Trim();
-            //titleInput.Text = null;
-
-            //book.Author = authorInput.Text.Trim();
-            //authorInput.Text = null;
-
-            //book.Edition = editionInput.Text.Trim();
-            //editionInput.Text = null;
-
-            //book.CourseCode = courseCodeInput.Text.Trim();
-            //courseCodeInput.Text = null;
-
-            //book.Faculty = facultySelection.SelectedItem.ToString();
-            //facultySelection.SelectedIndex = 0;
-
-            //book.Condition = conditionSelection.SelectedItem.ToString();
-            //conditionSelection.SelectedIndex = 0;
-
-            //book.Description = descInput.Text.Trim();
-            //descInput.Text = null;
-
-            //book.Price = float.Parse(priceInput.Text.Trim());
-            //priceInput.Text = null;
-
-            //book.Campus = "City";
-            #endregion
-            UsersDb.AddUser(new User());
-
+            if (imagePaths.Count > 0) {
+                model.Photo = imagePaths[0];
+            }
+            //UsersDb.AddUser(new User());
             BooksDb.AddBook(model);
-            
             await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 
             Application.Current.MainPage = new HomePage();
             await Shell.Current.GoToAsync("//main");
-
         }
         List<string> imagePaths = new List<string>();
         private async void BtnAddImageAsync(object sender,EventArgs e){
             var path = await getphoto();
             if (!string.IsNullOrEmpty(path)) {
-                imagePaths.Add(path);
-                loadGridData(path);
+                var dic=await BaseServer.UpdateImage(path);
+                if (dic["code"] == "1000")
+                {
+                    Debug.WriteLine(dic["hash"]+","+ dic["key"]);
+                    imagePaths.Add(dic["key"]);
+                    loadGridData(path);
+                }
+                else {
+                    Debug.WriteLine(dic["message"]);
+                }
             }
         }
         void loadGridData(string item){

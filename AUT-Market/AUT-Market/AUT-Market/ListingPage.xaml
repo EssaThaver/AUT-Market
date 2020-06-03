@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:AUT_Market"
-             mc:Ignorable="d"
+             xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="AUT_Market.ListingPage">
     <StackLayout>
-        
-        <!--========================================================================================================================================================================================-->
         
         <StackLayout x:Name="listingBook">
             <Grid BackgroundColor="#A44DC0">
@@ -25,40 +20,34 @@
                 <Button Text="Clear" x:Name="clearBtn" Clicked="clearBtn_Clicked" Grid.Column="2" TextColor="White" BackgroundColor="#A44DC0"/>
             </Grid>
             <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
-                <ScrollView>
-                    <StackLayout>
-                        <CollectionView x:Name="listview" ItemsSource="{Binding getBooks}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Margin="10,20,10,0">
-                                        <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Source={x:Reference listview},Path=BindingContext.ListViewCommand}" CommandParameter="{Binding}"/>
-                                        </Grid.GestureRecognizers>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Image Grid.RowSpan="3" Source="{Binding Photo}" Aspect="AspectFill" HeightRequest="60" WidthRequest="50"/>
-                                        <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold"/>
-                                        <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty}"/>
-                                        <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode}"/>
-                                        <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="3" Grid.ColumnSpan ="3"/>
-                                    </Grid>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </StackLayout>
-                </ScrollView>
+                <CollectionView x:Name="listview" ItemsSource="{Binding getBooks}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="10,10,10,0">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listview},Path=BindingContext.ListViewCommand}" CommandParameter="{Binding}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <ffimg:CachedImage Grid.RowSpan="3" Source="{Binding PhotoUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="100"/>
+                                <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold"/>
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty}"/>
+                                <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode}"/>
+                                <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="3" Grid.ColumnSpan ="3"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </RefreshView>
         </StackLayout>
-
-        <!--========================================================================================================================================================================================-->
 
         <!--This is filter section-->
         <StackLayout x:Name="filter" BackgroundColor="#A44DC0">
@@ -84,10 +73,6 @@
                 <Button x:Name="applyBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applyBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
-
-
-        <!--========================================================================================================================================================================================-->
-
         <!-- This is sorting section -->
         <StackLayout x:Name="sort" BackgroundColor="#A44DC0">
             <Grid>
@@ -111,61 +96,6 @@
                 <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20"/>
             </StackLayout>
         </StackLayout>
-
-        <!--========================================================================================================================================================================================-->
-
-
-        <!--<ListView ItemsSource="{Binding Books}" 
-            HasUnevenRows="true"
-          ItemSelected="OnListViewItemSelected"
-          ItemTapped="OnListViewItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            --><!-- Shows where the photo will go once the link with the database is fully operational --><!--
-                            <Label>Photo</Label>
-                            <Image Grid.RowSpan="2"
-                           Source="{Binding Photo}"
-                           Aspect="AspectFill"
-                           HeightRequest="60"
-                           WidthRequest="60" />
-                            --><!-- Label for the title, author, course code and price of each book --><!--
-                            <Label Grid.Column="1" 
-                                Text="{Binding Title}"
-                           FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                            Grid.Column="1"
-                           Text="{Binding Author}"
-                                    FontAttributes="Italic" />
-                            <Label Grid.Row="2"
-                           Grid.Column="1"
-                           Text="{Binding CourseCode}" 
-                                        VerticalOptions="End" />
-                            <Label Grid.Row="3"
-                           Grid.Column="1"
-                           Text="{Binding Price}" 
-                                            VerticalOptions="End" />
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.Footer>
-                --><!-- Footer to show the user that they have reached the end of the database --><!--
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="You have reached the end of the list!"
-                     FontSize="Medium" />
-                </StackLayout>
-            </ListView.Footer>
-        </ListView>-->
     </StackLayout>
 
 </ContentPage>

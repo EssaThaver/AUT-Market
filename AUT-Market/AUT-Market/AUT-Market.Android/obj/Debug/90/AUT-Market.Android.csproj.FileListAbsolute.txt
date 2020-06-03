@@ -980,27 +980,13 @@ C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res.flag
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\6CB02F9FFB56145B.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\28F44056EE560963.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\07D058CF6B170CD9.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\9F493B7817174249.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\E760D1F1B0356BFE.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\F7716CD4E7351F1E.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\2459E2706613E065.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\601D8DB97313FD5D.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\1327BFA4F3D937D2.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\03360281A4D94332.stamp
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\47726D48B1D95E0A.stamp
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\6CB02F9FFB56145B.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\28F44056EE560963.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\07D058CF6B170CD9.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\9F493B7817174249.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\E760D1F1B0356BFE.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\F7716CD4E7351F1E.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\2459E2706613E065.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\601D8DB97313FD5D.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\1327BFA4F3D937D2.flata
-C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\03360281A4D94332.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\47726D48B1D95E0A.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\compiled.flata
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\R.txt
@@ -3800,3 +3786,22 @@ D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\CB1CE99455172B91.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\DB0D54B102175F71.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\53858A2329176501.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\A324BE38A53576C6.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\B335031DF2350226.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\5763D06DE6D92AEA.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\CFFAB3DA9AD9647A.stamp
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\CB1CE99455172B91.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\DB0D54B102175F71.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\53858A2329176501.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\A324BE38A53576C6.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\B335031DF2350226.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\5763D06DE6D92AEA.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\flata\CFFAB3DA9AD9647A.flata
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\shoper.png
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\avitors.png
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\FFImageLoading.Transformations.dll
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\FFImageLoading.Transformations.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Qiniu.dll

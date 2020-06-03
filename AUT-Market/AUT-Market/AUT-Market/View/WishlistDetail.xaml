@@ -2,71 +2,98 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              Title="Book Details"
              x:Class="AUT_Market.View.WishlistDetail">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
+        <StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout>
-                    <CarouselView x:Name="carouselview" ItemsSource="{Binding BookImages}" HeightRequest="200" IndicatorView="indicatorView">
-                        <CarouselView.ItemTemplate>
-                            <DataTemplate>
-                                <ffimg:CachedImage Source="{Binding}" Aspect="AspectFit"/>
-                            </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
-                    <IndicatorView x:Name="indicatorView" IndicatorColor="White" SelectedIndicatorColor="#1976D2" BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,-20,0,0" IndicatorSize="8"/>
-                </StackLayout>
-                <BoxView HeightRequest="5"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="{Binding BookTitle}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="{Binding IslikeImg}"/>
-                        <Label Text="Add to WishList" VerticalOptions="Center"/>
+                    <StackLayout>
+                        <CarouselView x:Name="carouselview" ItemsSource="{Binding BookImages}" HeightRequest="200" IndicatorView="indicatorView">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <ffimg:CachedImage Source="{Binding}" Aspect="AspectFit"/>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView x:Name="indicatorView" IndicatorColor="White" SelectedIndicatorColor="#1976D2" BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,-20,0,0" IndicatorSize="8"/>
                     </StackLayout>
+                    <BoxView HeightRequest="5"/>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Title:" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label Text="{Binding BookTitle}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="{Binding IslikeImg}"/>
+                            <Label Text="Add to WishList" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Author:" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label Text="{Binding author}" VerticalOptions="Center" FontAttributes="Bold" />
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Faculty:" FontAttributes="Bold"/>
+                        <Label Text="{Binding faculty}" VerticalOptions="Center" FontAttributes="Bold" />
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
+                        <Label Text="{Binding price}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Publication Date:" FontAttributes="Bold"/>
+                        <Label Text="{Binding publicationDateStr}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Course Code:" FontAttributes="Bold"/>
+                        <Label Text="{Binding courseCode}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Campus:" FontAttributes="Bold"/>
+                        <Label Text="{Binding Campus}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Book Condition:" FontAttributes="Bold"/>
+                        <Label Text="{Binding bookCondition}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Book description:" FontAttributes="Bold"/>
+                        <Label Text="{Binding BookDesc}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
                 </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Author:" WidthRequest="60" FontAttributes="Bold"/>
-                    <Label Text="{Binding author}"/>
+            </ScrollView>
+
+            <StackLayout x:Name="StackShoper">
+                <BoxView HeightRequest="1" BackgroundColor="#ddd"/>
+                <StackLayout Orientation="Horizontal" HeightRequest="50" Padding="10,0,10,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavToShoperPage"/>
+                    </StackLayout.GestureRecognizers>
+                    <ffimg:CachedImage Source="avitors" WidthRequest="45" HeightRequest="45" Aspect="AspectFit">
+                        <ffimg:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation/>
+                        </ffimg:CachedImage.Transformations>
+                    </ffimg:CachedImage>
+                    <Label Text="{Binding ShopUserName}" VerticalOptions="Center"/>
                 </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Faculty:" WidthRequest="60" FontAttributes="Bold"/>
-                    <Label Text="{Binding faculty}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
-                    <Label Text="{Binding price}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Publication Date:" FontAttributes="Bold"/>
-                    <Label Text="{Binding publicationDateStr}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-               
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Course Code:" FontAttributes="Bold"/>
-                    <Label Text="{Binding courseCode}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Book Condition:" FontAttributes="Bold"/>
-                    <Label Text="{Binding bookCondition}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Book description:" FontAttributes="Bold"/>
-                    <Label Text="{Binding BookDesc}"/>
-                </StackLayout>
-                <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
             </StackLayout>
-        </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

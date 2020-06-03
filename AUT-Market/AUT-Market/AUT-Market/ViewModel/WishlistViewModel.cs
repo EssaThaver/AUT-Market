@@ -3,37 +3,26 @@ using AUT_Market.Service;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 
 namespace AUT_Market.ViewModel
 {
-    class WishlistViewModel
+    public class WishlistViewModel
     {
-        public ObservableCollection<Book> Items { get; set; }= new ObservableCollection<Book>();
+        public ObservableCollection<Collects> Items { get; set; }= new ObservableCollection<Collects>();
 
-        public void getChildData()
-        {
+        public Command getChildData => new Command(()=> {
             Items.Clear();
-            var list = BooksDb.GetBooks(1);
+            var list = CollectsServer.getCollects(User.Email);
             foreach (var item in list)
             {
                 Items.Add(item);
             }
             Debug.WriteLine(JsonConvert.SerializeObject(Items));
-        }
-        public Command<Book> UpdateBooksZan
-        {
-            get
-            {
-                return new Command<Book>((book) =>{
-                    book.Islike = book.Islike == 0 ? 1 : 0;
-                    BooksDb.UpdateBook(book);
-                    getChildData();
-                });
-            }
-        }
+        });
+        public Command UpdateBooksZan => new Command<Collects>((model) => {
+            CollectsServer.RemoveCollcet(model.ListingNumber.ToString(),User.Email);
+            getChildData.Execute(null);
+        });
     }
 }
