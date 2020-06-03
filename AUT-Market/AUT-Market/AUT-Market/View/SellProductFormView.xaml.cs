@@ -206,9 +206,9 @@ namespace AUT_Market.View
             #endregion
             UsersDb.AddUser(new User());
 
-           BooksDb.AddBook(model);
+            BooksDb.AddBook(model);
             
-            await DisplayAlert("Complate", "Your updateBook will post on the list soon", "OK");
+            await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 
             Application.Current.MainPage = new HomePage();
             await Shell.Current.GoToAsync("//main");
