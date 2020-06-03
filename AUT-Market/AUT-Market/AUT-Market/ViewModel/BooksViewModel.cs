@@ -29,22 +29,6 @@ namespace AUT_Market.ViewModel
             getBooks = BooksDb.GetBooks();
         }
 
-        public void getShortLiistOfCondition(string condition)
-        {
-            ObservableCollection<Book> books = BooksDb.GetBooks();
-            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
-
-            foreach(Book book in books)
-            {
-                if(book.Condition.Equals(condition))
-                {
-                    resultBook.Add(book);
-                }
-            }
-
-            getBooks = resultBook;
-        }
-
         public void getUserBook ()
         {
             getBooks = BooksDb.GetBookByUser(new User());

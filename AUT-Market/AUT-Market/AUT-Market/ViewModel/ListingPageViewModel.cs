@@ -36,6 +36,22 @@ namespace AUT_Market.ViewModel
             await Navigation.PushAsync(new WishlistDetail(value));
         });
 
+        public void searchBook(string userInput)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBooks();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+            foreach (Book book in books)
+            {
+                if (book.Title.ToLower().Contains(userInput.Trim().ToLower()) || book.CourseCode.ToLower().Contains(userInput.Trim().ToLower()))
+                {
+                    resultBook.Add(book);
+                }
+            }
+
+            getBooks = resultBook;
+        }
+
 
     }
 }

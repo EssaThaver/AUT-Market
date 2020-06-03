@@ -81,6 +81,16 @@ namespace AUT_Market
             BindingContext = vm;
 
         }
+
+        private void searchBook_SearchButtonPressed(object sender, EventArgs e)
+        {
+            vm = new ListingPageViewModel(Navigation);
+
+            vm.searchBook(searchBook.Text);
+
+            BindingContext = vm;
+
+        }
     }
 }
 
