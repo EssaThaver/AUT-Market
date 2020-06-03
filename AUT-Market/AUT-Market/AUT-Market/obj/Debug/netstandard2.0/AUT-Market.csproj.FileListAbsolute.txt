@@ -187,3 +187,24 @@ D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
 C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\BookSeller.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.deps.json
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.dll
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.pdb
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ListingPage.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\BookSeller.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\Login.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\MyBooks.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\Wishlist.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistDetail.xaml.g.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb

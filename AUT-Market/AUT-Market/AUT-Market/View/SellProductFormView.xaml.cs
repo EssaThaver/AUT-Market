@@ -16,16 +16,51 @@ namespace AUT_Market.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SellProductFormView : ContentPage
     {
-        SellProductValidation valid = new SellProductValidation();
+        Validation valid = new Validation();
+        List<string> imagePaths = new List<string>();
+        private Book updateBook;
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         public SellProductFormView()
         {
             InitializeComponent();
 
+            UpdateBtn.IsVisible = false;
+            doneBtn.IsVisible = true;
+
             facultySelection.ItemsSource = new Faculties().getListOfFaculty();
             conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
             campusSelection.ItemsSource = new Campus().getlistOfCampus();
         }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        public SellProductFormView(Book Book)
+        {
+            InitializeComponent();
+
+            updateBook = Book;
+
+            UpdateBtn.IsVisible = true;
+            doneBtn.IsVisible = false;
+
+            facultySelection.ItemsSource = new Faculties().getListOfFaculty();
+            conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
+            campusSelection.ItemsSource = new Campus().getlistOfCampus();
+
+            titleInput.Text = updateBook.Title;
+            authorInput.Text = updateBook.Author;
+            editionInput.Text = updateBook.Edition;
+            facultySelection.SelectedItem = updateBook.Faculty;
+            campusSelection.SelectedItem = updateBook.Campus;
+            courseCodeInput.Text = updateBook.CourseCode;
+            priceInput.Text = updateBook.Price.ToString();
+            conditionSelection.SelectedItem = updateBook.Condition;
+            descInput.Text = updateBook.Description;
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         protected async void cancelBtn_Clicked(object sender, EventArgs e)
         {
@@ -33,9 +68,23 @@ namespace AUT_Market.View
             await Shell.Current.GoToAsync("//main");
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         private void doneBtn_Clicked(object sender, EventArgs e)
         {
-            int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text,courseCodeInput.Text, priceInput.Text, descInput.Text);
+            Boolean check = validCheck();
+
+            if (check)
+            {
+                this.completeForm();
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        private Boolean validCheck()
+        {
+            int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text, courseCodeInput.Text, priceInput.Text, descInput.Text);
             if (IsValidInput == -1)
             {
                 if (facultySelection.SelectedItem != null)
@@ -44,7 +93,7 @@ namespace AUT_Market.View
                     {
                         if (conditionSelection.SelectedItem != null)
                         {
-                            this.completeForm();
+                            return true;
                         }
                         else
                         {
@@ -69,7 +118,12 @@ namespace AUT_Market.View
                 //This method will pop up display of invalid input.
                 invalidMsgDisplayAlert(IsValidInput);
             }
+
+            return false;
         }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         private void invalidMsgDisplayAlert(int InvalidType)
         {
             switch (InvalidType)
@@ -102,9 +156,11 @@ namespace AUT_Market.View
             }
         }
 
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         private async void completeForm()
         {
-            var model = new Book {
+            var newBook = new Book {
                 Edition = editionInput.Text,
                 Title = titleInput.Text,
                 Author = authorInput.Text,
@@ -115,18 +171,73 @@ namespace AUT_Market.View
                 Description = descInput.Text.Trim(),
                 Campus = campusSelection.SelectedItem.ToString()
             };
-            model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
+            newBook.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             if (imagePaths.Count > 0) {
-                model.Photo = imagePaths[0];
+                newBook.Photo = imagePaths[0];
             }
-            //UsersDb.AddUser(new User());
-            BooksDb.AddBook(model);
+
+            UsersDb.AddUser(new User());
+            BooksDb.AddBook(newBook);
             await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 
             Application.Current.MainPage = new HomePage();
             await Shell.Current.GoToAsync("//main");
         }
-        List<string> imagePaths = new List<string>();
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        private void UpdateBtn_Clicked(object sender, EventArgs e)
+        {
+            Boolean check = validCheck();
+
+            if (check)
+            {
+                this.completeUpdateForm();
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        private async void completeUpdateForm()
+        {
+
+            updateBook.Title = titleInput.Text.Trim();
+            titleInput.Text = null;
+
+            updateBook.Author = authorInput.Text.Trim();
+            authorInput.Text = null;
+
+            updateBook.Edition = editionInput.Text.Trim();
+            editionInput.Text = null;
+
+            updateBook.CourseCode = courseCodeInput.Text.Trim();
+            courseCodeInput.Text = null;
+
+            updateBook.Faculty = facultySelection.SelectedItem.ToString();
+            facultySelection.SelectedIndex = 0;
+
+            updateBook.Condition = conditionSelection.SelectedItem.ToString();
+            conditionSelection.SelectedIndex = 0;
+
+            updateBook.Description = descInput.Text.Trim();
+            descInput.Text = null;
+
+            updateBook.Price = float.Parse(priceInput.Text.Trim());
+            priceInput.Text = null;
+
+            updateBook.Campus = campusSelection.SelectedItem.ToString();
+
+            BooksDb.UpdateBookDetail(updateBook);
+
+            await DisplayAlert("Complate Update", "Your Book will be update and post on the list soon", "OK");
+
+            Application.Current.MainPage = new HomePage();
+            await Shell.Current.GoToAsync("//main");
+
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         private async void BtnAddImageAsync(object sender,EventArgs e){
             var path = await getphoto();
             if (!string.IsNullOrEmpty(path)) {
@@ -142,6 +253,9 @@ namespace AUT_Market.View
                 }
             }
         }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         void loadGridData(string item){
             AbsoluteLayout absoluteLayout = new AbsoluteLayout { HeightRequest = 100, WidthRequest = 100, Margin = new Thickness(0, 0, 5, 5) };
             absoluteLayout.BindingContext = imagePaths.Where(a => a== item).ToList().FirstOrDefault();
@@ -161,6 +275,9 @@ namespace AUT_Market.View
             flexlay.Children.Add(absoluteLayout);
 
         }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+
         async Task<string> getphoto() {
 
             await CrossMedia.Current.Initialize();
