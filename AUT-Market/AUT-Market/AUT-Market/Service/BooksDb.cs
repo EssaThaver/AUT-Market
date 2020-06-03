@@ -19,16 +19,16 @@ namespace AUT_Market
      */
    static class BooksDb
 {
-        public static Guid AddBook(Book newBook /*, User user*/)
+        public static int AddBook(Book newBook )
         {
-            Guid ListingNumber;
+            int result=0;
             using(SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
                 SqlCommand insertCommand = new SqlCommand("DECLARE @MyTableVar table (ListingNumber uniqueidentifier)" +
-                    "INSERT INTO Books (Title, Author, Edition, CourseCode, Faculty, Price, Condition, Description, EmailAddress, Campus, Posted,IsLike,BooksImgs) " +
+                    "INSERT INTO Books (Title, Author, Edition, CourseCode, Faculty, Price, Condition, Description, EmailAddress, Campus,Photo, Posted,BooksImgs) " +
                     "OUTPUT INSERTED.ListingNumber into @MyTableVar " +
-                    "VALUES (@Title, @Author, @Edition, @CourseCode, @Faculty, @Price, @Condition, @Description, @Email, @Campus, @Posted,@IsLike,@BooksImgs);" +
+                    "VALUES (@Title, @Author, @Edition, @CourseCode, @Faculty, @Price, @Condition, @Description, @Email, @Campus,@Photo, @Posted,@BooksImgs);" +
                     "SELECT ListingNumber FROM @MyTableVar", con);
                 insertCommand.Parameters.Add("@Title", SqlDbType.NVarChar).Value = newBook.Title;
                 insertCommand.Parameters.Add("@Author", SqlDbType.NVarChar).Value = newBook.Author;
@@ -40,116 +40,41 @@ namespace AUT_Market
                 insertCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = newBook.Description;
                 insertCommand.Parameters.Add("@Email",SqlDbType.NVarChar).Value = User.Email;
                 insertCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = newBook.Campus;
-                insertCommand.Parameters.Add("@Posted",SqlDbType.DateTime).Value = DateTime.Now;
-                insertCommand.Parameters.Add("@IsLike", SqlDbType.Int).Value = newBook.Islike;
+                insertCommand.Parameters.Add("@Photo", SqlDbType.NVarChar).Value = newBook.Photo;
+                insertCommand.Parameters.Add("@Posted", SqlDbType.DateTime).Value = DateTime.Now;
                 insertCommand.Parameters.Add("@BooksImgs", SqlDbType.VarChar).Value = newBook.BooksImgs;
-                using(SqlDataReader reader = insertCommand.ExecuteReader())
-                {
-                    reader.Read();
-                    ListingNumber = reader.GetGuid(0);
-                }
+                result = insertCommand.ExecuteNonQuery();
                 con.Close();
             }
-            return ListingNumber;
+            return result;
         }
 
-        public static List<Book> GetBooks()
-        {
-            List<Book> allBooks = new List<Book>();
-            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
-            {
-                con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM Books", con);
-                using(SqlDataReader reader = getCommand.ExecuteReader())
-                {
-                    while(reader.Read())
-                    {
-                        Book book = new Book();
-
-                        book.Title = reader["Title"].ToString();
-                        book.Author = reader["Author"].ToString();
-                        book.Edition = reader["Edition"].ToString();
-                        book.CourseCode = reader["CourseCode"].ToString();
-                        book.Faculty = reader["Faculty"].ToString();
-                        book.Condition = reader["Condition"].ToString();
-                        book.Description = reader["Description"].ToString();
-                        book.Price = (int)reader["Price"];
-                        book.Campus = reader["Campus"].ToString();
-                        book.Posted = (DateTime)reader["Posted"];
-                        book.ListingNumber = (Guid)reader["ListingNumber"];
-                        book.Islike = (int)reader["Islike"];
-                        book.BooksImgs = reader["BooksImgs"].ToString();
-                        book.Photo = reader["Photo"].ToString();
-                        allBooks.Add(book);
-                    }
-                }
-                con.Close();
-            }
-            return allBooks;
-        }
-        public static List<Book> GetBooks(int Islike)
-        {
-            List<Book> allBooks = new List<Book>();
-            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
-            {
-                con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM Books where Islike="+ Islike, con);
-                using (SqlDataReader reader = getCommand.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Book book = new Book();
-
-                        book.Title = reader["Title"].ToString();
-                        book.Author = reader["Author"].ToString();
-                        book.Edition = reader["Edition"].ToString();
-                        book.CourseCode = reader["CourseCode"].ToString();
-                        book.Faculty = reader["Faculty"].ToString();
-                        book.Condition = reader["Condition"].ToString();
-                        book.Description = reader["Description"].ToString();
-                        book.Price = (int)reader["Price"];
-                        book.Campus = reader["Campus"].ToString();
-                        book.Posted = (DateTime)reader["Posted"];
-                        book.ListingNumber = (Guid)reader["ListingNumber"];
-                        book.Islike= (int)reader["Islike"];
-                        book.BooksImgs= reader["BooksImgs"].ToString();
-                        book.Photo= reader["Photo"].ToString();
-                        allBooks.Add(book);
-                    }
-                }
-                con.Close();
-            }
-            return allBooks;
-        }
-        public static ObservableCollection<Book> GetBookss()
+        public static ObservableCollection<Book> GetBooks()
         {
             ObservableCollection<Book> allBooks = new ObservableCollection<Book>();
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM Books", con);
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers", con);
+                using(SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    allBooks = ReadtoListBook(reader);
+                }
+                con.Close();
+            }
+            return allBooks;
+        }
+        public static Book GetBooks(string listingnumber)
+        {
+            Book allBooks = new Book();
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where listingnumber=@listingnumber", con);
+                getCommand.Parameters.Add("@listingnumber", SqlDbType.VarChar).Value = listingnumber;
                 using (SqlDataReader reader = getCommand.ExecuteReader())
                 {
-                    while (reader.Read())
-                    {
-                        Book book = new Book();
-
-                        book.Title = reader["Title"].ToString();
-                        book.Author = reader["Author"].ToString();
-                        book.Edition = reader["Edition"].ToString();
-                        book.CourseCode = reader["CourseCode"].ToString();
-                        book.Faculty = reader["Faculty"].ToString();
-                        book.Condition = reader["Condition"].ToString();
-                        book.Description = reader["Description"].ToString();
-                        book.Price = (int)reader["Price"];
-                        book.Campus = reader["Campus"].ToString();
-                        book.Posted = (DateTime)reader["Posted"];
-                        book.ListingNumber = (Guid)reader["ListingNumber"];
-                        book.Islike = (int)reader["Islike"];
-                        book.BooksImgs = reader["BooksImgs"].ToString();
-                        book.Photo = reader["Photo"].ToString();
-                        allBooks.Add(book);
-                    }
+                    allBooks = ReadtoBook(reader);
                 }
                 con.Close();
             }
@@ -161,38 +86,50 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("Select * FROM Books WHERE EmailAddress = @EmailAddress", con);
+                SqlCommand getCommand = new SqlCommand("Select * FROM ViewBooksUsers WHERE EmailAddress = @EmailAddress", con);
                 getCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = User.Email;
-                using (SqlDataReader reader = getCommand.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Book book = new Book();
-
-                        book.Title = reader["Title"].ToString();
-                        book.Author = reader["Author"].ToString();
-                        book.Edition = reader["Edition"].ToString();
-                        book.CourseCode = reader["CourseCode"].ToString();
-                        book.Faculty = reader["Faculty"].ToString();
-                        book.Condition = reader["Condition"].ToString();
-                        book.Description = reader["Description"].ToString();
-                        book.Price = (int)reader["Price"];
-                        book.Campus = reader["Campus"].ToString();
-                        book.Posted = (DateTime)reader["Posted"];
-                        book.ListingNumber = (Guid)reader["ListingNumber"];
-                        book.Islike = (int)reader["Islike"];
-                        book.BooksImgs = reader["BooksImgs"].ToString();
-                        book.Photo = reader["Photo"].ToString();
-                        usersBooks.Add(book);
-                    }
+                using (SqlDataReader reader = getCommand.ExecuteReader()){
+                    usersBooks = ReadtoListBook(reader);
                 }
-
                 return usersBooks;
             }
         }
-        /*
-         * Book must have already been added to the database and have a ListingNumber
-         */
+
+        public static ObservableCollection<Book> GetBooksByShoper(string EmailAddress)
+        {
+            ObservableCollection<Book> allBooks = new ObservableCollection<Book>();
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where ShopEmailAddress=@ShopEmailAddress", con);
+                getCommand.Parameters.Add("@ShopEmailAddress", SqlDbType.VarChar).Value = EmailAddress;
+                using (SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    allBooks = ReadtoListBook(reader);
+                }
+                con.Close();
+            }
+            return allBooks;
+        }
+
+        public static int getTotalSale(string EmailAddress) {
+            int result = 0;
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand getCommand = new SqlCommand("select count(1) as Total from ViewBooksUsers where ShopEmailAddress=@EmailAddress", con);
+                getCommand.Parameters.Add("@EmailAddress", SqlDbType.VarChar).Value = EmailAddress;
+                object obj = getCommand.ExecuteScalar();
+                con.Close();
+                if (obj == null) result = 0;
+                else
+                {
+                    result = (int)obj;
+                }
+            }
+            return result;
+        }
+
         public static void RemoveBook(Book delBook)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -204,20 +141,54 @@ namespace AUT_Market
                 con.Close();
             }
         }
-        public static int UpdateBook(Book book)
-        {
-            Debug.WriteLine(JsonConvert.SerializeObject(book));
-            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+
+       static ObservableCollection<Book> ReadtoListBook(SqlDataReader reader) {
+            ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
+            while (reader.Read())
             {
-                con.Open();
-                SqlCommand delCommand = new SqlCommand("UPDATE Books SET Islike=@Islike where ListingNumber=@ListingNumber", con);
-                delCommand.Parameters.AddWithValue("@Islike", SqlDbType.Int).Value = book.Islike;
-                delCommand.Parameters.AddWithValue("@ListingNumber", SqlDbType.UniqueIdentifier).Value = book.ListingNumber;
-                delCommand.ExecuteNonQuery();
-                int result = delCommand.ExecuteNonQuery();
-                con.Close();
-                return result;
+                Book book = new Book();
+
+                book.Title = reader["Title"].ToString();
+                book.Author = reader["Author"].ToString();
+                book.Edition = reader["Edition"].ToString();
+                book.CourseCode = reader["CourseCode"].ToString();
+                book.Faculty = reader["Faculty"].ToString();
+                book.Condition = reader["Condition"].ToString();
+                book.Description = reader["Description"].ToString();
+                book.Price = (int)reader["Price"];
+                book.Campus = reader["Campus"].ToString();
+                book.Posted = (DateTime)reader["Posted"];
+                book.ListingNumber = (Guid)reader["ListingNumber"];
+                book.ShopUserName = reader["ShopUserName"].ToString();
+                book.ShopEmailAddress = reader["ShopEmailAddress"].ToString();
+                book.BooksImgs = reader["BooksImgs"].ToString();
+                book.Photo = reader["Photo"].ToString();
+                usersBooks.Add(book);
             }
+            return usersBooks;
+        }
+        static Book ReadtoBook(SqlDataReader reader)
+        {
+            Book book = new Book();
+            while (reader.Read())
+            {
+                book.Title = reader["Title"].ToString();
+                book.Author = reader["Author"].ToString();
+                book.Edition = reader["Edition"].ToString();
+                book.CourseCode = reader["CourseCode"].ToString();
+                book.Faculty = reader["Faculty"].ToString();
+                book.Condition = reader["Condition"].ToString();
+                book.Description = reader["Description"].ToString();
+                book.Price = (int)reader["Price"];
+                book.Campus = reader["Campus"].ToString();
+                book.Posted = (DateTime)reader["Posted"];
+                book.ListingNumber = (Guid)reader["ListingNumber"];
+                book.ShopUserName = reader["ShopUserName"].ToString();
+                book.ShopEmailAddress = reader["ShopEmailAddress"].ToString();
+                book.BooksImgs = reader["BooksImgs"].ToString();
+                book.Photo = reader["Photo"].ToString();
+            }
+            return book;
         }
     }
 }

@@ -186,3 +186,4 @@ D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Mark
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\Software Developemnt Practices COMP602\AUT2050\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+C:\Users\Administrator\source\repos\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\BookSeller.xaml.g.cs

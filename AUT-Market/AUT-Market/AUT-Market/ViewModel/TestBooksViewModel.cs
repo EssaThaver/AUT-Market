@@ -1,11 +1,6 @@
-﻿using AUT_Market.Model;
-using AUT_Market.Service;
+﻿using AUT_Market.Service;
 using AUT_Market.View;
-using FFImageLoading.Forms.Args;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -31,12 +26,12 @@ namespace AUT_Market.ViewModel
         public TestBooksViewModel(INavigation Navigation)
         {
             this.Navigation = Navigation;
-            getBooks = BooksDb.GetBookss();
+            getBooks = BooksDb.GetBooks();
         }
 
         public void getShortLiistOfCondition(string condition)
         {
-            ObservableCollection<Book> books = BooksDb.GetBookss();
+            ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
             foreach(Book book in books)
@@ -56,7 +51,7 @@ namespace AUT_Market.ViewModel
         }
 
         public ICommand ListViewCommand => new Command<Book>(async(value)=> {
-            await Navigation.PushAsync(new WishlistDetail(value));
+            await Navigation.PushAsync(new WishlistDetail(null));
         });
 
     }

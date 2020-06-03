@@ -40,6 +40,18 @@
           "lib/monoandroid71/Plugin.Permissions.dll": {}
         }
       },
+      "Qiniu.SDK/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Qiniu.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Qiniu.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.7.335": {
         "type": "package",
         "dependencies": {
@@ -972,6 +984,18 @@
           "lib/MonoAndroid10/FFImageLoading.Forms.dll": {}
         }
       },
+      "Xamarin.FFImageLoading.Transformations/2.4.11.982": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.FFImageLoading": "2.4.11.982"
+        },
+        "compile": {
+          "lib/MonoAndroid10/FFImageLoading.Transformations.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/FFImageLoading.Transformations.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.657": {
         "type": "package",
         "dependencies": {
@@ -1006,6 +1030,7 @@
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Permissions": "3.0.0.12",
+          "Qiniu.SDK": "8.0.0",
           "System.Data.SqlClient": "4.8.1",
           "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Media": "4.0.1.5",
@@ -1013,6 +1038,7 @@
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
+          "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
           "Xamarin.Forms": "4.5.0.657",
           "sqlite-net-pcl": "1.7.335"
         },
@@ -1092,6 +1118,21 @@
         "plugin.permissions.3.0.0.12.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "Qiniu.SDK/8.0.0": {
+      "sha512": "Y5O+51kX6SFffbAWMfT8DuP/9Py4//NPe7GRWqjldcftd7XRsQD5/crt0WGANpw6vgwhfj12gPQ/kexajNwn3w==",
+      "type": "package",
+      "path": "qiniu.sdk/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Qiniu.dll",
+        "lib/net46/Qiniu.dll",
+        "lib/netstandard1.3/Qiniu.dll",
+        "lib/netstandard2.0/Qiniu.dll",
+        "qiniu.sdk.8.0.0.nupkg.sha512",
+        "qiniu.sdk.nuspec"
       ]
     },
     "sqlite-net-pcl/1.7.335": {
@@ -2321,6 +2362,42 @@
         "xamarin.ffimageloading.forms.nuspec"
       ]
     },
+    "Xamarin.FFImageLoading.Transformations/2.4.11.982": {
+      "sha512": "cNG6zhiEBTENAGgIc9lY54YMJ0tg2dJ9+tj8tYgrOEQT8gxlj3OUzzNWZgaQWpcx28y5iIt/qM+Bd6jUwtAn1Q==",
+      "type": "package",
+      "path": "xamarin.ffimageloading.transformations/2.4.11.982",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FFImageLoading.Transformations.dll",
+        "lib/MonoAndroid10/FFImageLoading.Transformations.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Transformations.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Transformations.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Transformations.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Transformations.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Transformations.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Transformations.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Transformations.xml",
+        "lib/netstandard1.0/FFImageLoading.Transformations.dll",
+        "lib/netstandard1.0/FFImageLoading.Transformations.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Transformations.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Transformations.xml",
+        "lib/tizen40/FFImageLoading.Transformations.dll",
+        "lib/tizen40/FFImageLoading.Transformations.pdb",
+        "lib/tizen40/FFImageLoading.Transformations.xml",
+        "lib/uap/FFImageLoading.Transformations.dll",
+        "lib/uap/FFImageLoading.Transformations.pdb",
+        "lib/uap/FFImageLoading.Transformations.xml",
+        "lib/win81/FFImageLoading.Transformations.dll",
+        "lib/win81/FFImageLoading.Transformations.pdb",
+        "lib/win81/FFImageLoading.Transformations.xml",
+        "lib/wpa81/FFImageLoading.Transformations.dll",
+        "lib/wpa81/FFImageLoading.Transformations.pdb",
+        "lib/wpa81/FFImageLoading.Transformations.xml",
+        "xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
+        "xamarin.ffimageloading.transformations.nuspec"
+      ]
+    },
     "Xamarin.Forms/4.5.0.657": {
       "sha512": "S6WmhCKBRDMG5woHEIRA8MBZv6yn2jZ8Kf9DzzcOuB5gXivH1S5mIiSt4yoaa9HwfNUcg2d7AH2GEoICmH5bJg==",
       "type": "package",
@@ -2650,24 +2727,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Patel\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
       "projectName": "AUT-Market.Android",
-      "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
-      "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-      "outputPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market.Android\\AUT-Market.Android.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Patel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2681,8 +2758,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
-              "projectPath": "D:\\Software Developemnt Practices COMP602\\AUT2050\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
+            "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj"
             }
           }
         }

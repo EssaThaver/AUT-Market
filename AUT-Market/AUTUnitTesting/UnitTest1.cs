@@ -29,7 +29,6 @@ namespace AUTUnitTesting
         private void PressButton()
         {
             IsValidInput = valid.CheckValidInput(title, author, edition, courseCode, price, desc);
-
             Assert.AreEqual(IsValidInput, -1);
 
         }
