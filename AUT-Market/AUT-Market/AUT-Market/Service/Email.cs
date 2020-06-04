@@ -17,7 +17,7 @@ namespace AUT_Market.Service
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("autmarket.noreply@gmail.com");
-                mail.To.Add(book.ShopEmailAddress);
+                mail.To.Add(book.ShopEmailAddress.Trim());
                 mail.Subject = this.subject();
                 mail.Body = this.body();
                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;

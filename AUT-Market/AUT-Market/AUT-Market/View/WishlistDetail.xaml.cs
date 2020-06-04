@@ -41,7 +41,7 @@ namespace AUT_Market.View
 
         private async void interesting_Clicked(object sender, EventArgs e)
         {
-            var confrim = await DisplayAlert("Permission", "We need get your email to pass to " + vm.currentBook.ShopUserName + " to contact", "ACCPET", "DECLINE");
+            var confrim = await DisplayAlert("Permission", "We need get your email to pass to " + vm.currentBook.ShopEmailAddress + " to contact", "ACCPET", "DECLINE");
 
             if (confrim)
             {
