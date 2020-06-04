@@ -9,7 +9,8 @@ namespace AUT_Market.Service
 {
     class CollectsServer
     {
-        public static int AddCollect(Collects model){
+        public static int AddCollect(Collects model)
+        {
             int result = -1;
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
@@ -23,12 +24,13 @@ namespace AUT_Market.Service
             }
             return result;
         }
-        public static List<Collects> getCollects(string EmailAddress){
+        public static List<Collects> getCollects(string EmailAddress)
+        {
             var collects = new List<Collects>();
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewCollects where UserEmailAddress=@EmailAddress", con);
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewCollects where isdel=0 and UserEmailAddress=@EmailAddress", con);
                 getCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = EmailAddress;
                 using (SqlDataReader reader = getCommand.ExecuteReader())
                 {
@@ -38,7 +40,8 @@ namespace AUT_Market.Service
             }
             return collects;
         }
-        static List<Collects> ReaderToCollects(SqlDataReader reader) {
+        static List<Collects> ReaderToCollects(SqlDataReader reader)
+        {
             var collects = new List<Collects>();
             while (reader.Read())
             {
@@ -66,24 +69,27 @@ namespace AUT_Market.Service
             }
             return collects;
         }
-        public static int getQueryZan(string ListingNumber,string EmailAddress){
+        public static int getQueryZan(string ListingNumber, string EmailAddress)
+        {
             var result = 0;
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT Count(*) FROM ViewCollects where UserEmailAddress=@EmailAddress and ListingNumber=@ListingNumber", con);
+                SqlCommand getCommand = new SqlCommand("SELECT Count(*) FROM ViewCollects where  isdel=0 and  UserEmailAddress=@EmailAddress and ListingNumber=@ListingNumber", con);
                 getCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = EmailAddress;
                 getCommand.Parameters.Add("@ListingNumber", SqlDbType.NVarChar).Value = ListingNumber;
-                object obj= getCommand.ExecuteScalar();
+                object obj = getCommand.ExecuteScalar();
                 if (obj == null) result = 0;
-                else {
+                else
+                {
                     result = (int)obj;
                 }
                 con.Close();
             }
             return result;
         }
-        public static int RemoveCollcet(string ListingNumber, string EmailAddress) {
+        public static int RemoveCollcet(string ListingNumber, string EmailAddress)
+        {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();

@@ -15,26 +15,29 @@ namespace AUT_Market.View
     public partial class WishlistDetail : ContentPage
     {
         WishlistDetailViewModel vm;
-        public WishlistDetail(Book model,bool ShowShoper=true)
+        public WishlistDetail(Book model, bool ShowShoper = true)
         {
             InitializeComponent();
-            vm = new WishlistDetailViewModel(model,Navigation);
+            vm = new WishlistDetailViewModel(model, Navigation);
             BindingContext = vm;
-            if (!ShowShoper) {
+            if (!ShowShoper)
+            {
                 StackShoper.IsVisible = false;
             }
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            
+
             vm.getChildData();
         }
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e){
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
             vm?.UpdateZan.Execute(null);
         }
 
-        private void NavToShoperPage(object sender, EventArgs e) {
+        private void NavToShoperPage(object sender, EventArgs e)
+        {
             vm?.NavToShoperPage.Execute(null);
         }
 

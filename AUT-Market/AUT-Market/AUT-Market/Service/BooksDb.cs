@@ -55,7 +55,7 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers", con);
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where IsDel=0", con);
                 using(SqlDataReader reader = getCommand.ExecuteReader())
                 {
                     allBooks = ReadtoListBook(reader);
@@ -70,7 +70,7 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where listingnumber=@listingnumber", con);
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where IsDel=0 and listingnumber=@listingnumber", con);
                 getCommand.Parameters.Add("@listingnumber", SqlDbType.VarChar).Value = listingnumber;
                 using (SqlDataReader reader = getCommand.ExecuteReader())
                 {
@@ -86,7 +86,7 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("Select * FROM ViewBooksUsers WHERE EmailAddress = @EmailAddress", con);
+                SqlCommand getCommand = new SqlCommand("Select * FROM ViewBooksUsers  where IsDel=0 and EmailAddress = @EmailAddress", con);
                 getCommand.Parameters.Add("@EmailAddress", SqlDbType.NVarChar).Value = User.Email;
                 using (SqlDataReader reader = getCommand.ExecuteReader()){
                     usersBooks = ReadtoListBook(reader);
@@ -101,7 +101,7 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where ShopEmailAddress=@ShopEmailAddress", con);
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM ViewBooksUsers where IsDel=0 and ShopEmailAddress=@ShopEmailAddress", con);
                 getCommand.Parameters.Add("@ShopEmailAddress", SqlDbType.VarChar).Value = EmailAddress;
                 using (SqlDataReader reader = getCommand.ExecuteReader())
                 {
@@ -117,7 +117,7 @@ namespace AUT_Market
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand getCommand = new SqlCommand("select count(1) as Total from ViewBooksUsers where ShopEmailAddress=@EmailAddress", con);
+                SqlCommand getCommand = new SqlCommand("select count(1) as Total from ViewBooksUsers where IsDel=0 and ShopEmailAddress=@EmailAddress", con);
                 getCommand.Parameters.Add("@EmailAddress", SqlDbType.VarChar).Value = EmailAddress;
                 object obj = getCommand.ExecuteScalar();
                 con.Close();
@@ -130,16 +130,19 @@ namespace AUT_Market
             return result;
         }
 
-        public static void RemoveBook(Book delBook)
+        public static int RemoveBook(Book delBook)
         {
+            int result = 0;
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
                 con.Open();
-                SqlCommand delCommand = new SqlCommand("DELETE FROM Books WHERE ListingNumber=@ListingNumber", con);
+                //SqlCommand delCommand = new SqlCommand("DELETE FROM Books WHERE ListingNumber=@ListingNumber", con);
+                SqlCommand delCommand = new SqlCommand("update Books set IsDel=1 WHERE ListingNumber=@ListingNumber", con);
                 delCommand.Parameters.AddWithValue("@ListingNumber", SqlDbType.UniqueIdentifier).Value = delBook.ListingNumber;
-                delCommand.ExecuteNonQuery();
+                result=delCommand.ExecuteNonQuery();
                 con.Close();
             }
+            return result;
         }
 
        static ObservableCollection<Book> ReadtoListBook(SqlDataReader reader) {
@@ -156,6 +159,7 @@ namespace AUT_Market
                 book.Condition = reader["Condition"].ToString();
                 book.Description = reader["Description"].ToString();
                 book.Price = (int)reader["Price"];
+                book.IsDel= (int)reader["IsDel"];
                 book.Campus = reader["Campus"].ToString();
                 book.Posted = (DateTime)reader["Posted"];
                 book.ListingNumber = (Guid)reader["ListingNumber"];
@@ -180,6 +184,7 @@ namespace AUT_Market
                 book.Condition = reader["Condition"].ToString();
                 book.Description = reader["Description"].ToString();
                 book.Price = (int)reader["Price"];
+                book.IsDel = (int)reader["IsDel"];
                 book.Campus = reader["Campus"].ToString();
                 book.Posted = (DateTime)reader["Posted"];
                 book.ListingNumber = (Guid)reader["ListingNumber"];

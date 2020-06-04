@@ -20,12 +20,8 @@ namespace AUT_Market.View
             InitializeComponent();
 
             vm = new TestBooksViewModel(Navigation);
-
             vm.getUserBook();
-
             BindingContext = vm;
-
-
         }
 
         private async void Remove_Clicked(object sender, EventArgs e)
@@ -38,9 +34,10 @@ namespace AUT_Market.View
 
                 var book = removeBtn?.BindingContext as Book;
 
-                BooksDb.RemoveBook(book);
-
-                vm?.RemoveBook.Execute(book);
+                int result= BooksDb.RemoveBook(book);
+                if (result > 0) {
+                    vm?.RemoveBook.Execute(book);
+                }
             }
         }
     }

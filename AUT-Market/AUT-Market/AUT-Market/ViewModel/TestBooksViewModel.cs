@@ -9,7 +9,7 @@ namespace AUT_Market.ViewModel
     class TestBooksViewModel
     {
         public ObservableCollection<Book> getBooks { get; set; }
-        
+
 
         public Command<Book> RemoveBook
         {
@@ -34,27 +34,19 @@ namespace AUT_Market.ViewModel
             ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach(Book book in books)
+            foreach (Book book in books)
             {
-                if(book.Condition.Equals(condition))
+                if (book.Condition.Equals(condition))
                 {
                     resultBook.Add(book);
                 }
             }
-
             getBooks = resultBook;
         }
 
-        public void getUserBook ()
+        public void getUserBook()
         {
             getBooks = BooksDb.GetBookByUser(new User());
         }
-
-        public ICommand ListViewCommand => new Command<Book>(async(value)=> {
-            await Navigation.PushAsync(new WishlistDetail(null));
-        });
-
     }
-
-
 }

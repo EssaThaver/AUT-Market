@@ -115,16 +115,19 @@ namespace AUT_Market.View
                 Description = descInput.Text.Trim(),
                 Campus = campusSelection.SelectedItem.ToString()
             };
+            model.Photo = "";
             model.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             if (imagePaths.Count > 0) {
                 model.Photo = imagePaths[0];
             }
             //UsersDb.AddUser(new User());
-            BooksDb.AddBook(model);
-            await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
+            int result= BooksDb.AddBook(model);
+            if (result > 0) {
+                await DisplayAlert("Complate", "Your Book will post on the list soon", "OK");
 
-            Application.Current.MainPage = new HomePage();
-            await Shell.Current.GoToAsync("//main");
+                Application.Current.MainPage = new HomePage();
+                await Shell.Current.GoToAsync("//main");
+            }
         }
         List<string> imagePaths = new List<string>();
         private async void BtnAddImageAsync(object sender,EventArgs e){
