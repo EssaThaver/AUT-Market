@@ -20,6 +20,11 @@
                         <IndicatorView x:Name="indicatorView" IndicatorColor="White" SelectedIndicatorColor="#1976D2" BackgroundColor="Transparent" HorizontalOptions="Center" Margin="0,-20,0,0" IndicatorSize="8"/>
                     </StackLayout>
                     <BoxView HeightRequest="5"/>
+
+                    <StackLayout WidthRequest="100">
+                        <Button Text="I'm Interesting" Margin="10" x:Name="interestingTop" Clicked="interesting_Clicked" BackgroundColor="#A44DC0" TextColor="White"/>
+                    </StackLayout>
+
                     <StackLayout Orientation="Horizontal" Padding="10">
                         <Label Text="Title:" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="{Binding BookTitle}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
@@ -37,13 +42,13 @@
                         <Label Text="{Binding author}" VerticalOptions="Center" FontAttributes="Bold" />
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                    
+
                     <StackLayout Orientation="Horizontal" Padding="10">
                         <Label Text="Faculty:" FontAttributes="Bold"/>
                         <Label Text="{Binding faculty}" VerticalOptions="Center" FontAttributes="Bold" />
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
-                    
+
                     <StackLayout Orientation="Horizontal" Padding="10">
                         <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
                         <Label Text="{Binding price}" VerticalOptions="Center" FontAttributes="Bold"/>
@@ -77,6 +82,11 @@
                         <Label Text="{Binding BookDesc}" VerticalOptions="Center" FontAttributes="Bold"/>
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+
+                    <StackLayout WidthRequest="100">
+                        <Button Text="I'm Interesting" Margin="10" x:Name="interestingBottom"  Clicked="interesting_Clicked" BackgroundColor="#A44DC0" TextColor="White"/>
+                    </StackLayout>
+                    
                 </StackLayout>
             </ScrollView>
 

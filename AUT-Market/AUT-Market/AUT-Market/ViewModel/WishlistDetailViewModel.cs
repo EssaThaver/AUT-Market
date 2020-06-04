@@ -40,12 +40,16 @@ namespace AUT_Market.ViewModel
 
         #endregion
         public ObservableCollection<string> BookImages { get; set; }= new ObservableCollection<string>();
+        public Book currentBook { get; set; }
         Book model;
         INavigation Navigation;
+
         public WishlistDetailViewModel(Book model, INavigation Navigation) {
             this.Navigation = Navigation;
             this.model = BooksDb.GetBooks(model.ListingNumber.ToString());
+            this.currentBook = model;
         }
+
         public void getChildData() {
             var list = JsonConvert.DeserializeObject<List<string>>(model.BooksImgs);
             foreach (var item in list){
