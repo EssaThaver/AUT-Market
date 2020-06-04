@@ -13,7 +13,6 @@ namespace AUT_Market
 
     public partial class ListingPage : ContentPage
     {
-        // List<Book> Books { get; set; }
         TestBooksViewModel vm;
 
         public ListingPage()
@@ -27,6 +26,7 @@ namespace AUT_Market
             base.OnAppearing();
             conditionSelection.ItemsSource = new Conditions().getOptionCondition();
             campusSelection.ItemsSource = new Campus().getOptionCampus();
+            priceSelection.ItemsSource = new Price().getOptionPrice();
             vm = new TestBooksViewModel(Navigation);
             BindingContext = vm;
         }
@@ -56,7 +56,6 @@ namespace AUT_Market
 
         private void applyBtn_Clicked(object sender, EventArgs e)
         {
-
             if (conditionSelection.SelectedIndex > 0)
             {
                 vm = new TestBooksViewModel(Navigation);
@@ -99,6 +98,23 @@ namespace AUT_Market
         private void sortBtn_Clicked(object sender, EventArgs e)
         {
             sort.IsVisible = true;
+
+            if (priceSelection.SelectedIndex > 0)
+            {
+                vm = new TestBooksViewModel(Navigation);
+
+                string userSelect = priceSelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfPrice(userSelect);
+
+                BindingContext = vm;
+            }
+            else
+            {
+                vm = new TestBooksViewModel(Navigation);
+                BindingContext = vm;
+            }
+
             filter.IsVisible = false;
         }
 
@@ -108,6 +124,8 @@ namespace AUT_Market
             BindingContext = vm;
 
         }
+
+        
     }
 }
 

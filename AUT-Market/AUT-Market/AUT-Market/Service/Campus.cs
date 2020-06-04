@@ -20,13 +20,12 @@ namespace AUT_Market.Service
         public List<string> getOptionCampus()
         {
             List<string> listCampus = new List<string>();
-            ;
+            
             listCampus.Add("All campuses");
             listCampus.Add("North");
             listCampus.Add("City");
             listCampus.Add("South");
             
-
             return listCampus;
         }
     }

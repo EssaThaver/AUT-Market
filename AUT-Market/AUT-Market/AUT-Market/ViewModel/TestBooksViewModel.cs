@@ -38,9 +38,9 @@ namespace AUT_Market.ViewModel
             ObservableCollection<Book> books = BooksDb.GetBookss();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach(Book book in books)
+            foreach (Book book in books)
             {
-                if(book.Condition.Equals(condition))
+                if (book.Condition.Equals(condition))
                 {
                     resultBook.Add(book);
                 }
@@ -65,12 +65,41 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getUserBook ()
+        public void getShortLiistOfPrice(string price)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBookss();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+            foreach (Book book in books)
+            {
+                if (price == "Less than $50" && book.Price < 50)
+                {
+                    resultBook.Add(book);
+                }
+                else if (price == "Less than $100" && book.Price < 100)
+                {
+                    resultBook.Add(book);
+                }
+                else if (price == "Less than $150" && book.Price < 150)
+                {
+                    resultBook.Add(book);
+                }
+                else if (price == "Less than $200" && book.Price < 200)
+                {
+                    resultBook.Add(book);
+                }
+            }
+
+            getBooks = resultBook;
+        }
+
+        public void getUserBook()
         {
             getBooks = BooksDb.GetBookByUser(new User());
         }
 
-        public ICommand ListViewCommand => new Command<Book>(async(value)=> {
+        public ICommand ListViewCommand => new Command<Book>(async (value) =>
+        {
             await Navigation.PushAsync(new WishlistDetail(value));
         });
 
