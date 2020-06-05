@@ -31,7 +31,7 @@ namespace AUT_Market.ViewModel
 
         public void getUserBook ()
         {
-            getBooks = BooksDb.GetBookByUser(new User());
+            getBooks = BooksDb.GetBookByUser();
         }
 
         public ICommand ListViewCommand => new Command<Book>(async(value)=> {

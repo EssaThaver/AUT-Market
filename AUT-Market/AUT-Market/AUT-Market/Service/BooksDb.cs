@@ -80,7 +80,7 @@ namespace AUT_Market
             }
             return allBooks;
         }
-        public static ObservableCollection<Book> GetBookByUser(User user)
+        public static ObservableCollection<Book> GetBookByUser()
         {
             ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -110,6 +110,23 @@ namespace AUT_Market
                 con.Close();
             }
             return allBooks;
+        }
+
+        public static ObservableCollection<Book> GetSellerHistoryBook()
+        {
+            ObservableCollection<Book> getBooks = new ObservableCollection<Book>();
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand getCommand = new SqlCommand("SELECT * FROM SellerHistory where EmailAddress=@EmailAddress", con);
+                getCommand.Parameters.Add("@EmailAddress", SqlDbType.VarChar).Value = User.Email;
+                using (SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    getBooks = ReadtoSellerHistoryBook(reader);
+                }
+                con.Close();
+            }
+            return getBooks;
         }
 
         public static int getTotalSale(string EmailAddress) {
@@ -255,6 +272,32 @@ namespace AUT_Market
                 book.Photo = reader["Photo"].ToString();
             }
             return book;
+        }
+
+        static ObservableCollection<Book> ReadtoSellerHistoryBook(SqlDataReader reader)
+        {
+            ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
+            while (reader.Read())
+            {
+                Book book = new Book();
+
+                book.Title = reader["Title"].ToString();
+                book.Author = reader["Author"].ToString();
+                book.Edition = reader["Edition"].ToString();
+                book.CourseCode = reader["CourseCode"].ToString();
+                book.Faculty = reader["Faculty"].ToString();
+                book.Condition = reader["Condition"].ToString();
+                book.Description = reader["Description"].ToString();
+                book.Price = (int)reader["Price"];
+                book.Campus = reader["Campus"].ToString();
+                book.Posted = (DateTime)reader["Posted"];
+                book.ListingNumber = (Guid)reader["ListingNumber"];
+                book.ShopEmailAddress = reader["EmailAddress"].ToString();
+                book.Photo = reader["Photo"].ToString();
+                book.Reason = reader["Reason"].ToString();
+                usersBooks.Add(book);
+            }
+            return usersBooks;
         }
 
 

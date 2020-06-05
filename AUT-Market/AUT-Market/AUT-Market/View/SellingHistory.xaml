@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="AUT_Market.View.SellingHistory">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Image Source="AUTLongLogo.png"/>
+                    <Frame CornerRadius="40" Margin="20,-150,20,20">
+                        <StackLayout>
+                            <Label Text="Selling History" HorizontalOptions="Center" FontSize="40"/>
+                            <CollectionView ItemsSource="{Binding getSellerHistoryBooks}" x:Name="historyBook">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="10,20,10,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!--===============================================================================================================================================-->
+
+                                            <ffimg:CachedImage Grid.RowSpan="4" Source="{Binding PhotoUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="100"/>
+
+                                            <!--===============================================================================================================================================-->
+
+                                            <Label Grid.Column="1" Text="{Binding Title, StringFormat='Title: {0}'}" FontAttributes="Bold"/>
+                                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty, StringFormat='Faculty: {0}'}" />
+                                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode, StringFormat='Course Code: {0}'}" />
+                                            <Label Grid.Column="1" Grid.Row="3" Text="{Binding Price, StringFormat='Price: {0:C}'}"/>
+                                            <Label Grid.Column="1" Grid.Row="4" Text="{Binding Reason, StringFormat='Reason: {0}'}" />
+                                            
+                                            <!--===============================================================================================================================================-->
+
+                                            <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Row="5" Grid.ColumnSpan ="2"/>
+
+                                            <!--===============================================================================================================================================-->
+
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

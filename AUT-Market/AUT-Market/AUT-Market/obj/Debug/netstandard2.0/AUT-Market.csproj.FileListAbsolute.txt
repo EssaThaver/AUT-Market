@@ -208,3 +208,4 @@ D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\X
 D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
 D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellingHistory.xaml.g.cs

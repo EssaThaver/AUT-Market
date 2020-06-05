@@ -166,7 +166,7 @@ namespace AUT_Market.View
                 Author = authorInput.Text,
                 Faculty = facultySelection.SelectedItem.ToString(),
                 CourseCode = courseCodeInput.Text,
-                Price = float.Parse(priceInput.Text),
+                Price = int.Parse(priceInput.Text),
                 Condition = conditionSelection.SelectedItem.ToString(),
                 Description = descInput.Text.Trim(),
                 Campus = campusSelection.SelectedItem.ToString()
@@ -222,7 +222,7 @@ namespace AUT_Market.View
             updateBook.Description = descInput.Text.Trim();
             descInput.Text = null;
 
-            updateBook.Price = float.Parse(priceInput.Text.Trim());
+            updateBook.Price = int.Parse(priceInput.Text.Trim());
             priceInput.Text = null;
 
             updateBook.Campus = campusSelection.SelectedItem.ToString();
