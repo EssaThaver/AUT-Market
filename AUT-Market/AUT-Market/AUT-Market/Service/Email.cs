@@ -41,7 +41,7 @@ namespace AUT_Market.Service
 
         public string subject()
         {
-            string subMsg = User.Name + " is interest your book of " + book.Title;
+            string subMsg = User.Name + " is interested your book \"" + book.Title + "\"";
             return subMsg;
         }
 
@@ -50,11 +50,11 @@ namespace AUT_Market.Service
 
             string bodyMsg =
                 "Hi " + book.ShopUserName + ", \n\n" +
-                User.Name + " is interest your book. \n\n" +
+                User.Name + " is interested in buying your book.\n\n" +
                 "Title: " + book.Title +
                 "\nAuthor: " + book.Author +
                 "\nCourse Code: " + book.CourseCode +
-                "\n\nHere Buyer email address: " + User.Email;
+                "\n\nThis is "+ User.Name +"'s email address: " + User.Email;
 
             return bodyMsg;
         }

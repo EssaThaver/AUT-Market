@@ -36,11 +36,11 @@ namespace AUT_Market.View
 
         private async void Remove_Clicked(object sender, EventArgs e)
         {
-            var check = await DisplayAlert("Warning", "Are you Sure? ", "Yes", "No");
+            var check = await DisplayAlert("Warning", "Are You Sure? ", "Yes", "No");
 
             if (check)
             {
-                var reason = await DisplayActionSheet("Reason", null, null, "Sold", "No one Buy it", "faulty");
+                var reason = await DisplayActionSheet("Reason", null, null, "Sold", " I Changed My Mind"," No Buyers","Faulty");
 
 
                 var removeBtn = sender as Button;
