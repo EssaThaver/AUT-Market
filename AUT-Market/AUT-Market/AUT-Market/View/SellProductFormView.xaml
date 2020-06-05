@@ -35,7 +35,7 @@
 
                         <Picker x:Name="campusSelection" Title="Campus"/>
 
-                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric" Text="200"/>
+                        <Entry x:Name="priceInput"  Placeholder="Price" Keyboard="Numeric"/>
 
                         <Picker x:Name="conditionSelection" Title="Condition"/>
 

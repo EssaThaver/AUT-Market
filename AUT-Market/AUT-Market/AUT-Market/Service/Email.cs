@@ -47,6 +47,7 @@ namespace AUT_Market.Service
 
         public string body ()
         {
+
             string bodyMsg =
                 "Hi " + book.ShopUserName + ", \n\n" +
                 User.Name + " is interest your book. \n\n" +

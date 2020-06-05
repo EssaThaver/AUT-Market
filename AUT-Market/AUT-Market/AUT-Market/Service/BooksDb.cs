@@ -130,7 +130,7 @@ namespace AUT_Market
             return result;
         }
 
-        public static void RemoveBook(Book delBook)
+        public static void RemoveBook(Book delBook, string reason)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {
@@ -140,6 +140,37 @@ namespace AUT_Market
                 delCommand.ExecuteNonQuery();
                 con.Close();
             }
+
+            using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
+            {
+                con.Open();
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO SellerHistory (ListingNumber,Title, Author, Edition, CourseCode, Faculty, Price, Condition, Description, EmailAddress, Campus,Photo, Posted,BooksImgs, Reason) " +
+                    "VALUES (@ListingNumber, @Title, @Author, @Edition, @CourseCode, @Faculty, @Price, @Condition, @Description, @Email, @Campus,@Photo, @Posted,@BooksImgs, @Reason);", con);
+                insertCommand.Parameters.Add("@ListingNumber", SqlDbType.UniqueIdentifier).Value = delBook.ListingNumber;
+                insertCommand.Parameters.Add("@Title", SqlDbType.NVarChar).Value = delBook.Title;
+                insertCommand.Parameters.Add("@Author", SqlDbType.NVarChar).Value = delBook.Author;
+                insertCommand.Parameters.Add("@Edition", SqlDbType.NVarChar).Value = delBook.Edition;
+                insertCommand.Parameters.Add("@CourseCode", SqlDbType.NVarChar).Value = delBook.CourseCode;
+                insertCommand.Parameters.Add("@Faculty", SqlDbType.NVarChar).Value = delBook.Faculty;
+                insertCommand.Parameters.Add("@Price", SqlDbType.Int).Value = delBook.Price;
+                insertCommand.Parameters.Add("@Condition", SqlDbType.NVarChar).Value = delBook.Condition;
+                insertCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = delBook.Description;
+                insertCommand.Parameters.Add("@Email", SqlDbType.NVarChar).Value = User.Email;
+                insertCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = delBook.Campus;
+                insertCommand.Parameters.Add("@Photo", SqlDbType.NVarChar).Value = delBook.Photo;
+                insertCommand.Parameters.Add("@Posted", SqlDbType.DateTime).Value = delBook.Posted;
+                insertCommand.Parameters.Add("@BooksImgs", SqlDbType.VarChar).Value = delBook.BooksImgs;
+                insertCommand.Parameters.Add("@Reason", SqlDbType.NVarChar).Value = reason;
+                insertCommand.ExecuteNonQuery();
+
+                con.Close();
+            }
+
+
+
+
+
+
         }
 
         public static void UpdateBookDetail(Book UpBook)
