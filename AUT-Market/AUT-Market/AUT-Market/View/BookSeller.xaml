@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             Title="Book Seller"
+             Title="Seller Details"
              x:Class="AUT_Market.View.BookSeller">
     <ContentPage.Content>
         <StackLayout>
@@ -15,7 +15,7 @@
                 </ffimg:CachedImage>
                 <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
                     <Label Text="{Binding ShopUserName}" FontAttributes="Bold" VerticalOptions="Center"/>
-                    <Label Text="{Binding SaleTotal,StringFormat='Books for sale:{0} Books'}" VerticalOptions="Center"/>
+                    <Label Text="{Binding SaleTotal,StringFormat='Books for Sale: {0} Books'}" VerticalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
             <BoxView HeightRequest="1" BackgroundColor="#ddd"/>
