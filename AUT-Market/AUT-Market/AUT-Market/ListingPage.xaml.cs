@@ -14,7 +14,6 @@ namespace AUT_Market
             InitializeComponent();
             filter.IsVisible = false;
             sort.IsVisible = false;
-            NoBookAvailable.IsVisible = false;
         }
         protected override void OnAppearing()
         {
@@ -89,17 +88,7 @@ namespace AUT_Market
 
             vm.searchBook(searchBook.Text);
 
-            if(vm.getBooks.Count == 0)
-            {
-                NoBookAvailable.IsVisible = true;
-            }
-            else
-            {
-                BindingContext = vm;
-                NoBookAvailable.IsVisible = false;
-
-            }
-
+            BindingContext = vm;
 
         }
     }

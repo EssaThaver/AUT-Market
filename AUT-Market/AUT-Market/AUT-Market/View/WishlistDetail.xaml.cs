@@ -44,7 +44,7 @@ namespace AUT_Market.View
 
         private async void interesting_Clicked(object sender, EventArgs e)
         {
-            var confrim = await DisplayAlert("Permission", " Do we have your permission to send your email address to " + vm.currentBook.ShopUserName + " and she/he will contact you soon?", "ACCPET", "DECLINE");
+            var confrim = await DisplayAlert("Permission", "We need get your email to pass to " + vm.currentBook.ShopUserName + " and she/he will contact you soon", "ACCPET", "DECLINE");
             bool validSend = false;
 
             if (confrim)
@@ -55,7 +55,7 @@ namespace AUT_Market.View
 
                 if (validSend)
                 {
-                    DisplayAlert(" Sent", "Seller will contact you soon", "OK");
+                    DisplayAlert("Complete Send", "Seller will contact you soon", "OK");
                 }
                 else
                 {
@@ -70,12 +70,14 @@ namespace AUT_Market.View
             if (vm.currentBook.ShopEmailAddress == User.Email)
             {
                 interestingTop.IsEnabled = false;
-                interestingTop.Text = "My Book";
+                interestingTop.Text = "OWNED";
                 interestingTop.BackgroundColor = Color.FromHex("#DADADA");
                 interestingTop.TextColor = Color.Black;
 
-                interestingBottom.IsVisible = false;
-                
+                interestingBottom.IsEnabled = false;
+                interestingBottom.Text = "OWNED";
+                interestingBottom.BackgroundColor = Color.FromHex("#DADADA");
+                interestingBottom.TextColor = Color.Black;
             }
         }
     }
