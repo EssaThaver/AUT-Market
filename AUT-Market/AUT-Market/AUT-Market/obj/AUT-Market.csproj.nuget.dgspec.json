@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\master\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {}
+    "D:\\COMP602 AUTMarket\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {}
   },
   "projects": {
-    "D:\\master\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
+    "D:\\COMP602 AUTMarket\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\master\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+        "projectUniqueName": "D:\\COMP602 AUTMarket\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
         "projectName": "AUT_Market",
-        "projectPath": "D:\\master\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+        "projectPath": "D:\\COMP602 AUTMarket\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
         "packagesPath": "C:\\Users\\Patel\\.nuget\\packages\\",
-        "outputPath": "D:\\master\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
+        "outputPath": "D:\\COMP602 AUTMarket\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

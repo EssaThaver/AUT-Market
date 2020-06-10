@@ -6,7 +6,7 @@
              xmlns:ffimg="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="AUT_Market.View.SellingHistory">
-    <ContentPage.Content>
+    <!--<ContentPage.Content>
         <StackLayout>
             <ScrollView>
                 <StackLayout>
@@ -31,11 +31,11 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <!--===============================================================================================================================================-->
+                                            ===============================================================================================================================================
 
                                             <ffimg:CachedImage Grid.RowSpan="4" Source="{Binding PhotoUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="100"/>
 
-                                            <!--===============================================================================================================================================-->
+                                            ===============================================================================================================================================
 
                                             <Label Grid.Column="1" Text="{Binding Title, StringFormat='Title: {0}'}" FontAttributes="Bold"/>
                                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty, StringFormat='Faculty: {0}'}" />
@@ -43,11 +43,11 @@
                                             <Label Grid.Column="1" Grid.Row="3" Text="{Binding Price, StringFormat='Price: {0:C}'}"/>
                                             <Label Grid.Column="1" Grid.Row="4" Text="{Binding Reason, StringFormat='Reason: {0}'}" />
                                             
-                                            <!--===============================================================================================================================================-->
+                                            ===============================================================================================================================================
 
                                             <BoxView BackgroundColor="Black" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Row="5" Grid.ColumnSpan ="2"/>
 
-                                            <!--===============================================================================================================================================-->
+                                            ===============================================================================================================================================
 
                                         </Grid>
                                     </DataTemplate>
@@ -58,5 +58,5 @@
                 </StackLayout>
             </ScrollView>
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>-->
 </ContentPage>

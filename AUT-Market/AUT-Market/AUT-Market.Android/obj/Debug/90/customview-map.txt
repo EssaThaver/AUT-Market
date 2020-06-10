@@ -1,55 +1,55 @@
-@string/appbar_scrolling_view_behavior;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-alpha;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+alpha;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+alpha;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
-android.support.v7.widget.RecyclerView;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-cache-path;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
-external-cache-path;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-files-path;obj\Debug\90\res\xml\file_paths.xml
-external-path;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-FrameLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-item;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
+FrameLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+item;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
 item;obj\Debug\90\res\values\styles.xml
-LinearLayout;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
-paths;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+LinearLayout;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\bottomtablayout.xml
+paths;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 paths;obj\Debug\90\res\xml\file_paths.xml
-resources;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\values\strings.xml
-resources;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
+resources;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\values\strings.xml
+resources;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_in_right.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_out_left.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-set;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
-string;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\values\strings.xml
-style;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_in_right.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_out_left.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+set;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
+string;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\values\strings.xml
+style;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_in_right.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_out_left.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
-translate;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
-WebView;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\layout\activity_webview.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;D:\master\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_in_right.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\anim\slide_out_left.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromleft.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\enterfromright.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoleft.xml
+translate;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\anim\exittoright.xml
+WebView;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\45\jl\res\layout\activity_webview.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\lp\47\jl\res\layout\rootlayout.xml

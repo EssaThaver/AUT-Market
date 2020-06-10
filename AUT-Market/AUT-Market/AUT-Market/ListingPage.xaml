@@ -5,7 +5,7 @@
              x:Class="AUT_Market.ListingPage">
     <StackLayout>
         
-        <StackLayout x:Name="listingBook">
+        <StackLayout x:Name="listingBook">              
 
             <!--========================================================================================================================================================================================-->
 
@@ -31,7 +31,13 @@
             
             <!--========================================================================================================================================================================================-->
 
-                <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
+            <StackLayout HorizontalOptions="Center">
+                <Label  x:Name="NoBookResult" Text="No results containing all your search terms were found."/>
+            </StackLayout>
+
+            <!--========================================================================================================================================================================================-->
+
+            <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
                 <CollectionView x:Name="listview" ItemsSource="{Binding getBooks}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -113,8 +119,8 @@
                 <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20"/>
             </StackLayout>
         </StackLayout>
-    </StackLayout>
-    <!--===============================================================================================================================================-->
 
+        <!--===============================================================================================================================================-->
 
+    </StackLayout>    
 </ContentPage>
