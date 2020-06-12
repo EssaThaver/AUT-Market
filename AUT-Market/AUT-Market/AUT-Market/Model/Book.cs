@@ -21,6 +21,7 @@ namespace AUT_Market
         public string  Reason { get; set; }
         public DateTime Posted { get; set; }
         public string Photo { get; set; }
+        public int IsDel { get; set; }
         [JsonIgnore]
         public string PhotoUrl {
             get {
@@ -37,6 +38,7 @@ namespace AUT_Market
         /// </summary>
         [JsonIgnore]
         public string ShopUserName { get; set; }
+
         /// <summary>
         /// User
         /// </summary>
