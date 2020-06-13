@@ -58,7 +58,7 @@
 
 
     <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
-    <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->
+    <MenuItem Text="Logout" IconImageSource="Logout.png" x:Name="logout" Clicked="logout_Clicked"/>
 
     <!--===================================================================================================================================-->
 

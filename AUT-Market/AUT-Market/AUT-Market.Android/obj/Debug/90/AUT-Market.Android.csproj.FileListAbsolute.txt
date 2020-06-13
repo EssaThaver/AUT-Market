@@ -4955,3 +4955,7 @@ D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Deb
 D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Plugin.Settings.Abstractions.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Plugin.Settings.Abstractions.dll.mdb
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Plugin.Settings.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\android\assets\Plugin.Settings.dll.mdb
