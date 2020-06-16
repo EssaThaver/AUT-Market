@@ -21,7 +21,7 @@ namespace AUT_Market.View
         {
             InitializeComponent();
 
-            facultySelection.ItemsSource = new Faculties().getListOfFaculty();
+            facultySelection.ItemsSource = new Faculty().getListOfFaculties();
             conditionSelection.ItemsSource = new Conditions().getlistOfCondition();
             campusSelection.ItemsSource = new Campus().getlistOfCampus();
         }

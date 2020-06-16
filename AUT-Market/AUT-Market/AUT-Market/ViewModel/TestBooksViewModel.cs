@@ -5,6 +5,7 @@ using FFImageLoading.Forms.Args;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -31,6 +32,7 @@ namespace AUT_Market.ViewModel
         {
             this.Navigation = Navigation;
             getBooks = BooksDb.GetBookss();
+            
         }
 
         public void getShortLiistOfCondition(string condition)
@@ -65,6 +67,22 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
+        public void getShortLiistOfFaculty(string faculty)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBookss();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+            foreach (Book book in books)
+            {
+                if (book.Faculty.Equals(faculty))
+                {
+                    resultBook.Add(book);
+                }
+            }
+
+            getBooks = resultBook;
+        }
+
         public void getShortLiistOfPrice(string price)
         {
             ObservableCollection<Book> books = BooksDb.GetBookss();
@@ -88,6 +106,10 @@ namespace AUT_Market.ViewModel
                 {
                     resultBook.Add(book);
                 }
+                else if(price == "All")
+                {
+                    resultBook.Add(book);
+                }
             }
 
             getBooks = resultBook;
@@ -102,6 +124,22 @@ namespace AUT_Market.ViewModel
         {
             await Navigation.PushAsync(new WishlistDetail(value));
         });
+
+        public void getOrder(string orderChoice)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBookss();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+            foreach (Book book in books)
+            {
+                if(orderChoice == "Ascending")
+                {
+                    resultBook.OrderBy(price => book.Price);
+                } 
+            }
+
+            getBooks = resultBook;
+        }
 
     }
 

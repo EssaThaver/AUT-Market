@@ -26,7 +26,9 @@ namespace AUT_Market
             base.OnAppearing();
             conditionSelection.ItemsSource = new Conditions().getOptionCondition();
             campusSelection.ItemsSource = new Campus().getOptionCampus();
-            priceSelection.ItemsSource = new Price().getOptionPrice();
+            //           priceSelection.ItemsSource = new Price().getOptionPrice();
+            facultySelection.ItemsSource = new Faculty().getOptionFaculty();
+            orderSelection.ItemsSource = new Order().getListOfOrder();
             vm = new TestBooksViewModel(Navigation);
             BindingContext = vm;
         }
@@ -47,7 +49,7 @@ namespace AUT_Market
             bookRefresh.IsRefreshing = false;
         }
 
-       
+
         private void filterBtn_Clicked(object sender, EventArgs e)
         {
             filter.IsVisible = true;
@@ -56,32 +58,33 @@ namespace AUT_Market
 
         private void applyBtn_Clicked(object sender, EventArgs e)
         {
+            vm = new TestBooksViewModel(Navigation);
+
             if (conditionSelection.SelectedIndex > 0)
             {
-                vm = new TestBooksViewModel(Navigation);
-
                 string userSelect = conditionSelection.SelectedItem.ToString();
 
                 vm.getShortLiistOfCondition(userSelect);
-
-                BindingContext = vm;
             }
-            else if (campusSelection.SelectedIndex > 0)
+            if (campusSelection.SelectedIndex > 0)
             {
-                vm = new TestBooksViewModel(Navigation);
-
                 string userSelect = campusSelection.SelectedItem.ToString();
 
                 vm.getShortLiistOfCampus(userSelect);
-
-                BindingContext = vm;
             }
-            else
+            if (facultySelection.SelectedIndex > 0)
             {
-                vm = new TestBooksViewModel(Navigation);
-                BindingContext = vm;
+                string userSelect = facultySelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfFaculty(userSelect);
             }
-            
+            /*            if (priceSelection.SelectedIndex > 0)
+                        {
+                            string UserSelect = priceSelection.SelectedItem.ToString();
+                            vm.getShortLiistOfPrice(UserSelect);
+                        }
+              */
+            BindingContext = vm;
             filter.IsVisible = false;
         }
 
@@ -99,21 +102,15 @@ namespace AUT_Market
         {
             sort.IsVisible = true;
 
-            if (priceSelection.SelectedIndex > 0)
+            if(facultySelection.SelectedIndex > 0)
             {
-                vm = new TestBooksViewModel(Navigation);
+                string userSelect = orderSelection.SelectedItem.ToString();
 
-                string userSelect = priceSelection.SelectedItem.ToString();
-
-                vm.getShortLiistOfPrice(userSelect);
-
-                BindingContext = vm;
             }
-            else
-            {
-                vm = new TestBooksViewModel(Navigation);
-                BindingContext = vm;
-            }
+
+            vm = new TestBooksViewModel(Navigation);
+            BindingContext = vm;
+
 
             filter.IsVisible = false;
         }
@@ -125,7 +122,7 @@ namespace AUT_Market
 
         }
 
-        
+
     }
 }
 
