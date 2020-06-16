@@ -52,7 +52,7 @@
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    <ShellContent Title="My Books"  ContentTemplate="{DataTemplate view:MyBooks}" Icon="MyBook2.png"/>
+    <ShellContent Title="My Books"  ContentTemplate="{DataTemplate view:MyBooks}" Icon="myBook.png"/>
     <!--<ShellContent Title="Selling History"  ContentTemplate="{DataTemplate view:SellingHistory}"/>-->
 
 

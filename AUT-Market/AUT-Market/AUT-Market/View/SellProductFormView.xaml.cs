@@ -166,11 +166,12 @@ namespace AUT_Market.View
                 Author = authorInput.Text,
                 Faculty = facultySelection.SelectedItem.ToString(),
                 CourseCode = courseCodeInput.Text,
-                Price = int.Parse(priceInput.Text),
+                Price = priceInput.Text,
                 Condition = conditionSelection.SelectedItem.ToString(),
                 Description = descInput.Text.Trim(),
                 Campus = campusSelection.SelectedItem.ToString()
             };
+            newBook.Photo = "";
             newBook.BooksImgs = JsonConvert.SerializeObject(imagePaths);
             if (imagePaths.Count > 0) {
                 newBook.Photo = imagePaths[0];
@@ -222,7 +223,7 @@ namespace AUT_Market.View
             updateBook.Description = descInput.Text.Trim();
             descInput.Text = null;
 
-            updateBook.Price = int.Parse(priceInput.Text.Trim());
+            updateBook.Price = priceInput.Text.Trim();
             priceInput.Text = null;
 
             updateBook.Campus = campusSelection.SelectedItem.ToString();

@@ -53,7 +53,7 @@
                         <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
                         <Label Text="{Binding price}" VerticalOptions="Center" FontAttributes="Bold"/>
                     </StackLayout>
-                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>                    
                     <StackLayout Orientation="Horizontal" Padding="10">
                         <Label Text="Publication Date:" FontAttributes="Bold"/>
                         <Label Text="{Binding publicationDateStr}" VerticalOptions="Center" FontAttributes="Bold"/>

@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Text;
-using System.Drawing;
-using System.IO;
-using AUT_Market.Service;
+﻿using AUT_Market.Service;
+using System;
 using System.Collections.ObjectModel;
-using Newtonsoft.Json;
-using System.Diagnostics;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace AUT_Market
 {
@@ -17,7 +10,7 @@ namespace AUT_Market
      * Currently not working with images will update later
      * may need exception handling
      */
-   static class BooksDb
+    static class BooksDb
 {
         public static int AddBook(Book newBook )
         {
@@ -35,7 +28,7 @@ namespace AUT_Market
                 insertCommand.Parameters.Add("@Edition", SqlDbType.NVarChar).Value = newBook.Edition;
                 insertCommand.Parameters.Add("@CourseCode", SqlDbType.NVarChar).Value = newBook.CourseCode;
                 insertCommand.Parameters.Add("@Faculty", SqlDbType.NVarChar).Value = newBook.Faculty;
-                insertCommand.Parameters.Add("@Price", SqlDbType.Int).Value = newBook.Price;
+                insertCommand.Parameters.Add("@Price", SqlDbType.VarChar).Value = newBook.Price;
                 insertCommand.Parameters.Add("@Condition", SqlDbType.NVarChar).Value = newBook.Condition;
                 insertCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = newBook.Description;
                 insertCommand.Parameters.Add("@Email",SqlDbType.NVarChar).Value = User.Email;
@@ -182,12 +175,6 @@ namespace AUT_Market
 
             //    con.Close();
             //}
-
-
-
-
-
-
         }
 
         public static void UpdateBookDetail(Book UpBook)
@@ -202,7 +189,7 @@ namespace AUT_Market
                 UpdateCommand.Parameters.Add("@Edition", SqlDbType.NVarChar).Value = UpBook.Edition;
                 UpdateCommand.Parameters.Add("@CourseCode", SqlDbType.NVarChar).Value = UpBook.CourseCode;
                 UpdateCommand.Parameters.Add("@Faculty", SqlDbType.NVarChar).Value = UpBook.Faculty;
-                UpdateCommand.Parameters.Add("@Price", SqlDbType.Int).Value = UpBook.Price;
+                UpdateCommand.Parameters.Add("@Price", SqlDbType.VarChar).Value = UpBook.Price;
                 UpdateCommand.Parameters.Add("@Condition", SqlDbType.NVarChar).Value = UpBook.Condition;
                 UpdateCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = UpBook.Description;
                 UpdateCommand.Parameters.Add("@Campus", SqlDbType.NVarChar).Value = UpBook.Campus;
@@ -219,7 +206,7 @@ namespace AUT_Market
                 con.Open();
                 SqlCommand delCommand = new SqlCommand("UPDATE Books SET Price=@price where ListingNumber=@ListingNumber", con);
                 delCommand.Parameters.AddWithValue("@ListingNumber", SqlDbType.UniqueIdentifier).Value = UpBook.ListingNumber;
-                delCommand.Parameters.AddWithValue("@price", SqlDbType.Int).Value = UpBook.Price;
+                delCommand.Parameters.AddWithValue("@price", SqlDbType.VarChar).Value = UpBook.Price;
                 delCommand.ExecuteNonQuery();
                 con.Close();
             }
@@ -238,7 +225,7 @@ namespace AUT_Market
                 book.Faculty = reader["Faculty"].ToString();
                 book.Condition = reader["Condition"].ToString();
                 book.Description = reader["Description"].ToString();
-                book.Price = (int)reader["Price"];
+                book.Price = reader["Price"].ToString();
                 book.Campus = reader["Campus"].ToString();
                 book.Posted = (DateTime)reader["Posted"];
                 book.ListingNumber = (Guid)reader["ListingNumber"];
@@ -262,7 +249,7 @@ namespace AUT_Market
                 book.Faculty = reader["Faculty"].ToString();
                 book.Condition = reader["Condition"].ToString();
                 book.Description = reader["Description"].ToString();
-                book.Price = (int)reader["Price"];
+                book.Price = reader["Price"].ToString();
                 book.Campus = reader["Campus"].ToString();
                 book.Posted = (DateTime)reader["Posted"];
                 book.ListingNumber = (Guid)reader["ListingNumber"];

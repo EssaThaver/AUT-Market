@@ -47,7 +47,8 @@ namespace AUT_Market.ViewModel
         public WishlistDetailViewModel(Book model, INavigation Navigation) {
             this.Navigation = Navigation;
             this.model = BooksDb.GetBooks(model.ListingNumber.ToString());
-            this.currentBook = model;
+            System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
+            currentBook = model;
         }
 
         public void getChildData() {

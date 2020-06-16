@@ -21,19 +21,13 @@ namespace AUT_Market.View
             InitializeComponent();
             vm = new WishlistDetailViewModel(model, Navigation);
             BindingContext = vm;
+            vm.getChildData();
             if (!ShowShoper)
             {
                 StackShoper.IsVisible = false;
             }
-
             checkBookIsOwnByUser();
-
-        }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            vm.getChildData();
+          
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -58,11 +52,11 @@ namespace AUT_Market.View
 
                 if (validSend)
                 {
-                    DisplayAlert("Sent", "Seller will contact you soon", "OK");
+                  await  DisplayAlert("Sent", "Seller will contact you soon", "OK");
                 }
                 else
                 {
-                    DisplayAlert("Send Failed", "Try Again later", "OK");
+                    await DisplayAlert("Send Failed", "Try Again later", "OK");
                 }
             }
 

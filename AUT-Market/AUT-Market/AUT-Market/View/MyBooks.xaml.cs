@@ -89,7 +89,7 @@ namespace AUT_Market.View
 
             if (valid.CheckStringToDouble(newPrice) && !(String.IsNullOrWhiteSpace(newPrice)))
             {
-                book.Price = int.Parse(newPrice);
+                book.Price = newPrice;
 
                 BooksDb.PriceChange(book);
             }

@@ -25,7 +25,7 @@ namespace AUT_Market.Model
         public string Faculty { get; set; }
         public string Condition { get; set; }
         public string Description { get; set; }
-        public float Price { get; set; }
+        public string Price { get; set; }
         public string Campus { get; set; }
         public DateTime Posted { get; set; }
         public string Photo { get; set; }
