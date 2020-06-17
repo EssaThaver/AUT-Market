@@ -1859,11 +1859,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\AUT-Market-OK_Sprint_2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "projectName": "AUT_Market",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market-OK_Sprint_2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market-OK_Sprint_2\\AUT-Market\\AUT-Market\\AUT-Market\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -42,17 +42,20 @@
 
         <!-- This is tabbar in the bottom at home page-->
         <Tab Title="Books" Icon="BookStore.png">
-            <ShellContent ContentTemplate="{DataTemplate home:ListingPage}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+            <ShellContent ContentTemplate="{DataTemplate home:ListingPage}"/>
         </Tab>
         <Tab Title="Wishlist" Icon="WishList02.png">
-            <ShellContent ContentTemplate="{DataTemplate view:WishlistTesting}"/> <!-- This line need change becuase this page is prentend. So, when real page is page then will replace it. -->
+            <ShellContent ContentTemplate="{DataTemplate view:Wishlist}"/>
         </Tab>
 
         <!--===================================================================================================================================-->
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
-    <ShellContent Title="Remove Book"  ContentTemplate="{DataTemplate view:RemoveBook}" Icon="RemoveBook.png"/>
+    <ShellContent Title="My Books"  ContentTemplate="{DataTemplate view:MyBooks}" Icon="myBook.png"/>
+    <!--<ShellContent Title="Selling History"  ContentTemplate="{DataTemplate view:SellingHistory}"/>-->
+
+
 
     <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
     <MenuItem Text="Logout" IconImageSource="Logout.png"/> <!-- This line is wait for the logout function to connect it -->

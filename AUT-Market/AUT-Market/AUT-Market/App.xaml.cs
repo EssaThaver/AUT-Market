@@ -22,7 +22,7 @@ namespace AUT_Market
                 "IndicatorView_Experimental"
             });
 
-            MainPage = new TestLogin();
+            MainPage = new Login();
            
         }
 

@@ -9,7 +9,7 @@ namespace AUTUnitTesting
     [TestClass]
     public class UnitTest1
     {
-        SellProductValidation valid = new SellProductValidation();
+        Validation valid = new Validation();
 
         int IsValidInput;
 

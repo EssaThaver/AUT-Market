@@ -32,8 +32,14 @@
     <Compile Update="View\BookSeller.xaml.cs">
       <DependentUpon>BookSeller.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\WishlistTesting.xaml.cs">
-      <DependentUpon>WishlistTesting.xaml</DependentUpon>
+    <Compile Update="View\MyBooks.xaml.cs">
+      <DependentUpon>MyBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Wishlist.xaml.cs">
+      <DependentUpon>Wishlist.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -41,7 +47,10 @@
     <EmbeddedResource Update="HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\RemoveBook.xaml">
+    <EmbeddedResource Update="View\MyBooks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\SellingHistory.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\SellProductFormView.xaml">
@@ -50,13 +59,13 @@
     <EmbeddedResource Update="View\BookSeller.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\TestLogin.xaml">
+    <EmbeddedResource Update="View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\WishlistDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\WishlistTesting.xaml">
+    <EmbeddedResource Update="View\Wishlist.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

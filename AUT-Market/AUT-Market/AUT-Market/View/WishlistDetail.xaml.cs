@@ -1,4 +1,5 @@
 ﻿using AUT_Market.Model;
+using AUT_Market.Service;
 using AUT_Market.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,13 @@ namespace AUT_Market.View
             InitializeComponent();
             vm = new WishlistDetailViewModel(model, Navigation);
             BindingContext = vm;
+            vm.getChildData();
             if (!ShowShoper)
             {
                 StackShoper.IsVisible = false;
             }
-        }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            vm.getChildData();
+            checkBookIsOwnByUser();
+          
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -41,6 +39,40 @@ namespace AUT_Market.View
             vm?.NavToShoperPage.Execute(null);
         }
 
+        private async void interesting_Clicked(object sender, EventArgs e)
+        {
+            var confrim = await DisplayAlert("Permission", "Do we have your permission to send your email address to " + vm.currentBook.ShopUserName + " and she/he will contact you soon?", "ACCPET", "DECLINE");
+            bool validSend = false;
 
+            if (confrim)
+            {
+
+                validSend = new Email().sendMesseage(vm.currentBook);
+
+
+                if (validSend)
+                {
+                  await  DisplayAlert("Sent", "Seller will contact you soon", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Send Failed", "Try Again later", "OK");
+                }
+            }
+
+        }
+
+        public void checkBookIsOwnByUser()
+        {
+            if (vm.currentBook.ShopEmailAddress == User.Email)
+            {
+                interestingTop.IsEnabled = false;
+                interestingTop.Text = "My Book";
+                interestingTop.BackgroundColor = Color.FromHex("#DADADA");
+                interestingTop.TextColor = Color.Black;
+
+                interestingBottom.IsVisible = false;
+            }
+        }
     }
 }

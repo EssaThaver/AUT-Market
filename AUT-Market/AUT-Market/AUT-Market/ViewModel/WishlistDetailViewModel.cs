@@ -10,11 +10,11 @@ using Xamarin.Forms;
 
 namespace AUT_Market.ViewModel
 {
-    public class WishlistDetailViewModel : INotifyPropertyChanged
+    public class WishlistDetailViewModel: INotifyPropertyChanged
     {
         #region
         string _BookTitle;
-        public string BookTitle { get => _BookTitle; set { _BookTitle = value; OnPropertyChaned(); } }
+        public string BookTitle { get => _BookTitle;set { _BookTitle = value;OnPropertyChaned(); } }
         string _IslikeImg;
         public string IslikeImg { get => _IslikeImg; set { _IslikeImg = value; OnPropertyChaned(); } }
         string _author;
@@ -39,21 +39,22 @@ namespace AUT_Market.ViewModel
         public string ShopUserName { get => _ShopUserName; set { _ShopUserName = value; OnPropertyChaned(); } }
 
         #endregion
-        public ObservableCollection<string> BookImages { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<string> BookImages { get; set; }= new ObservableCollection<string>();
+        public Book currentBook { get; set; }
         Book model;
         INavigation Navigation;
-        public WishlistDetailViewModel(Book model, INavigation Navigation)
-        {
+
+        public WishlistDetailViewModel(Book model, INavigation Navigation) {
             this.Navigation = Navigation;
             this.model = BooksDb.GetBooks(model.ListingNumber.ToString());
+            System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
+            currentBook = model;
         }
-        public void getChildData()
-        {
-            BookImages.Clear();
+
+        public void getChildData() {
             var list = JsonConvert.DeserializeObject<List<string>>(model.BooksImgs);
-            foreach (var item in list)
-            {
-                BookImages.Add(BaseServer.baseurl + item);
+            foreach (var item in list){
+                BookImages.Add(BaseServer.baseurl+item);
             }
             BookTitle = model.Title;
             BookDesc = model.Description;
@@ -70,14 +71,13 @@ namespace AUT_Market.ViewModel
             int result = CollectsServer.getQueryZan(model.ListingNumber.ToString(), User.Email);
             IslikeImg = result > 0 ? "zan_on" : "zan_off";
         }
-        public Command UpdateZan => new Command(() => {
+        public Command UpdateZan => new Command(()=> {
             int result = 0;
             if (IslikeImg == "zan_on")
             {
                 //Remove books from wishlist
-                result = CollectsServer.RemoveCollcet(model.ListingNumber.ToString(), User.Email);
-                if (result > 0)
-                {
+                result = CollectsServer.RemoveCollcet(model.ListingNumber.ToString(),User.Email);
+                if (result > 0) {
                     IslikeImg = "zan_off";
                 }
             }
@@ -85,23 +85,21 @@ namespace AUT_Market.ViewModel
             {
                 //Add books to wishlist
                 result = CollectsServer.AddCollect(new Collects { EmailAddress = User.Email, ListingNumber = model.ListingNumber.ToString() });
-                if (result > 0)
-                {
+                if (result > 0){
                     IslikeImg = "zan_on";
                 }
             }
         });
 
-        public Command NavToShoperPage => new Command(async () => {
+        public Command NavToShoperPage => new Command(async()=>{
             await Navigation.PushAsync(new BookSeller(model.ShopEmailAddress));
         });
 
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChaned([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        public void OnPropertyChaned([CallerMemberName] string  name="") {
+            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(name));
         }
 
     }

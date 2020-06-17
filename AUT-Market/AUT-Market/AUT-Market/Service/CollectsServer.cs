@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace AUT_Market.Service
 {
@@ -52,7 +51,7 @@ namespace AUT_Market.Service
                 model.ListingNumber = reader["ListingNumber"].ToString();
                 model.Title = reader["Title"].ToString();
                 model.Author = reader["Author"].ToString();
-                model.Price = (int)reader["Price"];
+                model.Price = reader["Price"].ToString();
                 model.Edition = reader["Edition"].ToString();
                 model.CourseCode = reader["CourseCode"].ToString();
                 model.Faculty = reader["Faculty"].ToString();

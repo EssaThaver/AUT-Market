@@ -14,6 +14,8 @@ namespace AUT_Market
             InitializeComponent();
             filter.IsVisible = false;
             sort.IsVisible = false;
+            NoBookResult.IsVisible = false;
+
         }
         protected override void OnAppearing()
         {
@@ -79,6 +81,28 @@ namespace AUT_Market
         {
             vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
+
+            NoBookResult.IsVisible = false;
+
+        }
+
+        private void searchBook_SearchButtonPressed(object sender, EventArgs e)
+        {
+            vm = new ListingPageViewModel(Navigation);
+
+            vm.searchBook(searchBook.Text);
+
+            if (vm.getBooks.Count == 0)
+            {
+                BindingContext = vm;
+                NoBookResult.IsVisible = true;
+            }
+            else
+            {
+                BindingContext = vm;
+                NoBookResult.IsVisible = false;
+
+            }
 
         }
     }

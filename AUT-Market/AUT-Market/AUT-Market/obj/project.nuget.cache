@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rZk4TODYm1dRyBWqHJQtXZBShSB+qhCy9y0EFGNUMEIPNZPNQhxbbch9D23vm668lZDwuZd7gjfpF9SPyZDxEg==",
+  "dgSpecHash": "FrKqhe0r/63Za4lvgOQfdInwN2sMfYOfSUcoTvEvmpNfuDpTW2bUOefzz8pZ67xdYMaiitXqYjcxYFUhWgctJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\AUT-Market-OK_Sprint_2\\AUT-Market\\AUT-Market\\AUT-Market\\AUT-Market.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
