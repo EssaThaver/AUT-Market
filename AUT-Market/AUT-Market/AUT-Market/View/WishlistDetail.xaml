@@ -50,13 +50,8 @@
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
 
                     <StackLayout Orientation="Horizontal" Padding="10">
-                        <Label Text="Price:" WidthRequest="60" FontAttributes="Bold"/>
+                        <Label Text="Price: $" FontAttributes="Bold"/>
                         <Label Text="{Binding price}" VerticalOptions="Center" FontAttributes="Bold"/>
-                    </StackLayout>
-                    <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>                    
-                    <StackLayout Orientation="Horizontal" Padding="10">
-                        <Label Text="Publication Date:" FontAttributes="Bold"/>
-                        <Label Text="{Binding publicationDateStr}" VerticalOptions="Center" FontAttributes="Bold"/>
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
 
@@ -82,6 +77,11 @@
                         <Label Text="{Binding BookDesc}" VerticalOptions="Center" FontAttributes="Bold"/>
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
+
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Publication Date:" FontAttributes="Bold"/>
+                        <Label Text="{Binding publicationDateStr}" VerticalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
 
                     <StackLayout WidthRequest="100">
                         <Button Text="I'm Interested" Margin="10" x:Name="interestingBottom"  Clicked="interesting_Clicked" BackgroundColor="#A44DC0" TextColor="White"/>

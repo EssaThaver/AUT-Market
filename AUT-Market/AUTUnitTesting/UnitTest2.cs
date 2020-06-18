@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace AUTUnitTesting
 {
     /// <summary>
-    /// Books收藏测试用例
+    /// BooksWish list unit testing
     /// </summary>
     [TestClass]
     public class UnitTest2
