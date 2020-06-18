@@ -140,7 +140,7 @@ namespace AUT_Market
             return result;
         }
 
-        public static void RemoveBook(Book delBook, string reason)
+        public static void RemoveBook(Book delBook /*, string reason*/)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             {

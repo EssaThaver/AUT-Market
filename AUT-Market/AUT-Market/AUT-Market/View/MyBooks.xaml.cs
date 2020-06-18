@@ -40,14 +40,14 @@ namespace AUT_Market.View
 
             if (check)
             {
-                var reason = await DisplayActionSheet("Reason", null, null, "Sold", " I Changed My Mind"," No Buyers","Faulty");
+                //var reason = await DisplayActionSheet("Reason", null, null, "Sold", " I Changed My Mind"," No Buyers","Faulty");
 
 
                 var removeBtn = sender as Button;
 
                 var book = removeBtn?.BindingContext as Book;
 
-                BooksDb.RemoveBook(book,reason);
+                BooksDb.RemoveBook(book /*,reason*/);
 
                 vm?.RemoveBook.Execute(book);
             }

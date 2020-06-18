@@ -209,28 +209,6 @@ D:/master/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/A
 D:/master/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/ref/AUT_Market.dll
 D:/master/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT_Market.pdb
 D:/master/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/SellingHistory.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/AUT_Market.deps.json
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/AUT_Market.dll
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/ref/AUT_Market.dll
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/AUT_Market.pdb
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT-Market.csprojAssemblyReference.cache
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/App.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/HomePage.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/ListingPage.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/BookSeller.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/Login.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/MyBooks.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/SellingHistory.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/SellProductFormView.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/Wishlist.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/View/WishlistDetail.xaml.g.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT-Market.csproj.CoreCompileInputs.cache
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT-Market.AssemblyInfoInputs.cache
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT-Market.AssemblyInfo.cs
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/XamlC.stamp
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT_Market.dll
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/ref/AUT_Market.dll
-D:/COMP602 AUTMarket/AUT-Market/AUT-Market/AUT-Market/AUT-Market/obj/Debug/netstandard2.0/AUT_Market.pdb
 C:/Users/Administrator/source/repos/AUT-Market-OK_Sprint_2/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/AUT_Market.deps.json
 C:/Users/Administrator/source/repos/AUT-Market-OK_Sprint_2/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/AUT_Market.dll
 C:/Users/Administrator/source/repos/AUT-Market-OK_Sprint_2/AUT-Market/AUT-Market/AUT-Market/bin/Debug/netstandard2.0/ref/AUT_Market.dll
@@ -297,3 +275,24 @@ C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Mark
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.deps.json
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.pdb
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ListingPage.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\BookSeller.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\Login.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\MyBooks.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellingHistory.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\SellProductFormView.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\Wishlist.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\View\WishlistDetail.xaml.g.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csproj.CoreCompileInputs.cache
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfoInputs.cache
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.AssemblyInfo.cs
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\ref\AUT_Market.dll
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT_Market.pdb

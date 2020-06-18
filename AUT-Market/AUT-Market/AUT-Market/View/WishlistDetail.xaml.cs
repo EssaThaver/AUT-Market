@@ -37,6 +37,7 @@ namespace AUT_Market.View
         private void NavToShoperPage(object sender, EventArgs e)
         {
             vm?.NavToShoperPage.Execute(null);
+            checkBookIsOwnByUser();
         }
 
         private async void interesting_Clicked(object sender, EventArgs e)

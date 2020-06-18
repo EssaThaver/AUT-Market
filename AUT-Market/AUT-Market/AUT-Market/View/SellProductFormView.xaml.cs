@@ -93,7 +93,14 @@ namespace AUT_Market.View
                     {
                         if (conditionSelection.SelectedItem != null)
                         {
-                            return true;
+                            if (imagePaths.Count > 0)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                DisplayAlert("Image is missing", "Please add the Image", "OK");
+                            }
                         }
                         else
                         {
@@ -227,6 +234,8 @@ namespace AUT_Market.View
             priceInput.Text = null;
 
             updateBook.Campus = campusSelection.SelectedItem.ToString();
+
+            updateBook.BooksImgs = JsonConvert.SerializeObject(imagePaths);
 
             BooksDb.UpdateBookDetail(updateBook);
 

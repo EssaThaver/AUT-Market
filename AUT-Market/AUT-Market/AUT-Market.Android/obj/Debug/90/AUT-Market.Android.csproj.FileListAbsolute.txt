@@ -6095,3 +6095,4 @@ C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Mark
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Administrator\source\repos\AUT-Market-OK_Sprint_2 2\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market.Android\obj\Debug\90\res\drawable\mybook.png

@@ -23,6 +23,10 @@ namespace AUT_Market
             conditionSelection.ItemsSource = new Conditions().getOptionCondition();
             vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
+
+            filter.IsVisible = false;
+            sort.IsVisible = false;
+            NoBookResult.IsVisible = false;
         }
         private void bookRefresh_Refreshing(object sender, System.EventArgs e)
         {
