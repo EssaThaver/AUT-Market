@@ -33,6 +33,9 @@ namespace AUT_Market
             vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
             bookRefresh.IsRefreshing = false;
+            filter.IsVisible = false;
+            sort.IsVisible = false;
+            NoBookResult.IsVisible = false;
         }
 
        

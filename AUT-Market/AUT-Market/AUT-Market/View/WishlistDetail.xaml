@@ -25,7 +25,7 @@
                         <Button Text="I'm Interested" Margin="10" x:Name="interestingTop" Clicked="interesting_Clicked" BackgroundColor="#A44DC0" TextColor="White"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal" Padding="10">
+                    <StackLayout Orientation="Horizontal" Padding="20">
                         <Label Text="Title:" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="{Binding BookTitle}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
                         <StackLayout Orientation="Horizontal" VerticalOptions="Center">
@@ -78,10 +78,6 @@
                     </StackLayout>
                     <BoxView HeightRequest=".5" BackgroundColor="#ddd"/>
 
-                    <StackLayout Orientation="Horizontal" Padding="10">
-                        <Label Text="Publication Date:" FontAttributes="Bold"/>
-                        <Label Text="{Binding publicationDateStr}" VerticalOptions="Center" FontAttributes="Bold"/>
-                    </StackLayout>
 
                     <StackLayout WidthRequest="100">
                         <Button Text="I'm Interested" Margin="10" x:Name="interestingBottom"  Clicked="interesting_Clicked" BackgroundColor="#A44DC0" TextColor="White"/>
