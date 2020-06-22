@@ -8,7 +8,7 @@ using System.Text;
 namespace AUT_Market.Model
 {
     /// <summary>
-    /// Wishlist Table
+    /// Wishlist
     /// </summary>
     public class Collects
     {
@@ -42,15 +42,15 @@ namespace AUT_Market.Model
         public string IslikeImg { get; set; }
         public string BooksImgs { get; set; } = "[]";
         /// <summary>
-        /// 收藏者
+        /// Person who add books to the Wishlist
         /// </summary>
         public string UserEmailAddress { get; set; }
         /// <summary>
-        /// 卖家
+        /// Buyer
         /// </summary>
         public string ShopUserName { get; set; }
         /// <summary>
-        /// 卖家
+        /// Seller
         /// </summary>
         public string ShopEmailAddress { get; set; }
         #endregion

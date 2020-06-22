@@ -27,7 +27,7 @@ namespace AUT_Market.Service
                 {
                     Zone = Zone.ZoneCnSouth
                 };
-                var saveKey = Guid.NewGuid() + imgtype;//目标文件名
+                var saveKey = Guid.NewGuid() + imgtype;//Target file name
 
                 var putPolicy = new PutPolicy { Scope = Bucket };
                 putPolicy.SetExpires(3600);

@@ -11,6 +11,8 @@ namespace AUT_Market.ViewModel
     {
         public ObservableCollection<Collects> Items { get; set; }= new ObservableCollection<Collects>();
 
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command getChildData => new Command(()=> {
             Items.Clear();
             var list = CollectsServer.getCollects(User.Email);
@@ -20,6 +22,8 @@ namespace AUT_Market.ViewModel
             }
             Debug.WriteLine(JsonConvert.SerializeObject(Items));
         });
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command UpdateBooksZan => new Command<Collects>((model) => {
             CollectsServer.RemoveCollcet(model.ListingNumber.ToString(),User.Email);
             getChildData.Execute(null);

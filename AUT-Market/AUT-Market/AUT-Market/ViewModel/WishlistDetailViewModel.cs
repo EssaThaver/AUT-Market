@@ -40,17 +40,18 @@ namespace AUT_Market.ViewModel
 
         #endregion
         public ObservableCollection<string> BookImages { get; set; }= new ObservableCollection<string>();
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Book currentBook { get; set; }
         Book model;
         INavigation Navigation;
-
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public WishlistDetailViewModel(Book model, INavigation Navigation) {
             this.Navigation = Navigation;
             this.model = BooksDb.GetBooks(model.ListingNumber.ToString());
             System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(model));
             currentBook = model;
         }
-
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public void getChildData() {
             var list = JsonConvert.DeserializeObject<List<string>>(model.BooksImgs);
             foreach (var item in list){
@@ -71,6 +72,8 @@ namespace AUT_Market.ViewModel
             int result = CollectsServer.getQueryZan(model.ListingNumber.ToString(), User.Email);
             IslikeImg = result > 0 ? "zan_on" : "zan_off";
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command UpdateZan => new Command(()=> {
             int result = 0;
             if (IslikeImg == "zan_on")
@@ -91,13 +94,18 @@ namespace AUT_Market.ViewModel
             }
         });
 
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command NavToShoperPage => new Command(async()=>{
             await Navigation.PushAsync(new BookSeller(model.ShopEmailAddress));
         });
 
 
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public event PropertyChangedEventHandler PropertyChanged;
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public void OnPropertyChaned([CallerMemberName] string  name="") {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(name));
         }

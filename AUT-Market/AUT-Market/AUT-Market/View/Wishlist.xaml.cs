@@ -17,19 +17,21 @@ namespace AUT_Market.View
             InitializeComponent();
             vm = new WishlistViewModel();
         }
+        //------------------------------------------------------------------------------------------------------------------------------------//
         protected override void OnAppearing()
         {
             base.OnAppearing();
             BindingContext = vm;
             vm.getChildData.Execute(null);
         }
-
+        //------------------------------------------------------------------------------------------------------------------------------------//
         private void BtnZanClicked(object sender, EventArgs e)
         {
             var removeBtn = sender as ImageButton;
             var model = removeBtn?.BindingContext as Collects;
             vm?.UpdateBooksZan.Execute(model);
         }
+        //------------------------------------------------------------------------------------------------------------------------------------//
         private async void BtnDetailClicked(object sender, EventArgs e)
         {
             var removeBtn = sender as ImageButton;

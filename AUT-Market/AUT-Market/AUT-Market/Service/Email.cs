@@ -7,7 +7,9 @@ namespace AUT_Market.Service
 {
     class Email
     {
-        private Book book; 
+        private Book book;
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Boolean sendMesseage (Book getbook)
         {
             book = getbook;
@@ -39,12 +41,14 @@ namespace AUT_Market.Service
             return true;
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public string subject()
         {
             string subMsg = User.Name + " is interested your book \"" + book.Title + "\"";
             return subMsg;
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public string body ()
         {
 

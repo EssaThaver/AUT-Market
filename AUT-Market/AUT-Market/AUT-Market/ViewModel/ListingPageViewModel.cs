@@ -11,11 +11,15 @@ namespace AUT_Market.ViewModel
         public ObservableCollection<Book> getBooks { get; set; }
 
         INavigation Navigation;
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public ListingPageViewModel(INavigation Navigation)
         {
             this.Navigation = Navigation;
             getBooks = BooksDb.GetBooks();
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public void getShortLiistOfCondition(string condition)
         {
             ObservableCollection<Book> books = BooksDb.GetBooks();
@@ -32,10 +36,12 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public ICommand ListViewCommand => new Command<Book>(async (value)=>{
             await Navigation.PushAsync(new WishlistDetail(value));
         });
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public void searchBook(string userInput)
         {
             ObservableCollection<Book> books = BooksDb.GetBooks();

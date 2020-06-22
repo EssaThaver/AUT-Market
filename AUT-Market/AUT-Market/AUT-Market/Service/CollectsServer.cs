@@ -23,6 +23,8 @@ namespace AUT_Market.Service
             }
             return result;
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public static List<Collects> getCollects(string EmailAddress)
         {
             var collects = new List<Collects>();
@@ -39,6 +41,8 @@ namespace AUT_Market.Service
             }
             return collects;
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         static List<Collects> ReaderToCollects(SqlDataReader reader)
         {
             var collects = new List<Collects>();
@@ -68,6 +72,8 @@ namespace AUT_Market.Service
             }
             return collects;
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public static int getQueryZan(string ListingNumber, string EmailAddress)
         {
             var result = 0;
@@ -87,6 +93,8 @@ namespace AUT_Market.Service
             }
             return result;
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public static int RemoveCollcet(string ListingNumber, string EmailAddress)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))

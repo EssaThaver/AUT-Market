@@ -36,6 +36,7 @@ namespace AUT_Market
             }
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public static User GetUser(string email)
         {
             User user = new User();
@@ -55,6 +56,7 @@ namespace AUT_Market
             return user;
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public static void DelUser(string email)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))

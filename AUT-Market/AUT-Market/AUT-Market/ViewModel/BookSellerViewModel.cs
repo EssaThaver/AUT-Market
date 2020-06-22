@@ -22,9 +22,12 @@ namespace AUT_Market.ViewModel
         #endregion
         public ObservableCollection<Book> Items { get; set; } = new ObservableCollection<Book>();
         INavigation Navigation;
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public BookSellerViewModel(INavigation Navigation) {
             this.Navigation = Navigation;
         }
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command getChildData => new Command<string>((value)=> {
             Items.Clear();
             SaleTotal = BooksDb.getTotalSale(value);
@@ -36,14 +39,17 @@ namespace AUT_Market.ViewModel
             ShopEmailAddress = list[0].ShopEmailAddress;
         });
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command ListViewCommand => new Command<Book>(async (value) => {
             await Navigation.PushAsync(new WishlistDetail(value,false));
         });
 
 
 
-
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public event PropertyChangedEventHandler PropertyChanged;
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public void OnPropertyChaned([CallerMemberName] string name = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

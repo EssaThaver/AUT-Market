@@ -4,6 +4,8 @@ using System.Text;
 
 namespace AUT_Market.Service
 {
+
+    //------------------------------------------------------------------------------------------------------------------------------------//
     public class Conditions
     {
         public List<String> getlistOfCondition()
@@ -18,6 +20,7 @@ namespace AUT_Market.Service
             return listCondition;
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public List<string> getOptionCondition()
         {
             List<string> listCondition = new List<string>();
