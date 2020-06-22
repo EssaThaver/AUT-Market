@@ -3,6 +3,7 @@ using AUT_Market.Service;
 using AUT_Market.View;
 using System;
 using System.Threading;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,9 +23,32 @@ namespace AUT_Market
                 "IndicatorView_Experimental"
             });
 
-            MainPage = new Login();
-           
+            bool isLoggedIn = Current.Properties.ContainsKey("IsLoggedIn") ? Convert.ToBoolean(Current.Properties["IsLoggedIn"]) : false;
+
+            if (!isLoggedIn)
+            {
+                //Load if Not Logged In
+                MainPage = new Login();
+            }
+            else
+            {
+                //Load if Logged In
+                getUserDetail();
+                MainPage = new HomePage();
+            }
+
+            // MainPage = new Login();
+
         }
+
+        private async void getUserDetail()
+        {
+            User.Id = await SecureStorage.GetAsync("userID");
+            User.Name = await SecureStorage.GetAsync("userName");
+            User.Email = await SecureStorage.GetAsync("userEmail");
+            User.Picture = await SecureStorage.GetAsync("userPicture");
+        }
+
 
         protected override void OnStart()
         {

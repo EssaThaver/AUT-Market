@@ -9,6 +9,7 @@ using System.Linq;
 using AUT_Market.Service;
 using AUT_Market.View;
 using System.Data.SqlClient;
+using Xamarin.Essentials;
 
 namespace AUT_Market.View
 {
@@ -89,8 +90,6 @@ namespace AUT_Market.View
                     store.Delete(account, Constants.AppName);
                 }
                 await store.SaveAsync(account = e.Account, Constants.AppName);
-                await DisplayAlert("Name", User.Name, "OK");
-                await DisplayAlert("Email Address", User.Email, "OK");
                 try
                 {
                     UsersDb.AddUser(user);
@@ -100,9 +99,18 @@ namespace AUT_Market.View
                 App.CurrentUser = user;
             }
 
+            Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
+            await SecureStorage.SetAsync("userID", User.Id);
+            await SecureStorage.SetAsync("userName", User.Name);
+            await SecureStorage.SetAsync("userEmail", User.Email);
+            await SecureStorage.SetAsync("userPicture", User.Picture);
+
+
             Application.Current.MainPage = new HomePage();
             await Shell.Current.GoToAsync("//main");
         }
+
+
 
 
         void OnAuthError(object sender, AuthenticatorErrorEventArgs e)
