@@ -81,15 +81,22 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <Label Text="Filter" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,10"/>
                 <ImageButton x:Name="closeFilter" Clicked="closeFilter_Clicked" Source="Delete.png" BackgroundColor="Transparent" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Margin="0,10,10,5" Grid.Column="1"/>
-                
-            </Grid>       
-            
+
+            </Grid>
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
-                <!-- Add more filter here-->
+                <!-- Condition filter-->
                 <Picker x:Name="conditionSelection" Title="Condition" FontSize="20"/>
+            </Frame>
+            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+                <!-- Campus filter-->
+                <Picker x:Name="campusSelection" Title="Campus" FontSize="20"/>
+            </Frame>
+            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+                <!-- Faculty filter -->
+                <Picker x:Name="facultySelection" Title="Faculty" FontSize="20"/>
             </Frame>
             <StackLayout WidthRequest="100" HorizontalOptions="Center">
                 <Button x:Name="applyBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applyBtn_Clicked"/>
@@ -111,17 +118,19 @@
 
                 <Label Text="Sorting" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,10"/>
                 <ImageButton x:Name="closeStoring" Clicked="closeStoring_Clicked" Source="Delete.png" BackgroundColor="Transparent" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Margin="0,10,10,5" Grid.Column="1"/>
-
             </Grid>
-
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
-                <!-- add the sort fuction here -->
+                <!-- Order filter -->
+                <Picker x:Name="orderSelection" Title="Price" FontSize="20">
+                    <Picker.Items>
+                        <x:String>Ascending</x:String>
+                    </Picker.Items>
+                </Picker>
             </Frame>
             <StackLayout WidthRequest="100" HorizontalOptions="Center">
-                <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20"/>
+                <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applySortBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
-
         <!--===============================================================================================================================================-->
 
     </StackLayout>    
