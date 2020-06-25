@@ -12,18 +12,20 @@ namespace AUT_Market
         public ListingPage()
         {
             InitializeComponent();
+
+            conditionSelection.ItemsSource = new Conditions().getOptionCondition();
+            campusSelection.ItemsSource = new Campus().getOptionCampus();
+            facultySelection.ItemsSource = new Faculties().getOptionFaculty();
+
             filter.IsVisible = false;
             sort.IsVisible = false;
             NoBookResult.IsVisible = false;
+            vm = new ListingPageViewModel(Navigation);
 
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            conditionSelection.ItemsSource = new Conditions().getOptionCondition();
-            campusSelection.ItemsSource = new Campus().getOptionCampus();
-            facultySelection.ItemsSource = new Faculties().getOptionFaculty();
-            vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
 
             filter.IsVisible = false;
@@ -57,7 +59,7 @@ namespace AUT_Market
 
                 vm.getShortLiistOfCondition(userSelect);
 
-                BindingContext = vm;
+                //BindingContext = vm;
             }
             if (campusSelection.SelectedIndex > 0)
             {
@@ -65,7 +67,7 @@ namespace AUT_Market
 
                 vm.getShortLiistOfCampus(userSelect);
 
-                BindingContext = vm;
+                //BindingContext = vm;
             }
             if (facultySelection.SelectedIndex > 0)
             {
@@ -73,13 +75,12 @@ namespace AUT_Market
 
                 vm.getShortLiistOfFaculty(userSelect);
 
-                BindingContext = vm;
+                //BindingContext = vm;
             }
-            else
-            {
+            
             
                 BindingContext = vm;
-            }
+            
 
             filter.IsVisible = false;
         }
@@ -97,18 +98,23 @@ namespace AUT_Market
         private void sortBtn_Clicked(object sender, EventArgs e)
         {
             sort.IsVisible = true;
-            vm = new ListingPageViewModel(Navigation);
+            filter.IsVisible = false;
+            //vm = new ListingPageViewModel(Navigation);
         }
 
         private void applySortBtn_Clicked(object sender, EventArgs e)
         {
             vm = new ListingPageViewModel(Navigation);
 
-            if (facultySelection.SelectedIndex > 0)
+            if (orderSelection.SelectedIndex == 1)
             {
                 string userSelect = orderSelection.SelectedItem.ToString();
-                vm.getOrder(userSelect);
-               
+                vm.getAscendOrder(userSelect);
+            }
+            else if (orderSelection.SelectedIndex == 2)
+            {
+                string userSelect = orderSelection.SelectedItem.ToString();
+                vm.getDescendOrder(userSelect);
             }
 
             BindingContext = vm;

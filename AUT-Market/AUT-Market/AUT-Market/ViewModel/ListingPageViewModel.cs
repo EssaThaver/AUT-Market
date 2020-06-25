@@ -1,5 +1,6 @@
 ﻿using AUT_Market.Service;
 using AUT_Market.View;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -24,10 +25,10 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfCondition(string condition)
         {
-            ObservableCollection<Book> books = BooksDb.GetBooks();
+            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach (Book book in books)
+            foreach (Book book in getBooks)
             {
                 if (book.Condition.Equals(condition))
                 {
@@ -40,10 +41,10 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfCampus(string campus)
         {
-            ObservableCollection<Book> books = BooksDb.GetBooks();
+            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach (Book book in books)
+            foreach (Book book in getBooks)
             {
                 if (book.Campus.Equals(campus))
                 {
@@ -56,10 +57,10 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfFaculty(string faculty)
         {
-            ObservableCollection<Book> books = BooksDb.GetBooks();
+            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach (Book book in books)
+            foreach (Book book in getBooks)
             {
                 if (book.Faculty.Equals(faculty))
                 {
@@ -70,18 +71,38 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getOrder(string orderChoice)
+        public void getAscendOrder(string orderChoice)
         {
             ObservableCollection<Book> books = BooksDb.GetBooks();
-           // ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
-            foreach (Book book in books)
+
+            IEnumerable<Book> query = books.OrderBy(book => book.Price);
+
+            foreach (Book book1 in query)
             {
-                books.OrderBy(price => book.Price);
+                resultBook.Add(book1);
             }
 
-            getBooks = books;
+            getBooks = resultBook;
         }
+
+        public void getDescendOrder(string orderChoice)
+        {
+            ObservableCollection<Book> books = BooksDb.GetBooks();
+            ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
+
+
+            IEnumerable<Book> query = books.OrderByDescending(book => book.Price);
+
+            foreach (Book book1 in query)
+            {
+                resultBook.Add(book1);
+            }
+
+            getBooks = resultBook;
+        }
+
 
         public void searchBook(string userInput)
         {

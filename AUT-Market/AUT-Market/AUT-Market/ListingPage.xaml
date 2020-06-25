@@ -72,7 +72,8 @@
         <!--===============================================================================================================================================-->
 
         <!--This is filter section-->
-        <StackLayout x:Name="filter" BackgroundColor="#A44DC0">
+
+        <StackLayout x:Name="filter" BackgroundColor="#A44DC0" VerticalOptions="FillAndExpand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -88,16 +89,25 @@
             </Grid>
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
                 <!-- Condition filter-->
-                <Picker x:Name="conditionSelection" Title="Condition" FontSize="20"/>
+                <StackLayout>
+                    <Picker x:Name="conditionSelection" Title="Condition" FontSize="20"/>
+                    <Picker x:Name="campusSelection" Title="Campus" FontSize="20"/>
+                    <Picker x:Name="facultySelection" Title="Faculty" FontSize="20"/>
+                </StackLayout>
             </Frame>
-            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
-                <!-- Campus filter-->
-                <Picker x:Name="campusSelection" Title="Campus" FontSize="20"/>
-            </Frame>
-            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
-                <!-- Faculty filter -->
-                <Picker x:Name="facultySelection" Title="Faculty" FontSize="20"/>
-            </Frame>
+            <!--<Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+                    -->
+            <!-- Campus filter-->
+            <!--
+                    <Picker x:Name="campusSelection" Title="Campus" FontSize="20"/>
+                </Frame>
+                <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+                    -->
+            <!-- Faculty filter -->
+            <!--
+                    <Picker x:Name="facultySelection" Title="Faculty" FontSize="20"/>
+                </Frame>-->
+
             <StackLayout WidthRequest="100" HorizontalOptions="Center">
                 <Button x:Name="applyBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applyBtn_Clicked"/>
             </StackLayout>
@@ -123,12 +133,14 @@
                 <!-- Order filter -->
                 <Picker x:Name="orderSelection" Title="Price" FontSize="20">
                     <Picker.Items>
+                        <x:String>Mixed</x:String>
                         <x:String>Ascending</x:String>
+                        <x:String>Descending</x:String>
                     </Picker.Items>
                 </Picker>
             </Frame>
-            <StackLayout WidthRequest="100" HorizontalOptions="Center">
-                <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applySortBtn_Clicked"/>
+            <StackLayout WidthRequest="100" HorizontalOptions="Center" Margin="0,0,0,50" >
+                <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,50" CornerRadius="20" Clicked="applySortBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
         <!--===============================================================================================================================================-->

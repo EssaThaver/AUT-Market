@@ -319,3 +319,4 @@ C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-M
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\ref\AUT_Market.dll
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\bin\Debug\netstandard2.0\AUT_Market.pdb
 C:\Users\Georgia Thomson\Documents\GitHub\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\XamlC.stamp
+D:\COMP602 AUTMarket\AUT-Market\AUT-Market\AUT-Market\AUT-Market\obj\Debug\netstandard2.0\AUT-Market.csprojAssemblyReference.cache
