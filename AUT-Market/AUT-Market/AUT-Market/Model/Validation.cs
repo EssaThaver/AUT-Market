@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Essentials;
-
+/**
+ * This is validation class and there many different type validation to valid to make sure everything correct. 
+ * @author Karan Patel 15900950
+ */
 namespace AUT_Market.Model
 {
     public class Validation
@@ -22,9 +25,9 @@ namespace AUT_Market.Model
                 }
                 
             }
-            if (this.CheckStringToDouble(price))
+            if (this.CheckStringToFloat(price))
             {
-                if(this.CheckStringToDouble(edition))
+                if(this.CheckStringToFloat(edition))
                 {
                     return -1;
                 }
@@ -38,47 +41,17 @@ namespace AUT_Market.Model
                 return 4;
             }
                
-        }
-        public Boolean CheckSelectDateIsBeforeToday(DateTime date)
-        {
-            if(date < DateTime.Now.Date)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }            
-        }
-
-        //-------------------------------------------------------------------------------------------------------------------------------------//
-
-        //This mehtod to check description word count is below min word count.
-        public Boolean CheckMinWordCount(String desc)
-        {
-            desc.Trim();
-
-            String[] words = desc.Split(' ');
-
-            if (words.Length > 20)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        }            
 
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
         //This is check if user input is number.
-        public Boolean CheckStringToDouble(string num)
+        public Boolean CheckStringToFloat(string num)
         {
             Double doublePrice;
             try
             {
-                doublePrice = Double.Parse(num);
+                doublePrice = float.Parse(num);
             }
             catch(FormatException )
             {

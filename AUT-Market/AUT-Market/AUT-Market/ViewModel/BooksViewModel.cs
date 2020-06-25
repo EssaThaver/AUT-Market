@@ -10,7 +10,9 @@ namespace AUT_Market.ViewModel
     {
         public ObservableCollection<Book> getBooks { get; set; }
         
+        //------------------------------------------------------------------------------------------------------------------//
 
+        // This method is when user select the book to remove from the list. 
         public Command<Book> RemoveBook
         {
             get
@@ -22,17 +24,26 @@ namespace AUT_Market.ViewModel
             }
         }
 
+        //------------------------------------------------------------------------------------------------------------------//
+        
+        //This construction is to set up list of the book by seller.
+
         INavigation Navigation;
         public BooksViewModel(INavigation Navigation)
         {
             this.Navigation = Navigation;
-            getBooks = BooksDb.GetBooks();
+            getBooks = BooksDb.GetBookByUser();
         }
 
+        //------------------------------------------------------------------------------------------------------------------//
+
+        //This method is get book by seller.
         public void getUserBook ()
         {
             getBooks = BooksDb.GetBookByUser();
         }
+
+        //------------------------------------------------------------------------------------------------------------------//
 
         public ICommand ListViewCommand => new Command<Book>(async(value)=> {
             await Navigation.PushAsync(new WishlistDetail(null));

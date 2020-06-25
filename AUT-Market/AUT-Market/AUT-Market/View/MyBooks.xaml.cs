@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+/** This is my books page and this is display is my book that is very current selling. User able to control 
+ *  their book by using edit the book detail, price change, or remove the book from the list. 
+ *  @author by Karan Patel 15900950
+ */
+
+
 namespace AUT_Market.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -19,6 +25,7 @@ namespace AUT_Market.View
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        // This is inital to setup the list of the books to display it.
         public MyBooks()
         {
             InitializeComponent();
@@ -34,12 +41,14 @@ namespace AUT_Market.View
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This remove function is when user click the remove button then the book will remove from the list and database. 
         private async void Remove_Clicked(object sender, EventArgs e)
         {
             var check = await DisplayAlert("Warning", "Are You Sure? ", "Yes", "No");
 
             if (check)
             {
+                //This comment statement below that will hold to the next sprint becuase this feature not fully complete. That will add in new version in later
                 //var reason = await DisplayActionSheet("Reason", null, null, "Sold", " I Changed My Mind"," No Buyers","Faulty");
 
 
@@ -55,6 +64,7 @@ namespace AUT_Market.View
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This edit function is when user click edit then book detail display and user edit and modify the detail of the book. 
         private void Edit_Clicked(object sender, EventArgs e)
         {
             var editBtn = sender as Button;
@@ -65,7 +75,8 @@ namespace AUT_Market.View
         }
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------//
-
+         
+        // This is price change fuction is when user click the price change then display will pop up and user will input new price value then display will change to new price.
         private async void priceChange_Clicked(object sender, EventArgs e)
         {
             var priceBtn = sender as Button;
@@ -83,11 +94,12 @@ namespace AUT_Market.View
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This is price change method to display the new price and update the database too. 
         private void changePrice(string newPrice, Book book)
         {
             valid = new Validation();
 
-            if (valid.CheckStringToDouble(newPrice) && !(String.IsNullOrWhiteSpace(newPrice)))
+            if (valid.CheckStringToFloat(newPrice) && !(String.IsNullOrWhiteSpace(newPrice)))
             {
                 book.Price = newPrice;
 
@@ -99,5 +111,8 @@ namespace AUT_Market.View
             BindingContext = vm;
 
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------//
+
     }
 }

@@ -11,6 +11,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+/**
+ * This is class of the sell the book form where user can fill the form to sell their book.
+ * Also this class can edit and update seller's book detail. 
+ * @author Karan Patel 15900950
+ */
+
 namespace AUT_Market.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -21,7 +27,8 @@ namespace AUT_Market.View
         private Book updateBook;
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+        
+        //This construction is initial to display the form that user able to fill it and sell thier book.
         public SellProductFormView()
         {
             InitializeComponent();
@@ -36,6 +43,7 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This construction is seller select the book from the mybook page adn edit and modify in this page. Initialise to display the current book detail.
         public SellProductFormView(Book Book)
         {
             InitializeComponent();
@@ -62,6 +70,7 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This is cancel function is when user click cancel button then book won't sell or update the detail. 
         protected async void cancelBtn_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new HomePage();
@@ -70,6 +79,8 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+       // This is done function is when user complete fill the form for user want sell their book then click done button to sell their book
+       //Before sell the book system need to valid check to make sure there are no null and empty input.
         private void doneBtn_Clicked(object sender, EventArgs e)
         {
             Boolean check = validCheck();
@@ -81,7 +92,9 @@ namespace AUT_Market.View
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+        
+        //This valid method to check all the and image to make sure there are no null and emtpy
+        //Also, this pop up display to tell user which input is missing.
         private Boolean validCheck()
         {
             int IsValidInput = valid.CheckValidInput(titleInput.Text, authorInput.Text, editionInput.Text, courseCodeInput.Text, priceInput.Text, descInput.Text);
@@ -131,6 +144,7 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This is display pop up method to pop up display on user screen to tell user which input is missing. 
         private void invalidMsgDisplayAlert(int InvalidType)
         {
             switch (InvalidType)
@@ -165,6 +179,7 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        // This is complete form method. When valid check is comfirm then book detail will add the database and post in the list and anyone can see your book. 
         private async void completeForm()
         {
             var newBook = new Book {
@@ -194,6 +209,8 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This update function is when complete edit and click update button to update a new detail. 
+        //before update system need to valid to check to make sure there no null and empty input.
         private void UpdateBtn_Clicked(object sender, EventArgs e)
         {
             Boolean check = validCheck();
@@ -206,6 +223,7 @@ namespace AUT_Market.View
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        // valid check comfirm then new update detail will update the list and database
         private async void completeUpdateForm()
         {
 

@@ -4,14 +4,18 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 
+/**
+ * This is book database class to control database. 
+ * @author Karan Patel 15900950
+ */
+
 namespace AUT_Market
 {
-    /*
-     * Currently not working with images will update later
-     * may need exception handling
-     */
     static class BooksDb
 {
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This method to add new book into database
         public static int AddBook(Book newBook )
         {
             int result=0;
@@ -42,6 +46,9 @@ namespace AUT_Market
             return result;
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        // This method is to get the list of books from the database.
         public static ObservableCollection<Book> GetBooks()
         {
             ObservableCollection<Book> allBooks = new ObservableCollection<Book>();
@@ -57,6 +64,9 @@ namespace AUT_Market
             }
             return allBooks;
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        
         public static Book GetBooks(string listingnumber)
         {
             Book allBooks = new Book();
@@ -73,6 +83,10 @@ namespace AUT_Market
             }
             return allBooks;
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        
+        //This method to get the list of book by user(seller)
         public static ObservableCollection<Book> GetBookByUser()
         {
             ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
@@ -87,6 +101,8 @@ namespace AUT_Market
                 return usersBooks;
             }
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         public static ObservableCollection<Book> GetBooksByShoper(string EmailAddress)
         {
@@ -105,6 +121,11 @@ namespace AUT_Market
             return allBooks;
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+        // This method to get the list of book which is already sold it. 
+        // This will be complete by next sprint / verison
         //public static ObservableCollection<Book> GetSellerHistoryBook()
         //{
         //    ObservableCollection<Book> getBooks = new ObservableCollection<Book>();
@@ -121,6 +142,8 @@ namespace AUT_Market
         //    }
         //    return getBooks;
         //}
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         public static int getTotalSale(string EmailAddress) {
             int result = 0;
@@ -140,6 +163,8 @@ namespace AUT_Market
             return result;
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //This method is remove the book from listing and database. 
         public static void RemoveBook(Book delBook /*, string reason*/)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -151,6 +176,7 @@ namespace AUT_Market
                 con.Close();
             }
 
+            // This will be complete in the next sprint/ version.
             //using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
             //{
             //    con.Open();
@@ -177,6 +203,9 @@ namespace AUT_Market
             //}
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //This method is update new detail of the book in the database.
         public static void UpdateBookDetail(Book UpBook)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -199,6 +228,9 @@ namespace AUT_Market
             }
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        
+        //This method is to update a new price of the book in the database.
         public static void PriceChange(Book UpBook)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=aut-market.database.windows.net; Initial Catalog=marketdb;User ID=michael.denby;Password=sdpAUT2020"))
@@ -212,6 +244,9 @@ namespace AUT_Market
             }
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        // This method to get the book from database and add the list. 
         static ObservableCollection<Book> ReadtoListBook(SqlDataReader reader) {
             ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
             while (reader.Read())
@@ -237,6 +272,9 @@ namespace AUT_Market
             }
             return usersBooks;
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        // the method to get book from the database.
         static Book ReadtoBook(SqlDataReader reader)
         {
             Book book = new Book();
@@ -260,7 +298,9 @@ namespace AUT_Market
             }
             return book;
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+        //This will be hold to next sprint/ verison.
         //static ObservableCollection<Book> ReadtoSellerHistoryBook(SqlDataReader reader)
         //{
         //    ObservableCollection<Book> usersBooks = new ObservableCollection<Book>();
@@ -286,6 +326,8 @@ namespace AUT_Market
         //    }
         //    return usersBooks;
         //}
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
     }

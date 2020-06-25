@@ -16,12 +16,17 @@ namespace AUT_Market
             DisplayAlert("Hello", "Hello, " + User.Name, "OK");
         }
 
+        //----------------------------------------------------------------------------------------------------------------------------------//
+
+        //This is fuction of the logout. when user click logout then screen change to login screen and their detail is clear off in the memory. 
         private void logout_Clicked(object sender, System.EventArgs e)
         {
             Application.Current.Properties["IsLoggedIn"] = Boolean.FalseString;
             SecureStorage.RemoveAll();
             Application.Current.MainPage = new Login();
         }
+
+        //----------------------------------------------------------------------------------------------------------------------------------//
 
 
     }

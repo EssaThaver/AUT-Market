@@ -15,6 +15,9 @@
             mc:Ignorable="d"
             x:Class="AUT_Market.HomePage">
 
+    <!--===================================================================================================================================-->
+
+    <!--This is set up tihe size and shape in menu page.-->
     <Shell.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="MenuTemplate">
@@ -25,6 +28,10 @@
             </DataTemplate>
         </ResourceDictionary>
     </Shell.Resources>
+
+    <!--===================================================================================================================================-->
+    
+    <!--This is logo in menu page-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <ContentView BackgroundColor="#A44DC0" HeightRequest="245">
@@ -47,18 +54,17 @@
         <Tab Title="Wishlist" Icon="WishList02.png">
             <ShellContent ContentTemplate="{DataTemplate view:Wishlist}"/>
         </Tab>
-
         <!--===================================================================================================================================-->
+        
     </FlyoutItem>
 
     <ShellContent Title="Sell A Book" ContentTemplate="{DataTemplate view:SellProductFormView}" Icon="sell.png"/>
     <ShellContent Title="My Books"  ContentTemplate="{DataTemplate view:MyBooks}" Icon="myBook.png"/>
-    <!--<ShellContent Title="Selling History"  ContentTemplate="{DataTemplate view:SellingHistory}"/>-->
 
-
-
-    <MenuItem Text="Privacy" IconImageSource="privacy.png"/> <!-- This line is wait for the link of the privacy page -->
     <MenuItem Text="Logout" IconImageSource="Logout.png" x:Name="logout" Clicked="logout_Clicked"/>
+    
+    <!--<ShellContent Title="Selling History"  ContentTemplate="{DataTemplate view:SellingHistory}"/> "This statement will hold to the next sprint"-->
+   <!--<MenuItem Text="Privacy" IconImageSource="privacy.png"/>  "This statement will hold to the next sprint becuase this is very complex part" -->   
 
     <!--===================================================================================================================================-->
 
