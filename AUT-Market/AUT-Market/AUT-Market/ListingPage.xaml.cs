@@ -12,16 +12,20 @@ namespace AUT_Market
         public ListingPage()
         {
             InitializeComponent();
+
+            conditionSelection.ItemsSource = new Conditions().getOptionCondition();
+            campusSelection.ItemsSource = new Campus().getOptionCampus();
+            facultySelection.ItemsSource = new Faculties().getOptionFaculty();
+
             filter.IsVisible = false;
             sort.IsVisible = false;
             NoBookResult.IsVisible = false;
+            vm = new ListingPageViewModel(Navigation);
 
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            conditionSelection.ItemsSource = new Conditions().getOptionCondition();
-            vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
 
             filter.IsVisible = false;
@@ -38,7 +42,7 @@ namespace AUT_Market
             NoBookResult.IsVisible = false;
         }
 
-       
+
         private void filterBtn_Clicked(object sender, EventArgs e)
         {
             filter.IsVisible = true;
@@ -47,23 +51,36 @@ namespace AUT_Market
 
         private void applyBtn_Clicked(object sender, EventArgs e)
         {
+            vm = new ListingPageViewModel(Navigation);
 
             if (conditionSelection.SelectedIndex > 0)
             {
-                vm = new ListingPageViewModel(Navigation);
-
                 string userSelect = conditionSelection.SelectedItem.ToString();
 
                 vm.getShortLiistOfCondition(userSelect);
 
-                BindingContext = vm;
-
+                //BindingContext = vm;
             }
-            else
+            if (campusSelection.SelectedIndex > 0)
             {
-                vm = new ListingPageViewModel(Navigation);
-                BindingContext = vm;
+                string userSelect = campusSelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfCampus(userSelect);
+
+                //BindingContext = vm;
             }
+            if (facultySelection.SelectedIndex > 0)
+            {
+                string userSelect = facultySelection.SelectedItem.ToString();
+
+                vm.getShortLiistOfFaculty(userSelect);
+
+                //BindingContext = vm;
+            }
+
+
+            BindingContext = vm;
+
 
             filter.IsVisible = false;
         }
@@ -82,6 +99,26 @@ namespace AUT_Market
         {
             sort.IsVisible = true;
             filter.IsVisible = false;
+            //vm = new ListingPageViewModel(Navigation);
+        }
+
+        private void applySortBtn_Clicked(object sender, EventArgs e)
+        {
+            vm = new ListingPageViewModel(Navigation);
+
+            if (orderSelection.SelectedIndex == 1)
+            {
+                string userSelect = orderSelection.SelectedItem.ToString();
+                vm.getAscendOrder(userSelect);
+            }
+            else if (orderSelection.SelectedIndex == 2)
+            {
+                string userSelect = orderSelection.SelectedItem.ToString();
+                vm.getDescendOrder(userSelect);
+            }
+
+            BindingContext = vm;
+            sort.IsVisible = false;
         }
 
         private void clearBtn_Clicked(object sender, EventArgs e)
@@ -90,7 +127,6 @@ namespace AUT_Market
             BindingContext = vm;
 
             NoBookResult.IsVisible = false;
-
         }
 
         private void searchBook_SearchButtonPressed(object sender, EventArgs e)
@@ -108,10 +144,8 @@ namespace AUT_Market
             {
                 BindingContext = vm;
                 NoBookResult.IsVisible = false;
-
             }
 
         }
     }
 }
-
