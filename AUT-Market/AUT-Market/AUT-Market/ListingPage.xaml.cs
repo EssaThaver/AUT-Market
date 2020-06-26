@@ -126,6 +126,8 @@ namespace AUT_Market
             vm = new ListingPageViewModel(Navigation);
             BindingContext = vm;
 
+            filter.IsVisible = false;
+            sort.IsVisible = false;
             NoBookResult.IsVisible = false;
         }
 

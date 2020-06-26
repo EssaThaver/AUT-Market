@@ -83,19 +83,19 @@
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Filter" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,10"/>
+                <Label Text="Filter" TextColor="White" HorizontalOptions="Center" FontSize="20" Margin="20,10,0,5"/>
                 <ImageButton x:Name="closeFilter" Clicked="closeFilter_Clicked" Source="Delete.png" BackgroundColor="Transparent" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Margin="0,10,10,5" Grid.Column="1"/>
 
             </Grid>
-            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
+            <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,0">
                 <!-- Condition filter-->
                 <StackLayout>
-                    <Picker x:Name="conditionSelection" Title="Condition" FontSize="20"/>
-                    <Picker x:Name="campusSelection" Title="Campus" FontSize="20"/>
-                    <Picker x:Name="facultySelection" Title="Faculty" FontSize="20"/>
+                    <Picker x:Name="conditionSelection" Title="Condition" FontSize="15"/>
+                    <Picker x:Name="campusSelection" Title="Campus" FontSize="15"/>
+                    <Picker x:Name="facultySelection" Title="Faculty" FontSize="15"/>
                 </StackLayout>
             </Frame>
-            <StackLayout WidthRequest="100" HorizontalOptions="Center">
+            <StackLayout WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Start">
                 <Button x:Name="applyBtn" Text="Apply" Margin="0,0,0,10" CornerRadius="20" Clicked="applyBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
@@ -118,7 +118,7 @@
             </Grid>
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,10">
                 <!-- Order filter -->
-                <Picker x:Name="orderSelection" Title="Price" FontSize="20">
+                <Picker x:Name="orderSelection" Title="Price" FontSize="15">
                     <Picker.Items>
                         <x:String>Mixed</x:String>
                         <x:String>Ascending</x:String>
@@ -126,7 +126,7 @@
                     </Picker.Items>
                 </Picker>
             </Frame>
-            <StackLayout WidthRequest="100" HorizontalOptions="Center" Margin="0,0,0,50" >
+            <StackLayout WidthRequest="100" HorizontalOptions="Center">
                 <Button x:Name="sortItBtn" Text="Apply" Margin="0,0,0,50" CornerRadius="20" Clicked="applySortBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
