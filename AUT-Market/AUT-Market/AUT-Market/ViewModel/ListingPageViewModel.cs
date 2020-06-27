@@ -23,7 +23,7 @@ namespace AUT_Market.ViewModel
             await Navigation.PushAsync(new WishlistDetail(value));
         });
 
-        public void getShortLiistOfCondition(string condition)
+        public void getShortListOfCondition(string condition)
         {
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
@@ -38,7 +38,7 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getShortLiistOfCampus(string campus)
+        public void getShortListOfCampus(string campus)
         {
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
@@ -53,7 +53,7 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getShortLiistOfFaculty(string faculty)
+        public void getShortListOfFaculty(string faculty)
         {
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
@@ -68,7 +68,7 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getAscendOrder(string orderChoice)
+        public void getAscendingOrder(string orderChoice)
         {
             ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
@@ -84,7 +84,7 @@ namespace AUT_Market.ViewModel
             getBooks = resultBook;
         }
 
-        public void getDescendOrder(string orderChoice)
+        public void getDescendingOrder(string orderChoice)
         {
             ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
