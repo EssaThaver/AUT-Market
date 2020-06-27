@@ -46,9 +46,9 @@ Then navigate to where you saved the GitHub Repository and open the project.
 Load the App on your android phone.
 
 ```
-To load the app onto your android device, connect your phone to your computer via USB and make sure that you have 
-Developer Options & USB debugging enabled on your device. If not follow this link to see 
-how to enable Developer Options & USB debugging on your device.
+To load the app onto your android device, connect your phone to your computer via USB and make 
+sure that you have Developer Options & USB debugging enabled on your device. If not follow this 
+link to see how to enable Developer Options & USB debugging on your device.
 https://developer.android.com/studio/debug/dev-options
 ```
 
@@ -57,9 +57,9 @@ Load the App on the android emulator you created before
 ```
 To load the app onto your android emulator. Open the ADM (Android Device Manager) in visual studio
 and then click start on the device that you created. If there is no device available, you can click the 
-new button and create a new device. Once the device is created click start. 
-Once you click the start button your device will start to book up. It will take some time to boot the device
-once it has booted up click the run or debug button. This should start to load the app onto your emulator.
+new button and create a new device. Once the device is created click start.Once you click the start 
+button your device will start to boot up. It will take some time for the device to boot once it has 
+booted up click the run or debug button. This should start to load the app onto your emulator.
 Alternately you will be able to see the name of your device on the top bar with a green arrow next to it.
 Click it and your program should start to run. I will take some time for the device to load up and the app 
 to get installed on it.
