@@ -66,21 +66,21 @@ namespace AUT_Market
             {
                 string userSelect = conditionSelection.SelectedItem.ToString();
 
-                vm.getShortLiistOfCondition(userSelect);
+                vm.getShortListOfCondition(userSelect);
             }
             //If the user chose a specific campus in the Campus picker
             if (campusSelection.SelectedIndex > 0)
             {
                 string userSelect = campusSelection.SelectedItem.ToString();
 
-                vm.getShortLiistOfCampus(userSelect);
+                vm.getShortListOfCampus(userSelect);
             }
             //If the user chose a specific faculty in the Faculty picker
             if (facultySelection.SelectedIndex > 0)
             {
                 string userSelect = facultySelection.SelectedItem.ToString();
 
-                vm.getShortLiistOfFaculty(userSelect);
+                vm.getShortListOfFaculty(userSelect);
             }
 
             BindingContext = vm;
@@ -115,12 +115,12 @@ namespace AUT_Market
             if (orderSelection.SelectedIndex == 1)
             {
                 string userSelect = orderSelection.SelectedItem.ToString();
-                vm.getAscendOrder(userSelect);
+                vm.getAscendingOrder(userSelect);
             }
             else if (orderSelection.SelectedIndex == 2)
             {
                 string userSelect = orderSelection.SelectedItem.ToString();
-                vm.getDescendOrder(userSelect);
+                vm.getDescendingOrder(userSelect);
             }
 
             BindingContext = vm;
