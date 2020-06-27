@@ -8,7 +8,8 @@
         <StackLayout x:Name="listingBook">
 
             <!--========================================================================================================================================================================================-->
-
+            <!-- This is the searchbar section -->
+            
             <StackLayout BackgroundColor="#A44DC0">
                 <SearchBar HorizontalOptions="Center" x:Name="searchBook" Placeholder="Search" SearchButtonPressed="searchBook_SearchButtonPressed"  Margin="10,10,10,0" BackgroundColor="#DADADA"/>
 
@@ -30,12 +31,13 @@
             </StackLayout>
 
             <!--========================================================================================================================================================================================-->
-
+            <!-- This is displayed if the search does not return any books -->
             <StackLayout HorizontalOptions="Center">
                 <Label  x:Name="NoBookResult" Text="No results containing all your search terms were found."/>
             </StackLayout>
 
             <!--========================================================================================================================================================================================-->
+            <!-- This is the section that displays the books on the database -->
 
             <RefreshView x:Name="bookRefresh" Refreshing="bookRefresh_Refreshing">
                 <CollectionView x:Name="listview" ItemsSource="{Binding getBooks}">
@@ -71,7 +73,7 @@
 
         <!--===============================================================================================================================================-->
 
-        <!--This is filter section-->
+        <!--This is the filter section-->
 
         <StackLayout x:Name="filter" BackgroundColor="#A44DC0" VerticalOptions="FillAndExpand">
             <Grid>
@@ -88,7 +90,7 @@
 
             </Grid>
             <Frame BackgroundColor="#DADADA" CornerRadius="20" Margin="20,0,20,0">
-                <!-- Condition filter-->
+                <!-- Condition, Campus and Faculty filters-->
                 <StackLayout>
                     <Picker x:Name="conditionSelection" Title="Condition" FontSize="15"/>
                     <Picker x:Name="campusSelection" Title="Campus" FontSize="15"/>
@@ -102,7 +104,7 @@
 
         <!--===============================================================================================================================================-->
 
-        <!-- This is sorting section -->
+        <!-- This is the sorting section -->
         <StackLayout x:Name="sort" BackgroundColor="#A44DC0">
             <Grid>
                 <Grid.RowDefinitions>

@@ -4,8 +4,15 @@ using System.Text;
 
 namespace AUT_Market.Service
 {
+    /*
+     * The main Campus class
+     * Contains a list of all AUT Campuses and the options for the Campus filter
+     * @author Georgia Thomson 1391057
+     */
+
     class Campus
     {
+        //Returns a list of all AUT campuses
         public List<String> getlistOfCampus()
         {
             List<string> listCampus = new List<string>();
@@ -17,6 +24,7 @@ namespace AUT_Market.Service
             return listCampus;
         }
 
+        //Returns a list of all AUT Campuses for the campus picker including an "All" option
         public List<string> getOptionCampus()
         {
             List<string> listCampus = new List<string>();
