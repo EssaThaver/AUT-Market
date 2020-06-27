@@ -25,7 +25,6 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfCondition(string condition)
         {
-            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
             foreach (Book book in getBooks)
@@ -41,7 +40,6 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfCampus(string campus)
         {
-            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
             foreach (Book book in getBooks)
@@ -57,7 +55,6 @@ namespace AUT_Market.ViewModel
 
         public void getShortLiistOfFaculty(string faculty)
         {
-            //ObservableCollection<Book> books = BooksDb.GetBooks();
             ObservableCollection<Book> resultBook = new ObservableCollection<Book>();
 
             foreach (Book book in getBooks)
