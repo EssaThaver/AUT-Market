@@ -1,6 +1,6 @@
 # AUT-Market
 
-This app enables AUT Students to sell their textbooks online.
+AUT Market is an Androip app that enables AUT students to sell their textbooks online. Users can search for books by a range of criteria, and contact any sellers of books they are interested in purchasing. They can also create a Wish-List of books currently for sale and sign in is available through Google login. 
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
