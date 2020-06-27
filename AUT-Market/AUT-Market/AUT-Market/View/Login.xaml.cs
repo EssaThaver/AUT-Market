@@ -24,7 +24,7 @@ namespace AUT_Market.View
             InitializeComponent();
             store = AccountStore.Create();
         }
-
+        //When user clicks the googel sign in button
         private async void signinGoogle_Clicked(System.Object sender, System.EventArgs e)
         {
             string clientId = null;
@@ -37,12 +37,6 @@ namespace AUT_Market.View
                     redirectUrl = Constants.AndroidRedirectUrl;
                     break;
             }
-            //User user = null;
-            //user = JsonConvert.DeserializeObject<User>("{\"Name\":\"GTesting XTesting\",\"Email\":\"gxtesting12@gmail.com\"}");
-            //App.CurrentUser = user;
-            //Application.Current.MainPage = new HomePage();
-            //await Shell.Current.GoToAsync("//main");
-            //return;
 
             account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
 
@@ -65,7 +59,7 @@ namespace AUT_Market.View
             presenter.Login(authenticator);
 
         }
-
+        //When Auth is completed
         async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
         {
             var authenticator = sender as OAuth2Authenticator;
@@ -99,6 +93,7 @@ namespace AUT_Market.View
                 App.CurrentUser = user;
             }
 
+            // Information of the user we get and use
             Application.Current.Properties["IsLoggedIn"] = Boolean.TrueString;
             await SecureStorage.SetAsync("userID", User.Id);
             await SecureStorage.SetAsync("userName", User.Name);
@@ -113,6 +108,7 @@ namespace AUT_Market.View
 
 
 
+         // Error message if we get an Anthentication Error
         void OnAuthError(object sender, AuthenticatorErrorEventArgs e)
         {
             var authenticator = sender as OAuth2Authenticator;
