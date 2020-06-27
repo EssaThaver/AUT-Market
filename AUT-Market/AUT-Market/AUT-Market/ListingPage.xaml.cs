@@ -111,12 +111,14 @@ namespace AUT_Market
         private void applySortBtn_Clicked(object sender, EventArgs e)
         {
             vm = new ListingPageViewModel(Navigation);
-
+            
+            //If the user selected "Ascending"
             if (orderSelection.SelectedIndex == 1)
             {
                 string userSelect = orderSelection.SelectedItem.ToString();
                 vm.getAscendingOrder(userSelect);
             }
+            //If the user selected "Descending"
             else if (orderSelection.SelectedIndex == 2)
             {
                 string userSelect = orderSelection.SelectedItem.ToString();
@@ -144,7 +146,8 @@ namespace AUT_Market
             vm = new ListingPageViewModel(Navigation);
 
             vm.searchBook(searchBook.Text);
-
+            
+            //If the search returns no books
             if (vm.getBooks.Count == 0)
             {
                 BindingContext = vm;
