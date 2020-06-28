@@ -29,6 +29,8 @@ namespace AUT_Market.View
             checkBookIsOwnByUser();
           
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             vm?.UpdateZan.Execute(null);

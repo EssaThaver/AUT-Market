@@ -11,6 +11,7 @@ namespace AUT_Market.ViewModel
     {
         public ObservableCollection<Collects> Items { get; set; }= new ObservableCollection<Collects>();
 
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command getChildData => new Command(()=> {
             Items.Clear();
             var list = CollectsServer.getCollects(User.Email);

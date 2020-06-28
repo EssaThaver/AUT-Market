@@ -18,13 +18,15 @@ namespace AUT_Market.ViewModel
         
         int _SaleTotal;
         public int SaleTotal { get => _SaleTotal; set { _SaleTotal = value; OnPropertyChaned(); } }
-
+        
         #endregion
         public ObservableCollection<Book> Items { get; set; } = new ObservableCollection<Book>();
         INavigation Navigation;
         public BookSellerViewModel(INavigation Navigation) {
             this.Navigation = Navigation;
         }
+
+        //------------------------------------------------------------------------------------------------------------------------------------//
         public Command getChildData => new Command<string>((value)=> {
             Items.Clear();
             SaleTotal = BooksDb.getTotalSale(value);
@@ -40,8 +42,8 @@ namespace AUT_Market.ViewModel
             await Navigation.PushAsync(new WishlistDetail(value,false));
         });
 
-
-
+        //------------------------------------------------------------------------------------------------------------------------------------//
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChaned([CallerMemberName] string name = "")

@@ -6,7 +6,10 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
+            <!--AUT logo-->
                 <Image Source="AUTLongLogo.png"/>
+
+                <!--layout of the wishlist page -->
                 <Frame CornerRadius="40" Margin="20,-150,20,20">
                     <CollectionView ItemsSource="{Binding Items}">
                         <CollectionView.ItemTemplate>
@@ -25,6 +28,8 @@
                                         <ColumnDefinition Width="20*"/>
                                         <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
+
+                                    <!--display some of the information on  wishlist page-->
                                     <ffimg:CachedImage Grid.RowSpan="4" Source="{Binding PhotoUrl}" Aspect="AspectFill" WidthRequest="100"/>
                                     <Label Grid.Column="1" Text="{Binding Title,StringFormat='Title: {0:C}'}" FontAttributes="Bold"/>
                                     <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty,StringFormat='Faculty: {0:C}'}"/>
