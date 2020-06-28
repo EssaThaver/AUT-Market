@@ -42,6 +42,7 @@ namespace AUT_Market.View
             checkBookIsOwnByUser();
         }
 
+         //------------------------------------------------------------------------------------------------------------------------------------//
         private async void interesting_Clicked(object sender, EventArgs e)
         {
             var confrim = await DisplayAlert("Permission", "Do we have your permission to send your email address to " + vm.currentBook.ShopUserName + " and she/he will contact you soon?", "ACCPET", "DECLINE");
@@ -65,6 +66,7 @@ namespace AUT_Market.View
 
         }
 
+         //------------------------------------------------------------------------------------------------------------------------------------//
         public void checkBookIsOwnByUser()
         {
             if (vm.currentBook.ShopEmailAddress == User.Email)

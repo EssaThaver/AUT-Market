@@ -11,10 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace AUT_Market.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+     //------------------------------------------------------------------------------------------------------------------------------------//
     public partial class BookSeller : ContentPage
     {
         BookSellerViewModel vm;
         string EmailAddress;
+
+         //------------------------------------------------------------------------------------------------------------------------------------//
         public BookSeller(string emailaddress)
         {
             InitializeComponent();
@@ -22,6 +26,8 @@ namespace AUT_Market.View
             vm = new BookSellerViewModel(Navigation);
             BindingContext = vm;
         }
+
+         //------------------------------------------------------------------------------------------------------------------------------------//
         protected override void OnAppearing()
         {
             base.OnAppearing();

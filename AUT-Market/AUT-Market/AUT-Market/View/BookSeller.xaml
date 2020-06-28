@@ -7,6 +7,8 @@
              x:Class="AUT_Market.View.BookSeller">
     <ContentPage.Content>
         <StackLayout>
+
+        <!--display the seller's name with a icon start-->
             <StackLayout Orientation="Horizontal" Padding="10,5,10,5">
                 <ffimg:CachedImage Source="avitors" WidthRequest="45" HeightRequest="45" Aspect="AspectFit">
                     <ffimg:CachedImage.Transformations>
@@ -18,6 +20,9 @@
                     <Label Text="{Binding SaleTotal,StringFormat='Books for sale: {0}'}" VerticalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
+            <!--display the seller's name with a icon end-->
+
+            <!--layout of Seller details page start-->
             <BoxView HeightRequest="1" BackgroundColor="#ddd"/>
             <CollectionView x:Name="listview" ItemsSource="{Binding Items}">
                 <CollectionView.ItemTemplate>
@@ -37,13 +42,18 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="150*"/>
                             </Grid.ColumnDefinitions>
+                            <!--layout of Seller details page end-->
+
+                            <!--Book details page start-->
                             <ffimg:CachedImage Grid.RowSpan="4" Source="{Binding PhotoUrl}" Aspect="AspectFill" WidthRequest="100"/>
                             <Label Grid.Column="1" Text="{Binding Title,StringFormat='Title: {0:C}'}" FontAttributes="Bold"/>
                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding Faculty,StringFormat='Faculty: {0:C}'}"/>
                             <Label Grid.Column="1" Grid.Row="2" Text="{Binding CourseCode,StringFormat='Course Code: {0:C}'}"/>
                             <Label Grid.Column="1" Grid.Row="3" Text="{Binding Price,StringFormat='Price: ${0:C}'}"/>
                             <BoxView BackgroundColor="Black" HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" Grid.Row="4" Grid.ColumnSpan ="2"/>
+                            <!--Book details page end-->
 
+                            
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
