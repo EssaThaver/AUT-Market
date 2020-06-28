@@ -44,8 +44,7 @@ namespace AUT_Market.ViewModel
 
         //------------------------------------------------------------------------------------------------------------------------------------//
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        
         public void OnPropertyChaned([CallerMemberName] string name = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
